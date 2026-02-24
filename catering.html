@@ -1,1 +1,508 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catering &amp; Private Events | Referees Sports Bar &amp; Grill | Dayton, TN</title>
+  <meta name="description" content="Host your next party, team event, or celebration at Referees Sports Bar &amp; Grill in Dayton, TN. Group-friendly seating, catering, and private event options." />
+  <meta name="theme-color" content="#080808" />
+  <meta property="og:title" content="Catering &amp; Private Events | Referees Sports Bar &amp; Grill" />
+  <meta property="og:description" content="Birthdays, watch parties, team dinners — Referees has the food, space, and screens for your group." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="./favicon (2).ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script defer src="./app.js"></script>
+  <style>
+    .catering-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .catering-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r2);
+      padding: 28px;
+      transition: border-color .15s, transform .15s;
+    }
+    .catering-card:hover {
+      border-color: rgba(212,168,67,.3);
+      transform: translateY(-2px);
+    }
+    .catering-icon {
+      font-size: 2rem;
+      margin-bottom: 14px;
+    }
+    .catering-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: .03em;
+      margin-bottom: 8px;
+    }
+    .catering-card p {
+      font-size: .95rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .process-step {
+      text-align: center;
+      padding: 28px 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r2);
+      position: relative;
+    }
+    .step-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      line-height: 1;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .step-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .step-desc {
+      font-size: .9rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .menu-highlights {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .mh-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--r2);
+      padding: 18px;
+      text-align: center;
+    }
+    .mh-emoji { font-size: 1.8rem; margin-bottom: 8px; }
+    .mh-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .mh-desc { font-size: .8rem; color: var(--muted); line-height: 1.5; }
+    .inquiry-form {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r2);
+      padding: 36px;
+    }
+    .inquiry-split {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 48px;
+      align-items: start;
+    }
+    @media (max-width: 960px) {
+      .catering-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr; }
+      .menu-highlights { grid-template-columns: 1fr 1fr; }
+      .inquiry-split { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .menu-highlights { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
 
+<a class="skip" href="#main">Skip to main content</a>
+
+<div class="actionbar" role="navigation" aria-label="Quick actions">
+  <a class="ab-btn" href="tel:+14232855663" data-tel>Call</a>
+  <a class="ab-btn" href="#" data-maps target="_blank" rel="noopener">Directions</a>
+  <a class="ab-btn ab-btn--gold" href="#inquire">Book Event</a>
+</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="./index.html">
+      <img src="./referees-logo.png" alt="Referees Sports Bar and Grill" class="site-logo" />
+      <div class="brand-text">
+        <div class="brand-name">Referees</div>
+        <div class="brand-sub">Sports Bar &amp; Grill · Dayton, TN</div>
+      </div>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="./index.html">Home</a>
+      <a href="./menu.html">Menu</a>
+      <a href="./events.html">Events</a>
+      <a href="./gallery.html">Gallery</a>
+      <a href="./catering.html" class="active">Catering</a>
+      <a href="./index.html#contact">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-outline btn-sm" href="tel:+14232855663" data-tel>Call Now</a>
+      <a class="btn btn-primary btn-sm" href="#inquire">Book an Event</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" style="position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;z-index:0;">
+      <img src="./event-crowd-1.jpg" alt="" aria-hidden="true" style="width:100%;height:100%;object-fit:cover;opacity:.15;" />
+      <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(14,14,14,.98) 50%,rgba(14,14,14,.7));"></div>
+    </div>
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="section-label"><div class="line"></div><span>Private Events &amp; Groups</span></div>
+      <h1>Catering &amp;<br>Private Events</h1>
+      <p>Birthdays, watch parties, team dinners, corporate gatherings — Referees has the food, the screens, and the space to make it happen. Call us to talk through the details.</p>
+      <div class="flex-gap mt-24">
+        <a class="btn btn-primary btn-lg" href="#inquire">Book Your Event</a>
+        <a class="btn btn-outline btn-lg" href="tel:+14232855663" data-tel>Call to Talk</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE OFFER -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label"><div class="line"></div><span>What We Offer</span></div>
+      <h2>We've Got Your Group Covered</h2>
+      <p class="section-lead" style="max-width:54ch;margin-top:8px;">Whether it's 10 people or a full buyout, we can work with your group. Great food, cold drinks, big screens, and a staff that knows how to take care of a crowd.</p>
+
+      <div class="catering-grid">
+        <div class="catering-card">
+          <div class="catering-icon">🏈</div>
+          <h3>Watch Parties</h3>
+          <p>Reserve space for your crew for the big game — NFL, college ball, UFC, March Madness. Multiple big-screen TVs, wings, and cold drinks on tap. Call ahead to claim your spot.</p>
+        </div>
+        <div class="catering-card">
+          <div class="catering-icon">🎂</div>
+          <h3>Birthday Parties</h3>
+          <p>Celebrate in style with great food and good company. We can accommodate groups of various sizes and customize a food spread from our full menu. Call to discuss availability.</p>
+        </div>
+        <div class="catering-card">
+          <div class="catering-icon">🏆</div>
+          <h3>Team &amp; League Dinners</h3>
+          <p>Youth leagues, adult rec teams, company outings — we're the right place. Group-friendly pricing and a menu that works for everyone, including a dedicated kids' menu.</p>
+        </div>
+        <div class="catering-card">
+          <div class="catering-icon">🎤</div>
+          <h3>Private Karaoke &amp; Music Nights</h3>
+          <p>Book a night with live entertainment for your group. Karaoke, live bands, and good vibes. Check with us about availability and what we can put together for your event.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-label"><div class="line"></div><span>Simple Process</span></div>
+      <h2>How It Works</h2>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <div class="step-title">Call or Fill Out the Form</div>
+          <p class="step-desc">Tell us your date, approximate group size, and what kind of event you're planning. We'll let you know what's available.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <div class="step-title">We Talk Through the Details</div>
+          <p class="step-desc">We'll discuss food options, space, timing, and anything special you need. No complicated packages — just a straightforward conversation.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <div class="step-title">Show Up &amp; Enjoy</div>
+          <p class="step-desc">We take care of the food and setup. You bring your crew and have a great time. Payment is handled when you arrive.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU FOR GROUPS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label"><div class="line"></div><span>Group Favorites</span></div>
+      <h2>Food That Feeds a Crowd</h2>
+      <p class="section-lead" style="max-width:52ch;margin-top:8px;">Our full menu is available for group events. A few crowd-pleasers to plan around:</p>
+
+      <div class="menu-highlights">
+        <div class="mh-item">
+          <div class="mh-emoji">🍗</div>
+          <div class="mh-name">Wings</div>
+          <p class="mh-desc">Bone-in or boneless. 8 wet sauces, 4 dry rubs. Half dozen or full dozen.</p>
+        </div>
+        <div class="mh-item">
+          <div class="mh-emoji">🍔</div>
+          <div class="mh-name">Burgers</div>
+          <p class="mh-desc">6 signature burgers on brioche. The Roethlisburger is a fan favorite.</p>
+        </div>
+        <div class="mh-item">
+          <div class="mh-emoji">🌮</div>
+          <div class="mh-name">Fajitas</div>
+          <p class="mh-desc">Sizzling cast-iron fajitas — chicken, steak, shrimp, or Hawaiian.</p>
+        </div>
+        <div class="mh-item">
+          <div class="mh-emoji">🥩</div>
+          <div class="mh-name">Steaks</div>
+          <p class="mh-desc">8 oz sirloin, 16 oz cowboy rib-eye, or T-bone at market price.</p>
+        </div>
+        <div class="mh-item">
+          <div class="mh-emoji">🍟</div>
+          <div class="mh-name">Appetizers</div>
+          <p class="mh-desc">Nachos, loaded fries, pretzel nuggets, jalapeño poppers &amp; more.</p>
+        </div>
+        <div class="mh-item">
+          <div class="mh-emoji">🧆</div>
+          <div class="mh-name">Fried Favorites</div>
+          <p class="mh-desc">Fried pickles, mushrooms, zucchini, cheese wedges — great for sharing.</p>
+        </div>
+        <div class="mh-item">
+          <div class="mh-emoji">🍝</div>
+          <div class="mh-name">Pasta</div>
+          <p class="mh-desc">Chicken Alfredo and Chicken Parmesan — crowd-pleasers for everyone.</p>
+        </div>
+        <div class="mh-item">
+          <div class="mh-emoji">👧</div>
+          <div class="mh-name">Kids' Menu</div>
+          <p class="mh-desc">Ages 12 &amp; under, $6. Tenders, burger, alfredo, or cheese quesadilla.</p>
+        </div>
+      </div>
+
+      <div class="flex-gap mt-24">
+        <a class="btn btn-outline" href="./menu.html">View Full Menu</a>
+        <a class="btn btn-primary" href="#inquire">Book Your Event</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INQUIRY / BOOK -->
+  <section class="section section-alt" id="inquire">
+    <div class="container">
+      <div class="inquiry-split">
+        <div>
+          <div class="section-label"><div class="line"></div><span>Get in Touch</span></div>
+          <h2>Book Your Event</h2>
+          <p style="color:var(--muted);line-height:1.7;max-width:44ch;margin-top:8px;">Fill out the form and we'll reach back out to talk through availability, food options, and anything else you need. Or just give us a call — that works great too.</p>
+
+          <div class="how-it-works mt-32">
+            <div class="hiw-step">
+              <div class="hiw-num">📞</div>
+              <div class="hiw-text">
+                <strong>Call Us Directly</strong>
+                <span>The fastest way to book. <a href="tel:+14232855663" data-tel style="color:var(--gold)">(423) 285-5663</a></span>
+              </div>
+            </div>
+            <div class="hiw-step">
+              <div class="hiw-num">📧</div>
+              <div class="hiw-text">
+                <strong>Email</strong>
+                <span><a href="mailto:refereesportsbargrill@gmail.com" style="color:var(--gold)">refereesportsbargrill@gmail.com</a></span>
+              </div>
+            </div>
+            <div class="hiw-step">
+              <div class="hiw-num">📍</div>
+              <div class="hiw-text">
+                <strong>Come In &amp; Ask</strong>
+                <span>200 Able Drive Suite 7, Dayton, TN 37321</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <form class="inquiry-form" id="cateringForm" novalidate>
+            <div class="form-title">Event Inquiry</div>
+            <p class="form-note">We'll call or email you back within 1 business day to discuss details.</p>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="cname">Your Name</label>
+                <input id="cname" name="name" required placeholder="First &amp; last name" autocomplete="name" />
+              </div>
+              <div class="form-field">
+                <label for="cphone">Phone Number</label>
+                <input id="cphone" name="phone" required type="tel" placeholder="(423) 555-0000" autocomplete="tel" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="cemail">Email <span style="opacity:.6;font-size:.8em">(optional)</span></label>
+              <input id="cemail" name="email" type="email" placeholder="your@email.com" autocomplete="email" />
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="cdate">Event Date</label>
+                <input id="cdate" name="date" placeholder="MM/DD/YYYY or approx. date" />
+              </div>
+              <div class="form-field">
+                <label for="cguests">Approximate Guest Count</label>
+                <input id="cguests" name="guests" placeholder="e.g. 20 people" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="ctype">Type of Event</label>
+              <select id="ctype" name="type">
+                <option value="">Select event type…</option>
+                <option value="watch-party">Watch Party / Game Day</option>
+                <option value="birthday">Birthday Party</option>
+                <option value="team-dinner">Team / League Dinner</option>
+                <option value="corporate">Corporate / Company Event</option>
+                <option value="music-karaoke">Private Music / Karaoke Night</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="cdetails">Tell Us More</label>
+              <textarea id="cdetails" name="details" placeholder="Any specific food needs, timing, special requests, or questions…"></textarea>
+            </div>
+
+            <div class="payment-notice">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="flex-shrink:0;margin-top:2px;color:var(--gold)"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <p>This is an inquiry only — no payment required now. We'll confirm all details and pricing when we speak with you.</p>
+            </div>
+
+            <button class="btn btn-primary form-submit" type="submit">Send Inquiry</button>
+          </form>
+
+          <div class="order-success" id="cateringSuccess" hidden>
+            <h3>Inquiry Sent!</h3>
+            <p>We'll be in touch shortly to discuss your event. For fastest response, call us at <a href="tel:+14232855663" data-tel style="color:var(--green)">(423) 285-5663</a>.</p>
+            <div class="flex-gap mt-16">
+              <a class="btn btn-primary" href="tel:+14232855663" data-tel>Call Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK LINKS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label"><div class="line"></div><span>More at Referees</span></div>
+      <h2>While You're Here</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px">
+        <a class="event-card" href="./menu.html" style="text-decoration:none;display:block">
+          <div class="event-day" style="font-size:2rem">🍗</div>
+          <div class="event-title">Full Menu</div>
+          <p class="event-desc">Browse wings, burgers, fajitas, steaks, pasta, and more. All available for group events.</p>
+        </a>
+        <a class="event-card" href="./events.html" style="text-decoration:none;display:block">
+          <div class="event-day" style="font-size:2rem">🎵</div>
+          <div class="event-title">Weekly Events</div>
+          <p class="event-desc">Wing Wednesday, karaoke nights, live music, and game-day specials every week.</p>
+        </a>
+        <a class="event-card" href="./index.html#contact" style="text-decoration:none;display:block">
+          <div class="event-day" style="font-size:2rem">📍</div>
+          <div class="event-title">Find Us</div>
+          <p class="event-desc">200 Able Drive Suite 7, Dayton, TN 37321. Open Wed–Sat 11 AM–11 PM.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand-name">Referees</div>
+        <p>Dayton's go-to sports bar &amp; grill. Wings, burgers, fajitas, and cold drinks — plus live music and karaoke nights.</p>
+        <div class="flex-gap mt-16">
+          <a class="btn btn-primary btn-sm" href="#inquire">Book an Event</a>
+          <a class="btn btn-outline btn-sm" href="tel:+14232855663" data-tel>Call</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <div class="footer-links">
+          <a href="./index.html">Home</a>
+          <a href="./menu.html">Full Menu</a>
+          <a href="./events.html">Events</a>
+          <a href="./gallery.html">Gallery</a>
+          <a href="./catering.html">Catering</a>
+          <a href="./index.html#contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Hours</div>
+        <div class="footer-links" style="font-size:.85rem">
+          <span style="color:var(--muted)">Mon: 3 PM – 9 PM</span>
+          <span style="color:var(--muted2)">Tue: Closed</span>
+          <span style="color:var(--muted)">Wed–Sat: 11 AM – 11 PM</span>
+          <span style="color:var(--muted)">Sun: 11 AM – 9 PM</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-links">
+          <a href="tel:+14232855663" data-tel>(423) 285-5663</a>
+          <a href="mailto:refereesportsbargrill@gmail.com">Email Us</a>
+          <a href="#" data-maps target="_blank" rel="noopener">200 Able Drive, Dayton TN</a>
+          <a href="#" data-fb target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; <span id="year"></span> Referees Sports Bar &amp; Grill. All rights reserved.</div>
+      <div class="footer-social">
+        <a class="social-link" href="#" data-fb target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const form = document.getElementById('cateringForm');
+  const success = document.getElementById('cateringSuccess');
+  if (form) {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const fd = new FormData(form);
+      const name = String(fd.get('name') || '').trim();
+      const phone = String(fd.get('phone') || '').trim();
+      const email = String(fd.get('email') || '').trim();
+      const date = String(fd.get('date') || '').trim();
+      const guests = String(fd.get('guests') || '').trim();
+      const type = String(fd.get('type') || '').trim();
+      const details = String(fd.get('details') || '').trim();
+      const subject = encodeURIComponent(`Event Inquiry – ${name}${date ? ' – ' + date : ''}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\nPhone: ${phone}${email ? '\nEmail: ' + email : ''}\n\nEvent Date: ${date || 'TBD'}\nGuest Count: ${guests || 'TBD'}\nEvent Type: ${type || 'TBD'}\n\nDetails:\n${details}`
+      );
+      window.location.href = `mailto:refereesportsbargrill@gmail.com?subject=${subject}&body=${body}`;
+      form.reset();
+      form.style.display = 'none';
+      if (success) { success.hidden = false; success.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  }
+</script>
+
+</body>
+</html>
