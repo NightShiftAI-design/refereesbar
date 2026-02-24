@@ -1,122 +1,140 @@
 <!doctype html>
 <html lang="en">
 <head>
-   <link rel="icon" href="/favicon(2).ico">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Menu | Referees Sports Bar & Grill | Dayton, TN</title>
-  <meta name="description" content="Referees Sports Bar & Grill menu — appetizers, wings, burgers, fajitas, pasta, steaks, and more." />
-  <meta name="theme-color" content="#0b0b10" />
-
-  <meta property="og:title" content="Menu | Referees Sports Bar & Grill" />
-  <meta property="og:description" content="Browse the Referees menu: wings, burgers, fajitas, and more." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu | Referees Sports Bar &amp; Grill | Dayton, TN</title>
+  <meta name="description" content="Full menu at Referees Sports Bar &amp; Grill in Dayton, TN — appetizers, wings, burgers, fajitas, pasta, steaks, seafood, and more." />
+  <meta name="theme-color" content="#080808" />
+  <meta property="og:title" content="Menu | Referees Sports Bar &amp; Grill" />
+  <meta property="og:description" content="Browse wings, burgers, fajitas, steaks, and more at Referees in Dayton, TN." />
   <meta property="og:type" content="website" />
-
+  <link rel="icon" href="./favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
   <link rel="stylesheet" href="./styles.css" />
   <script defer src="./app.js"></script>
 </head>
-
 <body>
-  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- Sticky mobile action bar -->
-  <div class="actionbar" role="navigation" aria-label="Quick actions">
-    <a class="ab-btn" id="abCall" href="#">Call</a>
-    <a class="ab-btn" id="abDirections" href="#" target="_blank" rel="noopener">Directions</a>
-    <a class="ab-btn ab-btn--primary" href="./index.html#order">Order</a>
-  </div>
+<a class="skip" href="#main">Skip to main content</a>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="./index.html">
-        <div class="logo-badge" aria-hidden="true">R</div>
-        <div class="brand-text">
-          <div class="brand-name">Referees</div>
-          <div class="brand-sub">Sports Bar & Grill • Dayton, TN</div>
-        </div>
-      </a>
+<div class="actionbar" role="navigation" aria-label="Quick actions">
+  <a class="ab-btn" href="tel:+14232855663" data-tel>Call</a>
+  <a class="ab-btn" href="#" data-maps target="_blank" rel="noopener">Directions</a>
+  <a class="ab-btn ab-btn--gold" href="./index.html#order">Order Pickup</a>
+</div>
 
-      <nav class="nav">
-        <a href="./index.html#events">Events</a>
-        <a href="./index.html#gallery">Photos</a>
-        <a href="./index.html#contact">Contact</a>
-      </nav>
-
-      <div class="header-cta">
-        <a class="btn btn-ghost" href="./index.html#contact">Contact</a>
-        <a class="btn btn-primary" href="./index.html#order">Order Pickup</a>
-      </div>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h1 class="page-title">Menu</h1>
-            <p class="muted">
-              Tap a category or search the menu. Prices may change — call for the latest.
-            </p>
-          </div>
-          <div class="page-actions">
-            <a class="btn btn-ghost" href="./index.html">Back to Home</a>
-            <a class="btn btn-primary" href="./index.html#order">Order Pickup</a>
-          </div>
-        </div>
-
-        <div class="menu-controls">
-          <div class="tabs" role="tablist" aria-label="Menu categories" id="menuTabs">
-            <!-- Tabs injected by app.js -->
-          </div>
-
-          <div class="searchwrap">
-            <input id="menuSearch" type="search" placeholder="Search wings, burgers, fajitas…" aria-label="Search menu" />
-            <button class="btn btn-small btn-ghost" id="clearSearch" type="button">Clear</button>
-          </div>
-        </div>
-
-        <div id="menuMeta" class="menu-meta muted small"></div>
-
-        <div id="menuGrid" class="menu-grid">
-          <!-- Menu injected by app.js -->
-        </div>
-
-        <div class="notice mt">
-          <div class="notice-icon" aria-hidden="true">ℹ️</div>
-          <div>
-            <strong>Want online ordering?</strong>
-            <div class="muted small">We can enable Square (fastest) or Toast (restaurant-grade). Until then, use the Order Pickup request on the home page.</div>
-          </div>
-        </div>
-
-        <div class="mt">
-          <a class="btn btn-primary" href="./index.html#order">Order Pickup Request</a>
-          <a class="btn btn-ghost" href="./index.html#contact">Call / Directions</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="./index.html">
+      <img src="./referees-logo.png" alt="Referees Sports Bar and Grill" class="site-logo" />
+      <div class="brand-text">
         <div class="brand-name">Referees</div>
-        <div class="muted small">Sports Bar & Grill • Dayton, Tennessee</div>
+        <div class="brand-sub">Sports Bar &amp; Grill · Dayton, TN</div>
       </div>
-      <div class="footer-right">
-        <a href="./index.html#events">Events</a>
-        <a href="./index.html#gallery">Photos</a>
-        <a href="./index.html#order">Order</a>
-        <a href="./index.html#contact">Contact</a>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="./index.html">Home</a>
+      <a href="./menu.html" class="active">Menu</a>
+      <a href="./events.html">Events</a>
+      <a href="./gallery.html">Gallery</a>
+      <a href="./index.html#contact">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-outline btn-sm" href="tel:+14232855663" data-tel>Call Now</a>
+      <a class="btn btn-primary btn-sm" href="./index.html#order">Order Pickup</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-label"><div class="line"></div><span>What We're Serving</span></div>
+      <h1>The Full Menu</h1>
+      <p>Search or browse every category. Prices may change — call <a href="tel:+14232855663" data-tel style="color:var(--gold)">(423) 285-5663</a> to confirm before ordering.</p>
+      <div class="flex-gap mt-24">
+        <a class="btn btn-primary" href="./index.html#order">Place a Pickup Order</a>
+        <a class="btn btn-outline" href="tel:+14232855663" data-tel>Call Us</a>
       </div>
     </div>
-    <div class="container tiny muted footer-bottom">
-      © <span id="year"></span> Referees Sports Bar & Grill. All rights reserved.
+  </section>
+
+  <section class="section" id="menu">
+    <div class="container">
+      <div class="menu-controls">
+        <div class="tabs" role="tablist" aria-label="Menu categories" id="menuTabs"></div>
+        <div class="searchwrap">
+          <input id="menuSearch" type="search" placeholder="Search wings, burgers, fajitas…" aria-label="Search menu" autocomplete="off" />
+          <button class="btn btn-ghost btn-sm" id="clearSearch" type="button">Clear</button>
+        </div>
+      </div>
+      <div id="menuMeta" class="menu-meta"></div>
+      <div id="menuGrid" class="menu-grid"></div>
+      <div class="notice mt-32">
+        <div class="notice-icon">💡</div>
+        <div class="notice-body">
+          <strong>Prices may change without notice</strong>
+          <p>Call <a href="tel:+14232855663" data-tel style="color:var(--gold)">(423) 285-5663</a> to confirm current prices and daily specials, or to place a pickup order over the phone.</p>
+        </div>
+      </div>
+      <div class="flex-gap mt-24">
+        <a class="btn btn-primary" href="./index.html#order">Place a Pickup Order</a>
+        <a class="btn btn-outline" href="./index.html#contact">Contact &amp; Directions</a>
+      </div>
     </div>
-  </footer>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand-name">Referees</div>
+        <p>Dayton's go-to sports bar &amp; grill. Wings, burgers, fajitas, and cold drinks — plus live music and karaoke nights.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <div class="footer-links">
+          <a href="./index.html">Home</a>
+          <a href="./menu.html">Full Menu</a>
+          <a href="./events.html">Events</a>
+          <a href="./gallery.html">Gallery</a>
+          <a href="./index.html#contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Hours</div>
+        <div class="footer-links" style="font-size:.85rem">
+          <span style="color:var(--muted)">Mon: 3 PM – 9 PM</span>
+          <span style="color:var(--muted2)">Tue: Closed</span>
+          <span style="color:var(--muted)">Wed–Sat: 11 AM – 11 PM</span>
+          <span style="color:var(--muted)">Sun: 11 AM – 9 PM</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-links">
+          <a href="tel:+14232855663" data-tel>(423) 285-5663</a>
+          <a href="mailto:refereesportsbargrill@gmail.com">Email Us</a>
+          <a href="#" data-maps target="_blank" rel="noopener">200 Able Drive, Dayton TN</a>
+          <a href="#" data-fb target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; <span id="year"></span> Referees Sports Bar &amp; Grill. All rights reserved.</div>
+      <div class="footer-social">
+        <a class="social-link" href="#" data-fb target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
