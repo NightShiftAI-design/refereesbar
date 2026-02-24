@@ -640,3 +640,11 @@ input:focus, textarea:focus, select:focus{
   gap:10px;
   flex-wrap:wrap;
 }
+.card-link{
+  transition: transform .12s ease, border-color .12s ease, background .12s ease;
+}
+.card-link:hover{
+  transform: translateY(-2px);
+  border-color: rgba(255,138,31,.28);
+  background: rgba(255,255,255,.04);
+}
