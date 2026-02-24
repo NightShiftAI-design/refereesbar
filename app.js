@@ -361,4 +361,57 @@
       a.classList.add("active");
     }
   });
+
+  const track = $("#csTrack");
+  if (track) {
+    const slides = track.querySelectorAll(".cs-slide");
+    const total = slides.length;
+    if (total > 1) {
+      let current = 0;
+      let paused = false;
+      let animating = false;
+
+      function goTo(next) {
+        if (animating) return;
+        animating = true;
+        const from = current;
+        current = (next + total) % total;
+        track.style.transition = "none";
+        const clone = slides[current].cloneNode(true);
+        clone.style.position = "absolute";
+        clone.style.top = "0";
+        clone.style.left = "0";
+        clone.style.width = "100%";
+        clone.style.height = "100%";
+        clone.style.opacity = "0";
+        clone.style.transition = "opacity 1.2s ease";
+        track.parentElement.appendChild(clone);
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            clone.style.opacity = "1";
+            setTimeout(() => {
+              slides[from].style.backgroundImage = slides[current].style.backgroundImage;
+              clone.remove();
+              animating = false;
+            }, 1250);
+          });
+        });
+      }
+
+      const timer = setInterval(() => {
+        if (!paused) goTo(current + 1);
+      }, 4500);
+
+      track.parentElement.addEventListener("mouseenter", () => { paused = true; });
+      track.parentElement.addEventListener("mouseleave", () => { paused = false; });
+
+      let tx = 0, ty = 0;
+      track.parentElement.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, { passive: true });
+      track.parentElement.addEventListener("touchend", e => {
+        const dx = e.changedTouches[0].clientX - tx;
+        const dy = Math.abs(e.changedTouches[0].clientY - ty);
+        if (Math.abs(dx) > 40 && dy < 60) goTo(dx < 0 ? current + 1 : current - 1);
+      }, { passive: true });
+    }
+  }
 })();
