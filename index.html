@@ -7,11 +7,9 @@
   <meta name="description" content="Referees Sports Bar & Grill in Dayton, TN — wings, burgers, fajitas, cold drinks, live music & karaoke. Call, get directions, or order for pickup." />
   <meta name="theme-color" content="#0b0b10" />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Referees Sports Bar & Grill | Dayton, TN" />
   <meta property="og:description" content="Wings, burgers, fajitas, cold drinks, live music & karaoke. Call, directions, or order for pickup." />
   <meta property="og:type" content="website" />
-  <!-- Replace with your real URL -->
   <meta property="og:url" content="https://example.com" />
 
   <link rel="stylesheet" href="./styles.css" />
@@ -31,7 +29,6 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#">
-        <!-- Replace with real logo in /assets/logo.png -->
         <div class="logo-badge" aria-hidden="true">R</div>
         <div class="brand-text">
           <div class="brand-name">Referees</div>
@@ -77,9 +74,7 @@
             </div>
             <div class="meta-card">
               <div class="meta-title">Address</div>
-              <div class="meta-value">
-                200 Able Drive, Dayton, TN 37321
-              </div>
+              <div class="meta-value">200 Able Drive, Dayton, TN 37321</div>
             </div>
             <div class="meta-card">
               <div class="meta-title">Today</div>
@@ -89,28 +84,19 @@
         </div>
 
         <div class="hero-media">
-          <!-- Replace images in /assets. These are placeholders. -->
           <div class="media-card">
             <div class="media-top">
               <span class="media-tag">Featured</span>
-              <span class="media-tag muted" id="priceHint">$10–20</span>
+              <span class="media-tag muted">$10–20</span>
             </div>
             <div class="media-title">Try our wings + signature sauces</div>
             <div class="media-desc">Bone-in or boneless. Mild to mango habanero.</div>
 
             <div class="media-grid">
-              <div class="img ph" data-alt="Interior photo placeholder">
-                <span>Interior photo</span>
-              </div>
-              <div class="img ph" data-alt="Food photo placeholder">
-                <span>Food photo</span>
-              </div>
-              <div class="img ph" data-alt="Bar photo placeholder">
-                <span>Bar photo</span>
-              </div>
-              <div class="img ph" data-alt="Live music placeholder">
-                <span>Live music</span>
-              </div>
+              <div class="img ph"><span>Interior photo</span></div>
+              <div class="img ph"><span>Food photo</span></div>
+              <div class="img ph"><span>Bar photo</span></div>
+              <div class="img ph"><span>Live music</span></div>
             </div>
 
             <div class="media-actions">
@@ -127,7 +113,7 @@
       <div class="container split">
         <div>
           <h2>Hours</h2>
-          <p class="muted">Updated from the latest posted hours. Always call if you’re unsure on holidays.</p>
+          <p class="muted">Always call on holidays to confirm.</p>
 
           <div class="hours-card" aria-label="Business hours">
             <div class="hours-row"><span>Monday</span><span>3:00 PM – 9:00 PM</span></div>
@@ -155,77 +141,41 @@
       </div>
     </section>
 
-    <!-- Menu -->
+    <!-- MENU (Upgraded) -->
     <section id="menu" class="section section-alt">
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Menu Highlights</h2>
-            <p class="muted">Full menu available in-store. Want online ordering? We can turn it on (Square/Toast) anytime.</p>
+            <h2>Menu</h2>
+            <p class="muted">Search the menu or tap a category. Prices may change — call for the latest.</p>
           </div>
           <a class="btn btn-ghost" href="#order">Order Pickup</a>
         </div>
 
-        <div class="grid3">
-          <article class="card">
-            <h3>Wings</h3>
-            <p class="muted">Bone-in or boneless</p>
-            <ul class="menu-list">
-              <li><span>½ Dozen</span><span>$11.00</span></li>
-              <li><span>Whole Dozen</span><span>$20.00</span></li>
-            </ul>
-            <p class="small muted">Sauces: Mild, Hot, Garlic Parmesan, Honey BBQ, Sweet Red Chili, Sriracha Bourbon, Mango Habanero</p>
-          </article>
+        <div class="menu-controls">
+          <div class="tabs" role="tablist" aria-label="Menu categories" id="menuTabs">
+            <!-- Tabs injected by JS -->
+          </div>
 
-          <article class="card">
-            <h3>Burgers</h3>
-            <p class="muted">Served on brioche bun</p>
-            <ul class="menu-list">
-              <li><span>All American</span><span>$12.00</span></li>
-              <li><span>Jolene’s Burger</span><span>$12.00</span></li>
-              <li><span>Bacon Burger</span><span>$14.00</span></li>
-              <li><span>Chicken Buffalo Burger</span><span>$13.50</span></li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Apps</h3>
-            <p class="muted">Perfect for sharing</p>
-            <ul class="menu-list">
-              <li><span>Fried Pickles</span><span>$8.00</span></li>
-              <li><span>Jalapeño Poppers</span><span>$8.00</span></li>
-              <li><span>Loaded Fries</span><span>$12.00</span></li>
-              <li><span>Sampler Platter</span><span>$12.00</span></li>
-            </ul>
-          </article>
+          <div class="searchwrap">
+            <input id="menuSearch" type="search" placeholder="Search wings, burgers, fajitas…" aria-label="Search menu" />
+            <button class="btn btn-small btn-ghost" id="clearSearch" type="button">Clear</button>
+          </div>
         </div>
 
-        <div class="grid2 mt">
-          <article class="card">
-            <h3>Subs / Wraps</h3>
-            <ul class="menu-list">
-              <li><span>Philly Flyer Steak</span><span>$10.00</span></li>
-              <li><span>Clubhouse Wrap</span><span>$13.00</span></li>
-              <li><span>Referees Chicken Dog</span><span>$11.50</span></li>
-              <li><span>The Bills Wrap</span><span>$12.00</span></li>
-            </ul>
-          </article>
+        <div id="menuMeta" class="menu-meta muted small"></div>
 
-          <article class="card">
-            <h3>Fajitas</h3>
-            <ul class="menu-list">
-              <li><span>Chicken or Steak</span><span>$16.00</span></li>
-              <li><span>Hawaiian Steak</span><span>$18.00</span></li>
-              <li><span>Shrimp</span><span>$17.00</span></li>
-              <li><span>Tex (Chicken/Steak/Shrimp)</span><span>$18.00</span></li>
-            </ul>
-            <p class="small muted">Ask staff about today’s specials & sauces.</p>
-          </article>
+        <div id="menuGrid" class="menu-grid">
+          <!-- Menu sections injected by JS -->
         </div>
 
-        <p class="tiny muted mt">
-          Prices shown are from photographed menus and may change. For the latest pricing, call the restaurant.
-        </p>
+        <div class="notice mt">
+          <div class="notice-icon" aria-hidden="true">ℹ️</div>
+          <div>
+            <strong>Online ordering is coming.</strong>
+            <div class="muted small">For now, send a pickup request below or call to place an order.</div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -235,7 +185,7 @@
         <div class="section-head">
           <div>
             <h2>Events & Specials</h2>
-            <p class="muted">Live music, karaoke, and weekly specials. Follow Facebook for the latest announcements.</p>
+            <p class="muted">Live music, karaoke, and weekly specials. Follow Facebook for the latest.</p>
           </div>
           <a class="btn btn-ghost" id="facebookLinkTop" href="#" target="_blank" rel="noopener">Facebook</a>
         </div>
@@ -259,14 +209,6 @@
             <p class="small">Check Facebook for dates.</p>
           </article>
         </div>
-
-        <div class="notice mt">
-          <div class="notice-icon" aria-hidden="true">ℹ️</div>
-          <div>
-            <strong>Want “Tonight at Referees” on the website?</strong>
-            <div class="muted small">We can add a simple admin section so the owner can update events without touching code.</div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -276,7 +218,7 @@
         <div class="section-head">
           <div>
             <h2>Photos</h2>
-            <p class="muted">Replace these placeholders with real photos from Facebook or new shots.</p>
+            <p class="muted">Replace placeholders with real photos from Facebook or new shots.</p>
           </div>
         </div>
 
@@ -286,7 +228,7 @@
           <div class="img ph"><span>Burgers</span></div>
           <div class="img ph"><span>Live Music</span></div>
           <div class="img ph"><span>Drinks</span></div>
-          <div class="img ph"><span>Menu Board</span></div>
+          <div class="img ph"><span>Menu</span></div>
         </div>
       </div>
     </section>
@@ -295,10 +237,8 @@
     <section id="order" class="section">
       <div class="container split">
         <div>
-          <h2>Order Pickup (MVP)</h2>
-          <p class="muted">
-            Since online ordering isn’t set up yet, this form can send a quick request by email (or you can switch it to Square/Toast later).
-          </p>
+          <h2>Order Pickup (Request)</h2>
+          <p class="muted">Until online ordering is enabled, this sends a quick order request email to confirm by phone.</p>
 
           <form class="form" id="orderForm">
             <div class="field-row">
@@ -338,7 +278,7 @@
             </div>
 
             <button class="btn btn-primary" type="submit">Send Order Request</button>
-            <p class="tiny muted">This does not charge the customer. It’s a request message to confirm by phone.</p>
+            <p class="tiny muted">This does not charge the customer — it’s a request to confirm by phone.</p>
           </form>
 
           <div class="success" id="orderSuccess" hidden>
