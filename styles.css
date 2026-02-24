@@ -630,3 +630,13 @@ input:focus, textarea:focus, select:focus{
   .searchwrap{justify-content:flex-start; width:100%;}
   #menuSearch{width:100%;}
 }
+.page-title{
+  margin:0 0 6px;
+  font-size: clamp(1.9rem, 3.2vw, 2.4rem);
+  line-height:1.1;
+}
+.page-actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
