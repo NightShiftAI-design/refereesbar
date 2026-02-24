@@ -167,7 +167,7 @@
   <!-- PAGE HERO -->
   <section class="page-hero" style="position:relative;overflow:hidden;">
     <div style="position:absolute;inset:0;z-index:0;">
-      <img src="./event-crowd-1.jpg" alt="" aria-hidden="true" style="width:100%;height:100%;object-fit:cover;opacity:.15;" />
+      <img src="./assets/photos/event-crowd-1.jpg" alt="" aria-hidden="true" style="width:100%;height:100%;object-fit:cover;opacity:.15;" />
       <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(14,14,14,.98) 50%,rgba(14,14,14,.7));"></div>
     </div>
     <div class="container" style="position:relative;z-index:1;">
@@ -473,11 +473,12 @@
         <a class="social-link" href="#" data-fb target="_blank" rel="noopener" aria-label="Facebook">
           <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
         </a>
-      </div>
+        <a class="footer-credit" href="https://www.gshyamvp.com" target="_blank" rel="noopener">Website by GVP</a>
     </div>
   </div>
 </footer>
 
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script>
   const form = document.getElementById('cateringForm');
   const success = document.getElementById('cateringSuccess');
@@ -492,11 +493,9 @@
       const guests = String(fd.get('guests') || '').trim();
       const type = String(fd.get('type') || '').trim();
       const details = String(fd.get('details') || '').trim();
-      const subject = encodeURIComponent(`Event Inquiry – ${name}${date ? ' – ' + date : ''}`);
-      const body = encodeURIComponent(
-        `Name: ${name}\nPhone: ${phone}${email ? '\nEmail: ' + email : ''}\n\nEvent Date: ${date || 'TBD'}\nGuest Count: ${guests || 'TBD'}\nEvent Type: ${type || 'TBD'}\n\nDetails:\n${details}`
-      );
-      window.location.href = `mailto:refereesportsbargrill@gmail.com?subject=${subject}&body=${body}`;
+      const subject = encodeURIComponent('Event Inquiry – ' + name + (date ? ' – ' + date : ''));
+      const body = encodeURIComponent('Name: ' + name + '\nPhone: ' + phone + (email ? '\nEmail: ' + email : '') + '\n\nEvent Date: ' + (date || 'TBD') + '\nGuest Count: ' + (guests || 'TBD') + '\nEvent Type: ' + (type || 'TBD') + '\n\nDetails:\n' + details);
+      window.location.href = 'mailto:refereesportsbargrill@gmail.com?subject=' + subject + '&body=' + body;
       form.reset();
       form.style.display = 'none';
       if (success) { success.hidden = false; success.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
