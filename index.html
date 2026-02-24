@@ -1,393 +1,483 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <link rel="icon" href="/favicon(2).ico">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Referees Sports Bar & Grill | Dayton, TN</title>
-  <meta name="description" content="Referees Sports Bar & Grill in Dayton, TN — wings, burgers, fajitas, cold drinks, live music & karaoke. Call, get directions, or order for pickup." />
-  <meta name="theme-color" content="#0b0b10" />
-
-  <meta property="og:title" content="Referees Sports Bar & Grill | Dayton, TN" />
-  <meta property="og:description" content="Wings, burgers, fajitas, cold drinks, live music & karaoke. Call, directions, or order for pickup." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Referees Sports Bar &amp; Grill | Dayton, TN</title>
+  <meta name="description" content="Referees Sports Bar &amp; Grill — Dayton's home for wings, burgers, fajitas, cold drinks, live music &amp; karaoke at 200 Able Drive. Call (423) 285-5663." />
+  <meta name="theme-color" content="#080808" />
+  <meta property="og:title" content="Referees Sports Bar &amp; Grill | Dayton, TN" />
+  <meta property="og:description" content="Dayton's go-to spot for games, wings, burgers, and a good time. Call (423) 285-5663." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://example.com" />
-
+  <meta property="og:url" content="https://referees-dayton.com/" />
+  <link rel="icon" href="./favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
   <link rel="stylesheet" href="./styles.css" />
   <script defer src="./app.js"></script>
 </head>
-
 <body>
-  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- Sticky mobile action bar -->
-  <div class="actionbar" role="navigation" aria-label="Quick actions">
-    <a class="ab-btn" id="abCall" href="#">Call</a>
-    <a class="ab-btn" id="abDirections" href="#" target="_blank" rel="noopener">Directions</a>
-    <a class="ab-btn ab-btn--primary" href="#order">Order</a>
-  </div>
+<a class="skip" href="#main">Skip to main content</a>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="./index.html">
-  <img 
-    src="./referees-logo.png" 
-    alt="Referees Sports Bar and Grill logo" 
-    class="site-logo"
-  />
-  <div class="brand-text">
-    <div class="brand-name">Referees</div>
-    <div class="brand-sub">Sports Bar & Grill • Dayton, TN</div>
-  </div>
-</a>
+<div class="actionbar" role="navigation" aria-label="Quick actions">
+  <a class="ab-btn" href="tel:+14232855663" data-tel>Call</a>
+  <a class="ab-btn" href="#" data-maps target="_blank" rel="noopener">Directions</a>
+  <a class="ab-btn ab-btn--gold" href="#order">Order Pickup</a>
+</div>
 
-     <nav class="nav">
-        <a href="./menu.html">Menu</a>
-        <a href="./events.html">Events</a>
-        <a href="./gallery.html">Photos</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="header-cta">
-        <a class="btn btn-ghost" id="topDirections" href="#" target="_blank" rel="noopener">Directions</a>
-        <a class="btn btn-primary" href="#order">Order Pickup</a>
-      </div>
-    </div>
-  </header>
-
-  <main id="main">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="pill">Wings • Burgers • Fajitas • Cold Drinks</p>
-          <h1>Dayton’s go-to spot for games, food, and a good time.</h1>
-          <p class="lead">
-            Big TVs, casual atmosphere, friendly service — plus live music and karaoke nights.
-            Come hungry.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" id="heroCall" href="#">Call Now</a>
-            <a class="btn btn-ghost" href="#menu">View Menu</a>
-          </div>
-
-          <div class="hero-meta">
-            <div class="meta-card">
-              <div class="meta-title">Phone</div>
-              <a id="phoneLink" class="meta-value" href="#">(423) 285-5663</a>
-            </div>
-            <div class="meta-card">
-              <div class="meta-title">Address</div>
-              <div class="meta-value">200 Able Drive, Dayton, TN 37321</div>
-            </div>
-            <div class="meta-card">
-              <div class="meta-title">Today</div>
-              <div id="openStatus" class="meta-value">Checking hours…</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-media">
-          <div class="media-card">
-            <div class="media-top">
-              <span class="media-tag">Featured</span>
-              <span class="media-tag muted">$10–20</span>
-            </div>
-            <div class="media-title">Try our wings + signature sauces</div>
-            <div class="media-desc">Bone-in or boneless. Mild to mango habanero.</div>
-
-            <div class="media-grid">
-              <div class="img ph"><span>Interior photo</span></div>
-              <div class="img ph"><span>Food photo</span></div>
-              <div class="img ph"><span>Bar photo</span></div>
-              <div class="img ph"><span>Live music</span></div>
-            </div>
-
-            <div class="media-actions">
-              <a class="btn btn-small btn-ghost" href="#events">See Events</a>
-              <a class="btn btn-small btn-primary" href="#order">Order Pickup</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Hours -->
-    <section class="section">
-      <div class="container split">
-        <div>
-          <h2>Hours</h2>
-          <p class="muted">Always call on holidays to confirm.</p>
-
-          <div class="hours-card" aria-label="Business hours">
-            <div class="hours-row"><span>Monday</span><span>3:00 PM – 9:00 PM</span></div>
-            <div class="hours-row"><span>Tuesday</span><span>Closed</span></div>
-            <div class="hours-row"><span>Wednesday</span><span>11:00 AM – 11:00 PM</span></div>
-            <div class="hours-row"><span>Thursday</span><span>11:00 AM – 11:00 PM</span></div>
-            <div class="hours-row"><span>Friday</span><span>11:00 AM – 11:00 PM</span></div>
-            <div class="hours-row"><span>Saturday</span><span>11:00 AM – 11:00 PM</span></div>
-            <div class="hours-row"><span>Sunday</span><span>11:00 AM – 9:00 PM</span></div>
-          </div>
-        </div>
-
-        <div class="callout">
-          <h3>Game day? We’ve got you.</h3>
-          <ul class="checklist">
-            <li>Multiple TVs for live sports</li>
-            <li>Classic bar food + weekly specials</li>
-            <li>Casual, energetic atmosphere</li>
-          </ul>
-          <div class="callout-actions">
-            <a class="btn btn-primary" id="midCall" href="#">Call</a>
-            <a class="btn btn-ghost" id="midDirections" href="#" target="_blank" rel="noopener">Directions</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MENU (Upgraded) -->
-    <section id="menu" class="section section-alt">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Menu</h2>
-            <p class="muted">Search the menu or tap a category. Prices may change — call for the latest.</p>
-          </div>
-          <a class="btn btn-ghost" href="#order">Order Pickup</a>
-        </div>
-
-        <div class="menu-controls">
-          <div class="tabs" role="tablist" aria-label="Menu categories" id="menuTabs">
-            <!-- Tabs injected by JS -->
-          </div>
-
-          <div class="searchwrap">
-            <input id="menuSearch" type="search" placeholder="Search wings, burgers, fajitas…" aria-label="Search menu" />
-            <button class="btn btn-small btn-ghost" id="clearSearch" type="button">Clear</button>
-          </div>
-        </div>
-
-        <div id="menuMeta" class="menu-meta muted small"></div>
-
-        <div id="menuGrid" class="menu-grid">
-          <!-- Menu sections injected by JS -->
-        </div>
-
-        <div class="notice mt">
-          <div class="notice-icon" aria-hidden="true">ℹ️</div>
-          <div>
-            <strong>Online ordering is coming.</strong>
-            <div class="muted small">For now, send a pickup request below or call to place an order.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Events -->
-    <section id="events" class="section">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Events & Specials</h2>
-            <p class="muted">Live music, karaoke, and weekly specials. Follow Facebook for the latest.</p>
-          </div>
-          <a class="btn btn-ghost" id="facebookLinkTop" href="#" target="_blank" rel="noopener">Facebook</a>
-        </div>
-
-        <div class="grid3">
-          <article class="card">
-            <h3>Wing Wednesday</h3>
-            <p class="muted">Midweek wings + game night energy.</p>
-            <p class="small">Ask about the special when you arrive.</p>
-          </article>
-
-          <article class="card">
-            <h3>Karaoke Nights</h3>
-            <p class="muted">Bring your crew. Pick your song.</p>
-            <p class="small">Schedule posted on Facebook.</p>
-          </article>
-
-          <article class="card">
-            <h3>Live Music</h3>
-            <p class="muted">Local talent + good vibes.</p>
-            <p class="small">Check Facebook for dates.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery -->
-    <section id="gallery" class="section section-alt">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Photos</h2>
-            <p class="muted">Replace placeholders with real photos from Facebook or new shots.</p>
-          </div>
-        </div>
-
-        <div class="gallery">
-          <div class="img ph"><span>Interior</span></div>
-          <div class="img ph"><span>Wings</span></div>
-          <div class="img ph"><span>Burgers</span></div>
-          <div class="img ph"><span>Live Music</span></div>
-          <div class="img ph"><span>Drinks</span></div>
-          <div class="img ph"><span>Menu</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Order -->
-    <section id="order" class="section">
-      <div class="container split">
-        <div>
-          <h2>Order Pickup (Request)</h2>
-          <p class="muted">Until online ordering is enabled, this sends a quick order request email to confirm by phone.</p>
-
-          <form class="form" id="orderForm">
-            <div class="field-row">
-              <label>
-                Name
-                <input name="name" required placeholder="Your name" />
-              </label>
-              <label>
-                Phone
-                <input name="phone" required placeholder="(###) ###-####" />
-              </label>
-            </div>
-
-            <label>
-              Pickup time
-              <input name="pickup" required placeholder="ASAP / 6:30 PM / etc." />
-            </label>
-
-            <label>
-              Order details
-              <textarea name="details" required placeholder="Example: 1 dozen wings (mango habanero), 1 bacon burger, 1 side waffle fries..."></textarea>
-            </label>
-
-            <div class="field-row">
-              <label>
-                Notes (optional)
-                <input name="notes" placeholder="No onions, extra sauce, etc." />
-              </label>
-              <label>
-                Preferred contact
-                <select name="contactPref">
-                  <option value="call">Call me</option>
-                  <option value="text">Text me</option>
-                  <option value="email">Email me</option>
-                </select>
-              </label>
-            </div>
-
-            <button class="btn btn-primary" type="submit">Send Order Request</button>
-            <p class="tiny muted">This does not charge the customer — it’s a request to confirm by phone.</p>
-          </form>
-
-          <div class="success" id="orderSuccess" hidden>
-            <strong>Sent!</strong>
-            <div class="muted small">If you don’t hear back quickly, call the restaurant to confirm your order.</div>
-            <div class="mt">
-              <a class="btn btn-ghost" id="successCall" href="#">Call Referees</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="callout">
-          <h3>Want real online ordering + payments?</h3>
-          <p class="muted">
-            We can enable full ordering with pickup times, receipts, and payment processing using Square (fastest) or Toast (restaurant-grade).
-          </p>
-
-          <div class="stack">
-            <div class="mini">
-              <div class="mini-title">Fastest setup</div>
-              <div class="mini-value">Square Online Ordering</div>
-            </div>
-            <div class="mini">
-              <div class="mini-title">Restaurant platform</div>
-              <div class="mini-value">Toast (if they want full POS)</div>
-            </div>
-            <div class="mini">
-              <div class="mini-title">Custom option</div>
-              <div class="mini-value">Website cart + Stripe</div>
-            </div>
-          </div>
-
-          <div class="callout-actions">
-            <a class="btn btn-primary" href="#contact">Get It Set Up</a>
-            <a class="btn btn-ghost" id="calloutCall" href="#">Call</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section section-alt">
-      <div class="container split">
-        <div>
-          <h2>Contact</h2>
-          <p class="muted">Call for reservations, orders, and event questions.</p>
-
-          <div class="contact-cards">
-            <div class="contact-card">
-              <div class="contact-label">Phone</div>
-              <a id="contactPhone" class="contact-value" href="#">(423) 285-5663</a>
-            </div>
-            <div class="contact-card">
-              <div class="contact-label">Email</div>
-              <a class="contact-value" href="mailto:refereesportsbargrill@gmail.com">refereesportsbargrill@gmail.com</a>
-            </div>
-            <div class="contact-card">
-              <div class="contact-label">Address</div>
-              <div class="contact-value">200 Able Drive, Dayton, TN 37321</div>
-            </div>
-          </div>
-
-          <div class="mt">
-            <a class="btn btn-primary" id="contactDirections" href="#" target="_blank" rel="noopener">Get Directions</a>
-            <a class="btn btn-ghost" id="facebookLinkBottom" href="#" target="_blank" rel="noopener">Facebook</a>
-          </div>
-        </div>
-
-        <div class="map-card" aria-label="Map">
-          <div class="map-head">
-            <div>
-              <div class="map-title">Find us</div>
-              <div class="muted small">Tap for Google Maps</div>
-            </div>
-            <a class="btn btn-small btn-ghost" id="mapDirections" href="#" target="_blank" rel="noopener">Open Maps</a>
-          </div>
-          <a class="map-embed" id="mapEmbedLink" href="#" target="_blank" rel="noopener" aria-label="Open map">
-            <div class="img ph"><span>Map preview</span></div>
-          </a>
-          <p class="tiny muted">Tip: add a real Google Maps embed iframe once you have the official listing link.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="./index.html">
+      <img src="./referees-logo.png" alt="Referees Sports Bar and Grill" class="site-logo" />
+      <div class="brand-text">
         <div class="brand-name">Referees</div>
-        <div class="muted small">Sports Bar & Grill • Dayton, Tennessee</div>
+        <div class="brand-sub">Sports Bar &amp; Grill · Dayton, TN</div>
       </div>
-      <div class="footer-right">
-        <a href="#menu">Menu</a>
-        <a href="#events">Events</a>
-        <a href="#order">Order</a>
-        <a href="#contact">Contact</a>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="./index.html">Home</a>
+      <a href="./menu.html">Menu</a>
+      <a href="./events.html">Events</a>
+      <a href="./gallery.html">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-outline btn-sm" href="tel:+14232855663" data-tel>Call Now</a>
+      <a class="btn btn-primary btn-sm" href="#order">Order Pickup</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Welcome">
+    <div class="hero-bg">
+      <img src="./assets/photos/hero-bg.jpg" alt="" aria-hidden="true" />
+    </div>
+    <div class="hero-content">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="hero-eyebrow">
+              <div class="eyebrow-line"></div>
+              <span class="eyebrow-text">Dayton, Tennessee</span>
+            </div>
+            <h1>Dayton's <em>Favorite</em> Sports Bar</h1>
+            <p class="hero-lead">Wings, burgers, sizzling fajitas, and cold drinks. Big screens for every game. Live music &amp; karaoke nights. Come hungry, stay for the game.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary btn-lg" href="#order">Place a Pickup Order</a>
+              <a class="btn btn-outline btn-lg" href="tel:+14232855663" data-tel>Call Now</a>
+            </div>
+            <div class="hero-stats" role="group" aria-label="Quick info">
+              <div class="stat-item">
+                <div class="stat-label">Today's Status</div>
+                <div class="open-status stat-value">Checking hours…</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">Phone</div>
+                <div class="stat-value"><a href="tel:+14232855663" data-tel>(423) 285-5663</a></div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">Address</div>
+                <div class="stat-value"><a href="#" data-maps target="_blank" rel="noopener">200 Able Dr, Dayton TN</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-media" aria-hidden="true">
+            <div class="hero-img-main">
+              <img src="./assets/photos/hero-food.jpg" alt="Signature wings at Referees" />
+            </div>
+            <div class="hero-img-grid">
+              <div class="hero-img-sm">
+                <img src="./assets/photos/hero-bar.jpg" alt="Bar at Referees" />
+              </div>
+              <div class="hero-img-sm">
+                <img src="./assets/photos/hero-interior.jpg" alt="Interior of Referees" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="container tiny muted footer-bottom">
-      © <span id="year"></span> Referees Sports Bar & Grill. All rights reserved.
+  </section>
+
+  <!-- FEATURE STRIP -->
+  <div class="feature-strip" aria-label="Highlights" role="region">
+    <div class="container">
+      <div class="strip-inner">
+        <div class="strip-item">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#080808" stroke-width="2.5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 5v5l3 3-1.5 1.5L10 14V7h2z"/></svg>
+          <span>Wings · Bone-In or Boneless</span>
+        </div>
+        <div class="strip-item">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#080808" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+          <span>8 Wet Sauces · 4 Dry Rubs</span>
+        </div>
+        <div class="strip-item">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#080808" stroke-width="2.5"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+          <span>Sizzling Fajitas</span>
+        </div>
+        <div class="strip-item">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#080808" stroke-width="2.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          <span>Live Music &amp; Karaoke</span>
+        </div>
+        <div class="strip-item">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#080808" stroke-width="2.5"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+          <span>Multiple Big Screens</span>
+        </div>
+        <div class="strip-item">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#080808" stroke-width="2.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg>
+          <span>Group-Friendly Seating</span>
+        </div>
+        <div class="strip-item">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#080808" stroke-width="2.5"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg>
+          <span>16 oz Cowboy Rib-Eye</span>
+        </div>
+      </div>
     </div>
-  </footer>
+  </div>
+
+  <!-- HOURS -->
+  <section class="section section-alt" id="hours">
+    <div class="container">
+      <div class="hours-section">
+        <div>
+          <div class="section-label"><div class="line"></div><span>We're Open</span></div>
+          <h2>Hours</h2>
+          <p class="section-lead mt-12">Always call on holidays to confirm. Walk-ins welcome — no reservations needed for most parties.</p>
+          <div class="hours-table mt-24" role="table" aria-label="Business hours">
+            <div class="hours-row" id="hours-mon" role="row"><span class="hours-day">Monday</span><span class="hours-time">3:00 PM – 9:00 PM</span></div>
+            <div class="hours-row" id="hours-tue" role="row"><span class="hours-day">Tuesday</span><span class="hours-time hours-closed">Closed</span></div>
+            <div class="hours-row" id="hours-wed" role="row"><span class="hours-day">Wednesday</span><span class="hours-time">11:00 AM – 11:00 PM</span></div>
+            <div class="hours-row" id="hours-thu" role="row"><span class="hours-day">Thursday</span><span class="hours-time">11:00 AM – 11:00 PM</span></div>
+            <div class="hours-row" id="hours-fri" role="row"><span class="hours-day">Friday</span><span class="hours-time">11:00 AM – 11:00 PM</span></div>
+            <div class="hours-row" id="hours-sat" role="row"><span class="hours-day">Saturday</span><span class="hours-time">11:00 AM – 11:00 PM</span></div>
+            <div class="hours-row" id="hours-sun" role="row"><span class="hours-day">Sunday</span><span class="hours-time">11:00 AM – 9:00 PM</span></div>
+          </div>
+        </div>
+        <div class="hours-callout">
+          <h3>Game Day? We've Got You.</h3>
+          <p class="text-muted text-small">Big games, big screens, cold beer, and bar food that actually delivers. Whether it's college ball, UFC, or the NFL — we'll have it on.</p>
+          <div class="callout-features">
+            <div class="cf-item"><div class="cf-dot"></div><span>Multiple TVs covering every matchup</span></div>
+            <div class="cf-item"><div class="cf-dot"></div><span>Classic bar food + weekly specials</span></div>
+            <div class="cf-item"><div class="cf-dot"></div><span>Wing Wednesday every week</span></div>
+            <div class="cf-item"><div class="cf-dot"></div><span>Karaoke &amp; live music nights</span></div>
+            <div class="cf-item"><div class="cf-dot"></div><span>Friendly, attentive staff</span></div>
+          </div>
+          <div class="callout-actions">
+            <a class="btn btn-primary" href="tel:+14232855663" data-tel>Call Now</a>
+            <a class="btn btn-outline" href="#" data-maps target="_blank" rel="noopener">Get Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU PREVIEW -->
+  <section class="section" id="menu">
+    <div class="container">
+      <div class="section-intro">
+        <div>
+          <div class="section-label"><div class="line"></div><span>What We're Serving</span></div>
+          <h2>The Menu</h2>
+          <p class="section-lead">Search or browse every category. Prices may vary — call us to confirm.</p>
+        </div>
+        <div class="flex-gap">
+          <a class="btn btn-outline" href="./menu.html">Full Menu Page</a>
+          <a class="btn btn-primary" href="#order">Order Pickup</a>
+        </div>
+      </div>
+
+      <div class="menu-controls">
+        <div class="tabs" role="tablist" aria-label="Menu categories" id="menuTabs"></div>
+        <div class="searchwrap">
+          <input id="menuSearch" type="search" placeholder="Search wings, burgers, fajitas…" aria-label="Search menu" autocomplete="off" />
+          <button class="btn btn-ghost btn-sm" id="clearSearch" type="button">Clear</button>
+        </div>
+      </div>
+
+      <div id="menuMeta" class="menu-meta"></div>
+      <div id="menuGrid" class="menu-grid"></div>
+
+      <div class="notice mt-24">
+        <div class="notice-icon">💡</div>
+        <div class="notice-body">
+          <strong>Prices may change</strong>
+          <p>Call us at <a href="tel:+14232855663" data-tel style="color:var(--gold)">(423) 285-5663</a> to confirm current prices and daily specials before ordering.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="section section-alt" id="events">
+    <div class="container">
+      <div class="section-intro">
+        <div>
+          <div class="section-label"><div class="line"></div><span>What's On</span></div>
+          <h2>Events &amp; Specials</h2>
+          <p class="section-lead">Live music, karaoke, and weekly specials every week. Follow us on Facebook for up-to-date schedules.</p>
+        </div>
+        <a class="btn btn-outline" href="#" data-fb target="_blank" rel="noopener">Facebook Updates</a>
+      </div>
+
+      <div class="events-grid">
+        <article class="event-card">
+          <div class="event-day">Wed</div>
+          <div class="event-title">Wing Wednesday</div>
+          <p class="event-desc">Midweek wings special. Ask your server about that week's deal. Great for groups — come hungry.</p>
+        </article>
+        <article class="event-card">
+          <div class="event-day">Thu</div>
+          <div class="event-title">Karaoke Night</div>
+          <p class="event-desc">Bring your crew and pick your song. Times vary — check Facebook for this week's schedule.</p>
+        </article>
+        <article class="event-card">
+          <div class="event-day">Fri</div>
+          <div class="event-title">Live Music</div>
+          <p class="event-desc">Local talent, good vibes, and cold drinks. Band &amp; DJ schedule posted on Facebook — come early for good seats.</p>
+        </article>
+        <article class="event-card">
+          <div class="event-day">Sat</div>
+          <div class="event-title">Big Games + Late Crowd</div>
+          <p class="event-desc">College ball, UFC, NFL — we've got it on every screen. Ask about drink specials for the game.</p>
+        </article>
+      </div>
+
+      <div class="specials-row">
+        <div class="special-card">
+          <div class="special-tag">Group Events</div>
+          <div class="special-title">Host a Party</div>
+          <p class="special-desc">Birthdays, team watch parties, celebrations — call us to reserve space and ask about group orders.</p>
+        </div>
+        <div class="special-card">
+          <div class="special-tag">Kid-Friendly</div>
+          <div class="special-title">Family Welcome</div>
+          <p class="special-desc">Dedicated kids' menu for ages 12 &amp; under. Fried pickles and buttered noodles always a hit.</p>
+        </div>
+        <div class="special-card">
+          <div class="special-tag">Every Season</div>
+          <div class="special-title">Sports Central</div>
+          <p class="special-desc">Multiple big-screen TVs covering NFL, college ball, UFC, NASCAR, and more. The full game day experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER PICKUP -->
+  <section class="section" id="order">
+    <div class="container">
+      <div class="order-section">
+        <div class="order-intro">
+          <div class="section-label"><div class="line"></div><span>Pickup Orders</span></div>
+          <h2>Place a Pickup Order</h2>
+          <p>Send us your order and we'll call you back to confirm everything and set your pickup time. Payment is collected when you arrive — no online payment required.</p>
+          <div class="how-it-works mt-24">
+            <div class="hiw-step">
+              <div class="hiw-num">01</div>
+              <div class="hiw-text">
+                <strong>Fill out the form</strong>
+                <span>Name, phone, and what you'd like to order.</span>
+              </div>
+            </div>
+            <div class="hiw-step">
+              <div class="hiw-num">02</div>
+              <div class="hiw-text">
+                <strong>We call you back</strong>
+                <span>We'll confirm your order and give you a pickup time.</span>
+              </div>
+            </div>
+            <div class="hiw-step">
+              <div class="hiw-num">03</div>
+              <div class="hiw-text">
+                <strong>Pick up &amp; pay</strong>
+                <span>Payment is collected in person when you arrive. Cash or card accepted.</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex-gap mt-24">
+            <a class="btn btn-outline" href="./menu.html">Browse Full Menu</a>
+            <a class="btn btn-ghost" href="tel:+14232855663" data-tel>Or Just Call Us</a>
+          </div>
+        </div>
+
+        <div>
+          <div id="orderFormWrap">
+            <form class="order-form" id="orderForm" novalidate>
+              <div class="form-title">Your Order</div>
+              <p class="form-note">We'll call to confirm. No payment until pickup.</p>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="fname">Your Name</label>
+                  <input id="fname" name="name" required placeholder="First &amp; last name" autocomplete="name" />
+                </div>
+                <div class="form-field">
+                  <label for="fphone">Phone Number</label>
+                  <input id="fphone" name="phone" required type="tel" placeholder="(423) 555-0000" autocomplete="tel" />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="forder">Order Summary</label>
+                <textarea id="forder" name="order" required placeholder="e.g. 1 dozen wings (mango habanero), 1 bacon burger with waffle fries, 1 chicken caesar…"></textarea>
+              </div>
+
+              <div class="form-field">
+                <label for="fpickup">Preferred Pickup Time <span style="opacity:.6;font-size:.8em">(optional)</span></label>
+                <input id="fpickup" name="pickup" placeholder="e.g. 6:30 PM, ASAP, etc." />
+              </div>
+
+              <div class="form-field">
+                <label for="fnotes">Notes / Allergies <span style="opacity:.6;font-size:.8em">(optional)</span></label>
+                <input id="fnotes" name="notes" placeholder="No onions, extra sauce, food allergy, etc." />
+              </div>
+
+              <div class="payment-notice">
+                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="flex-shrink:0;margin-top:2px;color:var(--gold)"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <p><strong>Payment upon pickup only.</strong> No credit card info required here. We'll call you to confirm your order and pickup time.</p>
+              </div>
+
+              <button class="btn btn-primary form-submit" type="submit">Send Order Request</button>
+            </form>
+          </div>
+
+          <div class="order-success" id="orderSuccess" hidden>
+            <h3>Order Sent!</h3>
+            <p>We'll call you back shortly to confirm your order and let you know when it'll be ready. Payment is due when you pick up.</p>
+            <div class="flex-gap">
+              <a class="btn btn-primary" href="tel:+14232855663" data-tel>Call to Confirm Faster</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-label"><div class="line"></div><span>Find Us</span></div>
+      <h2>Contact &amp; Location</h2>
+      <div class="contact-grid mt-32">
+        <div>
+          <div class="contact-cards">
+            <a class="contact-card" href="tel:+14232855663" data-tel>
+              <div class="cc-icon" aria-hidden="true">
+                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </div>
+              <div>
+                <div class="cc-label">Phone</div>
+                <div class="cc-value">(423) 285-5663</div>
+              </div>
+            </a>
+            <a class="contact-card" href="mailto:refereesportsbargrill@gmail.com">
+              <div class="cc-icon" aria-hidden="true">
+                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div>
+                <div class="cc-label">Email</div>
+                <div class="cc-value">refereesportsbargrill@gmail.com</div>
+              </div>
+            </a>
+            <a class="contact-card" href="#" data-maps target="_blank" rel="noopener">
+              <div class="cc-icon" aria-hidden="true">
+                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <div class="cc-label">Address</div>
+                <div class="cc-value">200 Able Drive Suite 7, Dayton, TN 37321</div>
+              </div>
+            </a>
+            <a class="contact-card" href="#" data-fb target="_blank" rel="noopener">
+              <div class="cc-icon" aria-hidden="true">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </div>
+              <div>
+                <div class="cc-label">Facebook</div>
+                <div class="cc-value">@refereesdayton</div>
+              </div>
+            </a>
+          </div>
+          <div class="flex-gap">
+            <a class="btn btn-primary" href="tel:+14232855663" data-tel>Call Now</a>
+            <a class="btn btn-outline" href="#" data-maps target="_blank" rel="noopener">Get Directions</a>
+          </div>
+        </div>
+
+        <div class="map-wrap">
+          <iframe
+            title="Referees Sports Bar and Grill location map"
+            src="https://maps.google.com/maps?q=Referees+Sports+Bar+and+Grill+200+Able+Drive+Dayton+TN+37321&output=embed"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            aria-label="Map showing Referees Sports Bar and Grill at 200 Able Drive, Dayton TN">
+          </iframe>
+          <div class="map-footer">
+            <span class="map-address">200 Able Drive Suite 7, Dayton, TN 37321</span>
+            <a class="btn btn-ghost btn-sm" href="#" data-maps target="_blank" rel="noopener">Open Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand-name">Referees</div>
+        <p>Dayton's go-to sports bar &amp; grill. Wings, burgers, fajitas, and cold drinks — plus live music and karaoke nights.</p>
+        <div class="flex-gap mt-16">
+          <a class="btn btn-primary btn-sm" href="#order">Order Pickup</a>
+          <a class="btn btn-outline btn-sm" href="tel:+14232855663" data-tel>Call</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <div class="footer-links">
+          <a href="./index.html">Home</a>
+          <a href="./menu.html">Full Menu</a>
+          <a href="./events.html">Events</a>
+          <a href="./gallery.html">Gallery</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Hours</div>
+        <div class="footer-links" style="font-size:.85rem">
+          <span style="color:var(--muted)">Mon: 3 PM – 9 PM</span>
+          <span style="color:var(--muted2)">Tue: Closed</span>
+          <span style="color:var(--muted)">Wed–Sat: 11 AM – 11 PM</span>
+          <span style="color:var(--muted)">Sun: 11 AM – 9 PM</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-links">
+          <a href="tel:+14232855663" data-tel>(423) 285-5663</a>
+          <a href="mailto:refereesportsbargrill@gmail.com">Email Us</a>
+          <a href="#" data-maps target="_blank" rel="noopener">200 Able Drive, Dayton TN</a>
+          <a href="#" data-fb target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; <span id="year"></span> Referees Sports Bar &amp; Grill. All rights reserved.</div>
+      <div class="footer-social">
+        <a class="social-link" href="#" data-fb target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
