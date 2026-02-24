@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Photos | Referees Sports Bar & Grill | Dayton, TN</title>
+  <meta name="description" content="Browse photos from Referees Sports Bar & Grill in Dayton, TN — food, drinks, interior, and events." />
+  <meta name="theme-color" content="#0b0b10" />
+
+  <meta property="og:title" content="Photos | Referees Sports Bar & Grill" />
+  <meta property="og:description" content="Food, drinks, interior, and events photos." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="./styles.css" />
+  <script defer src="./app.js"></script>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Sticky mobile action bar -->
+  <div class="actionbar" role="navigation" aria-label="Quick actions">
+    <a class="ab-btn" id="abCall" href="#">Call</a>
+    <a class="ab-btn" id="abDirections" href="#" target="_blank" rel="noopener">Directions</a>
+    <a class="ab-btn ab-btn--primary" href="#photos">Photos</a>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html">
+        <div class="logo-badge" aria-hidden="true">R</div>
+        <div class="brand-text">
+          <div class="brand-name">Referees</div>
+          <div class="brand-sub">Sports Bar & Grill • Dayton, TN</div>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="./menu.html">Menu</a>
+        <a href="./events.html">Events</a>
+        <a href="./index.html#contact">Contact</a>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn btn-ghost" href="./index.html#contact">Contact</a>
+        <a class="btn btn-primary" href="./index.html#order">Order Pickup</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="pill">Food • Drinks • Interior • Events</p>
+          <h1>Photo Gallery</h1>
+          <p class="lead">
+            A quick look at the vibe. Replace these placeholders with real photos (or I can wire this to pull from Facebook later).
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#photos">View Photos</a>
+            <a class="btn btn-ghost" id="facebookLinkTop" href="#" target="_blank" rel="noopener">More on Facebook</a>
+          </div>
+
+          <div class="hero-meta">
+            <div class="meta-card">
+              <div class="meta-title">Today</div>
+              <div id="openStatus" class="meta-value">Checking hours…</div>
+            </div>
+            <div class="meta-card">
+              <div class="meta-title">Call</div>
+              <a id="phoneLink" class="meta-value" href="#">(423) 285-5663</a>
+            </div>
+            <div class="meta-card">
+              <div class="meta-title">Location</div>
+              <div class="meta-value">Dayton, TN</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="media-card">
+            <div class="media-top">
+              <span class="media-tag">Featured</span>
+              <span class="media-tag muted">Drop photos into /assets/photos</span>
+            </div>
+
+            <div class="media-title">Best shots to add first</div>
+            <div class="media-desc">Wings, burger, interior, bar, and one live music/karaoke shot.</div>
+
+            <div class="media-grid">
+              <div class="img ph"><span>Wings</span></div>
+              <div class="img ph"><span>Burger</span></div>
+              <div class="img ph"><span>Interior</span></div>
+              <div class="img ph"><span>Live Music</span></div>
+            </div>
+
+            <div class="media-actions">
+              <a class="btn btn-small btn-ghost" href="./menu.html">View Menu</a>
+              <a class="btn btn-small btn-primary" href="./index.html#order">Order Pickup</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="photos" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Photos</h2>
+            <p class="muted">Tip: keep filenames short and consistent. Example: <span class="badge">wings-1.jpg</span></p>
+          </div>
+        </div>
+
+        <!-- Filters (simple anchor-based UI) -->
+        <div class="menu-controls">
+          <div class="tabs" aria-label="Gallery categories">
+            <a class="tab" href="#food" role="button">Food</a>
+            <a class="tab" href="#drinks" role="button">Drinks</a>
+            <a class="tab" href="#interior" role="button">Interior</a>
+            <a class="tab" href="#events" role="button">Events</a>
+            <a class="tab" href="#all" role="button">All</a>
+          </div>
+        </div>
+
+        <!-- FOOD -->
+        <article id="food" class="menu-section">
+          <div class="menu-section-head">
+            <div>
+              <h3>Food</h3>
+              <div class="menu-sub">Wings, burgers, fries, fajitas</div>
+            </div>
+            <span class="badge">Replace placeholders</span>
+          </div>
+
+          <div class="gallery gallery-tiles">
+            <!-- Replace these placeholders with <img> tags -->
+            <div class="img ph"><span>wings-1.jpg</span></div>
+            <div class="img ph"><span>burger-1.jpg</span></div>
+            <div class="img ph"><span>fries-1.jpg</span></div>
+            <div class="img ph"><span>fajitas-1.jpg</span></div>
+            <div class="img ph"><span>appetizer-1.jpg</span></div>
+            <div class="img ph"><span>dessert-1.jpg</span></div>
+          </div>
+
+          <p class="tiny muted mt">
+            Add photos to <code>/assets/photos/</code> then swap each placeholder with:
+            <code>&lt;img src="./assets/photos/wings-1.jpg" alt="Wings"&gt;</code>
+          </p>
+        </article>
+
+        <!-- DRINKS -->
+        <article id="drinks" class="menu-section mt">
+          <div class="menu-section-head">
+            <div>
+              <h3>Drinks</h3>
+              <div class="menu-sub">Beer, cocktails, cold drinks</div>
+            </div>
+            <span class="badge">Replace placeholders</span>
+          </div>
+
+          <div class="gallery gallery-tiles">
+            <div class="img ph"><span>beer-1.jpg</span></div>
+            <div class="img ph"><span>beer-2.jpg</span></div>
+            <div class="img ph"><span>cocktail-1.jpg</span></div>
+            <div class="img ph"><span>bar-1.jpg</span></div>
+          </div>
+        </article>
+
+        <!-- INTERIOR -->
+        <article id="interior" class="menu-section mt">
+          <div class="menu-section-head">
+            <div>
+              <h3>Interior</h3>
+              <div class="menu-sub">Seating, TVs, bar area</div>
+            </div>
+            <span class="badge">Replace placeholders</span>
+          </div>
+
+          <div class="gallery gallery-tiles">
+            <div class="img ph"><span>interior-1.jpg</span></div>
+            <div class="img ph"><span>interior-2.jpg</span></div>
+            <div class="img ph"><span>interior-3.jpg</span></div>
+            <div class="img ph"><span>patio-1.jpg</span></div>
+          </div>
+        </article>
+
+        <!-- EVENTS -->
+        <article id="events" class="menu-section mt">
+          <div class="menu-section-head">
+            <div>
+              <h3>Events</h3>
+              <div class="menu-sub">Live music, karaoke, game nights</div>
+            </div>
+            <span class="badge">Replace placeholders</span>
+          </div>
+
+          <div class="gallery gallery-tiles">
+            <div class="img ph"><span>live-music-1.jpg</span></div>
+            <div class="img ph"><span>karaoke-1.jpg</span></div>
+            <div class="img ph"><span>game-night-1.jpg</span></div>
+            <div class="img ph"><span>crowd-1.jpg</span></div>
+          </div>
+        </article>
+
+        <!-- ALL -->
+        <article id="all" class="menu-section mt">
+          <div class="menu-section-head">
+            <div>
+              <h3>All Photos</h3>
+              <div class="menu-sub">A mixed view of everything</div>
+            </div>
+            <span class="badge">Starter layout</span>
+          </div>
+
+          <div class="gallery gallery-tiles">
+            <div class="img ph"><span>wings-1.jpg</span></div>
+            <div class="img ph"><span>burger-1.jpg</span></div>
+            <div class="img ph"><span>beer-1.jpg</span></div>
+            <div class="img ph"><span>interior-1.jpg</span></div>
+            <div class="img ph"><span>live-music-1.jpg</span></div>
+            <div class="img ph"><span>fries-1.jpg</span></div>
+            <div class="img ph"><span>bar-1.jpg</span></div>
+            <div class="img ph"><span>karaoke-1.jpg</span></div>
+            <div class="img ph"><span>fajitas-1.jpg</span></div>
+          </div>
+
+          <div class="notice mt">
+            <div class="notice-icon" aria-hidden="true">📸</div>
+            <div>
+              <strong>Want the gallery to auto-populate?</strong>
+              <div class="muted small">
+                If you put photos in a folder and want them to render automatically without editing HTML,
+                we can convert this into a small JSON-driven gallery (still simple, still fast).
+              </div>
+            </div>
+          </div>
+
+          <div class="mt">
+            <a class="btn btn-primary" href="./index.html#order">Order Pickup</a>
+            <a class="btn btn-ghost" id="contactDirections" href="#" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="brand-name">Referees</div>
+        <div class="muted small">Sports Bar & Grill • Dayton, Tennessee</div>
+      </div>
+      <div class="footer-right">
+        <a href="./index.html">Home</a>
+        <a href="./menu.html">Menu</a>
+        <a href="./events.html">Events</a>
+        <a href="./index.html#contact">Contact</a>
+      </div>
+    </div>
+    <div class="container tiny muted footer-bottom">
+      © <span id="year"></span> Referees Sports Bar & Grill. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
