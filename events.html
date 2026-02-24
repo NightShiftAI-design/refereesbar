@@ -1,1 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Events & Specials | Referees Sports Bar & Grill | Dayton, TN</title>
+  <meta name="description" content="See what’s happening at Referees Sports Bar & Grill in Dayton, TN — Wing Wednesday, karaoke nights, live music, and game-day specials." />
+  <meta name="theme-color" content="#0b0b10" />
 
+  <meta property="og:title" content="Events & Specials | Referees Sports Bar & Grill" />
+  <meta property="og:description" content="Wing Wednesday, karaoke, live music, and game-day specials in Dayton, TN." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="./styles.css" />
+  <script defer src="./app.js"></script>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Sticky mobile action bar -->
+  <div class="actionbar" role="navigation" aria-label="Quick actions">
+    <a class="ab-btn" id="abCall" href="#">Call</a>
+    <a class="ab-btn" id="abDirections" href="#" target="_blank" rel="noopener">Directions</a>
+    <a class="ab-btn ab-btn--primary" href="#weekly">This Week</a>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html">
+        <div class="logo-badge" aria-hidden="true">R</div>
+        <div class="brand-text">
+          <div class="brand-name">Referees</div>
+          <div class="brand-sub">Sports Bar & Grill • Dayton, TN</div>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="./menu.html">Menu</a>
+        <a href="./index.html#gallery">Photos</a>
+        <a href="./index.html#contact">Contact</a>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn btn-ghost" id="topDirections" href="#" target="_blank" rel="noopener">Directions</a>
+        <a class="btn btn-primary" href="./index.html#order">Order Pickup</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="pill">Weekly Specials • Karaoke • Live Music</p>
+          <h1>Events & Specials</h1>
+          <p class="lead">
+            See what’s happening at Referees this week. For last-minute updates (bands, karaoke times, game parties),
+            check Facebook.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#weekly">See Weekly Lineup</a>
+            <a class="btn btn-ghost" id="facebookLinkTop" href="#" target="_blank" rel="noopener">Facebook Updates</a>
+          </div>
+
+          <div class="hero-meta">
+            <div class="meta-card">
+              <div class="meta-title">Today</div>
+              <div id="openStatus" class="meta-value">Checking hours…</div>
+            </div>
+            <div class="meta-card">
+              <div class="meta-title">Call</div>
+              <a id="phoneLink" class="meta-value" href="#">(423) 285-5663</a>
+            </div>
+            <div class="meta-card">
+              <div class="meta-title">Where</div>
+              <div class="meta-value">200 Able Drive, Dayton, TN</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="media-card">
+            <div class="media-top">
+              <span class="media-tag">Good vibes</span>
+              <span class="media-tag muted">Sports • Food • Drinks</span>
+            </div>
+
+            <div class="media-title">Bring your crew</div>
+            <div class="media-desc">Big games, big screens, and classic bar food.</div>
+
+            <div class="media-grid">
+              <div class="img ph"><span>Live music</span></div>
+              <div class="img ph"><span>Karaoke</span></div>
+              <div class="img ph"><span>Game night</span></div>
+              <div class="img ph"><span>Wings</span></div>
+            </div>
+
+            <div class="media-actions">
+              <a class="btn btn-small btn-ghost" href="./menu.html">View Menu</a>
+              <a class="btn btn-small btn-primary" href="./index.html#order">Order Pickup</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Weekly lineup -->
+    <section id="weekly" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>This Week at Referees</h2>
+            <p class="muted">Use this as your “default schedule.” Post-specific details go on Facebook.</p>
+          </div>
+          <a class="btn btn-ghost" id="facebookLinkBottom" href="#" target="_blank" rel="noopener">See Facebook Posts</a>
+        </div>
+
+        <div class="grid2">
+          <article class="card">
+            <h3>Wednesday</h3>
+            <p class="muted">Wing Wednesday</p>
+            <p class="small">Wings + game night energy. Ask staff about the special.</p>
+          </article>
+
+          <article class="card">
+            <h3>Thursday</h3>
+            <p class="muted">Karaoke / Community Night</p>
+            <p class="small">Grab a table and sing. Times vary — check Facebook for the post.</p>
+          </article>
+
+          <article class="card">
+            <h3>Friday</h3>
+            <p class="muted">Live Music / Weekend Kickoff</p>
+            <p class="small">Bands & DJs announced on Facebook. Come early for good seats.</p>
+          </article>
+
+          <article class="card">
+            <h3>Saturday</h3>
+            <p class="muted">Big Games + Late Crowd</p>
+            <p class="small">College ball, UFC, and big matchups. Ask about drink specials.</p>
+          </article>
+        </div>
+
+        <div class="notice mt">
+          <div class="notice-icon" aria-hidden="true">✅</div>
+          <div>
+            <strong>Owner-friendly update idea</strong>
+            <div class="muted small">
+              We can add a simple “Tonight’s Event” banner that can be updated without touching code.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specials -->
+    <section class="section">
+      <div class="container split">
+        <div>
+          <h2>Specials</h2>
+          <p class="muted">Put your best recurring deals here so people remember them.</p>
+
+          <div class="grid2">
+            <article class="card">
+              <h3>Wing Wednesday</h3>
+              <p class="muted">Weekly wings special</p>
+              <p class="small">Great for dine-in. Call ahead for pickup orders.</p>
+              <div class="mt">
+                <a class="btn btn-small btn-primary" href="./index.html#order">Order Pickup</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>Game Day</h3>
+              <p class="muted">Big screens + bar classics</p>
+              <p class="small">Wings, burgers, fries, and cold drinks during the game.</p>
+              <div class="mt">
+                <a class="btn btn-small btn-ghost" href="./menu.html">View Menu</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="callout">
+          <h3>Want to host a party?</h3>
+          <p class="muted">Birthdays, team celebrations, watch parties — call to reserve space and ask about group orders.</p>
+          <ul class="checklist">
+            <li>Group-friendly seating</li>
+            <li>Easy pickup orders</li>
+            <li>Music & karaoke nights</li>
+          </ul>
+          <div class="callout-actions">
+            <a class="btn btn-primary" id="midCall" href="#">Call</a>
+            <a class="btn btn-ghost" id="midDirections" href="#" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facebook embed area (optional) -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Latest Updates</h2>
+            <p class="muted">The fastest way to stay current is Facebook. Add an embed later if you want.</p>
+          </div>
+          <a class="btn btn-ghost" id="facebookLinkTop2" href="#" target="_blank" rel="noopener">Open Facebook</a>
+        </div>
+
+        <div class="card">
+          <h3>Optional: Facebook feed embed</h3>
+          <p class="muted small">
+            If you want the latest posts to show directly here, we can embed Facebook’s Page Plugin.
+            For now, this section is a clean placeholder so the page still looks finished.
+          </p>
+
+          <div class="img ph mt" style="min-height:220px;">
+            <span>Facebook feed embed placeholder</span>
+          </div>
+
+          <div class="mt">
+            <a class="btn btn-primary" id="facebookLinkBottom2" href="#" target="_blank" rel="noopener">See Posts</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick links -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Quick Links</h2>
+            <p class="muted">Everything important in one place.</p>
+          </div>
+        </div>
+
+        <div class="grid3">
+          <a class="card card-link" href="./menu.html">
+            <h3>Full Menu</h3>
+            <p class="muted">Browse appetizers, wings, burgers, fajitas & more.</p>
+          </a>
+
+          <a class="card card-link" href="./index.html#order">
+            <h3>Order Pickup</h3>
+            <p class="muted">Send a quick pickup request (until online ordering is enabled).</p>
+          </a>
+
+          <a class="card card-link" id="contactDirections" href="#" target="_blank" rel="noopener">
+            <h3>Directions</h3>
+            <p class="muted">200 Able Drive, Dayton, TN 37321</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="brand-name">Referees</div>
+        <div class="muted small">Sports Bar & Grill • Dayton, Tennessee</div>
+      </div>
+      <div class="footer-right">
+        <a href="./index.html">Home</a>
+        <a href="./menu.html">Menu</a>
+        <a href="./index.html#order">Order</a>
+        <a href="./index.html#contact">Contact</a>
+      </div>
+    </div>
+    <div class="container tiny muted footer-bottom">
+      © <span id="year"></span> Referees Sports Bar & Grill. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
