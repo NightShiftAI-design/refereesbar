@@ -505,3 +505,128 @@ input:focus, textarea:focus, select:focus{
   .gallery{grid-template-columns:1fr}
   .field-row{grid-template-columns:1fr}
 }
+/* ===== MENU UI (Add-on) ===== */
+.menu-controls{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  flex-wrap:wrap;
+  margin: 14px 0 10px;
+}
+
+.tabs{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.tab{
+  border:1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.03);
+  padding:10px 12px;
+  border-radius: 999px;
+  font-weight:900;
+  font-size:.92rem;
+  cursor:pointer;
+  user-select:none;
+}
+.tab[aria-selected="true"]{
+  background: linear-gradient(135deg, rgba(255,138,31,.98), rgba(255,181,74,.92));
+  border-color: rgba(255,138,31,.35);
+  color:#120a00;
+}
+
+.searchwrap{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex: 1;
+  justify-content:flex-end;
+}
+
+#menuSearch{
+  width:min(420px, 100%);
+  padding:12px 12px;
+  border-radius: 999px;
+}
+
+.menu-meta{
+  margin: 6px 0 14px;
+}
+
+.menu-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:14px;
+}
+
+.menu-section{
+  border:1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.03);
+  border-radius: 24px;
+  padding: 16px;
+}
+
+.menu-section-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:10px;
+}
+
+.menu-section h3{
+  margin:0;
+  font-size:1.15rem;
+}
+.menu-sub{
+  color: rgba(255,255,255,.78);
+  font-size: .95rem;
+}
+
+.menu-items{
+  list-style:none;
+  padding:0;
+  margin:10px 0 0;
+}
+
+.menu-item{
+  display:grid;
+  grid-template-columns: 1fr auto;
+  gap:14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.menu-item:last-child{ border-bottom:none; }
+
+.item-name{
+  font-weight:900;
+}
+.item-desc{
+  color: rgba(255,255,255,.72);
+  font-size: .92rem;
+  margin-top:4px;
+}
+.item-price{
+  font-weight:1000;
+  white-space:nowrap;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:6px 10px;
+  border-radius:999px;
+  font-weight:900;
+  font-size:.82rem;
+  border:1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.04);
+  color: rgba(255,255,255,.88);
+}
+
+@media (max-width: 920px){
+  .searchwrap{justify-content:flex-start; width:100%;}
+  #menuSearch{width:100%;}
+}
