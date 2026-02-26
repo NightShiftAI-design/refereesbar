@@ -343,42 +343,53 @@
   renderMenu();
 
   // ─── MENU IMAGE TILES — "Coming Soon" MODAL ─────────────────────
-  // Scoped only to #menuImageModal triggered by [data-menu-tile] buttons.
-  // No lightbox behavior on food images anywhere on the site.
+  // Listeners bound once inside DOMContentLoaded to guarantee the DOM
+  // is ready. Uses .is-open class toggle — no hidden attribute conflicts.
 
-  const menuModal = $("#menuImageModal");
+  document.addEventListener("DOMContentLoaded", function () {
+    var modal     = document.getElementById("menuImageModal");
+    var closeBtn  = document.getElementById("mimClose");
+    var tiles     = document.querySelectorAll("[data-menu-tile]");
 
-  function openMenuModal() {
-    if (!menuModal) return;
-    menuModal.hidden = false;
-    menuModal.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-    menuModal.querySelector(".mim-close")?.focus();
-  }
+    if (!modal) return; // not on this page
 
-  function closeMenuModal() {
-    if (!menuModal) return;
-    menuModal.hidden = true;
-    menuModal.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
-  }
+    function openModal() {
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      if (closeBtn) closeBtn.focus();
+    }
 
-  if (menuModal) {
-    // Close button
-    menuModal.querySelector(".mim-close")?.addEventListener("click", closeMenuModal);
-    // Click outside (backdrop)
-    menuModal.addEventListener("click", e => {
-      if (e.target === menuModal) closeMenuModal();
+    function closeModal() {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    // Open — each tile
+    tiles.forEach(function (btn) {
+      btn.addEventListener("click", openModal);
     });
-    // ESC key
-    document.addEventListener("keydown", e => {
-      if (!menuModal.hidden && e.key === "Escape") closeMenuModal();
-    });
-  }
 
-  // Wire all menu-tile trigger buttons
-  $$("[data-menu-tile]").forEach(btn => {
-    btn.addEventListener("click", openMenuModal);
+    // Close — X button (bound directly by id, never re-created)
+    if (closeBtn) {
+      closeBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        closeModal();
+      });
+    }
+
+    // Close — click on the overlay backdrop (not the box)
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) closeModal();
+    });
+
+    // Close — ESC key
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && modal.classList.contains("is-open")) {
+        closeModal();
+      }
+    });
   });
 
   // ─── PHOTO CAROUSEL ─────────────────────────────────────────────
