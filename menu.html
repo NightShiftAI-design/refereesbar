@@ -56,6 +56,7 @@
     .mim-overlay {
       display: none;
       position: fixed; inset: 0; z-index: 9000;
+      width: 100%; height: 100%;
       background: rgba(0,0,0,.88);
       backdrop-filter: blur(6px);
       -webkit-backdrop-filter: blur(6px);
@@ -64,6 +65,7 @@
       padding: 20px;
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
+      box-sizing: border-box;
     }
     .mim-overlay.is-open { display: flex; }
     .mim-box {
@@ -93,12 +95,14 @@
       font-size: 1.8rem; letter-spacing: .04em;
       color: var(--text); margin-bottom: 20px; text-align: center;
     }
-    .mim-content { display: flex; flex-direction: column; gap: 28px; }
-    .mim-img-block { display: flex; flex-direction: column; gap: 10px; }
+    .mim-content { display: flex; flex-direction: column; gap: 28px; width: 100%; align-items: stretch; }
+    .mim-img-block { display: flex; flex-direction: column; gap: 10px; width: 100%; min-height: 0; }
     .mim-img-block img {
       width: 100%; max-width: 100%; height: auto;
       display: block; border-radius: var(--r);
       border: 1px solid var(--border);
+      /* Force image to actually render — prevent any inherited constraint */
+      min-width: 0; flex-shrink: 0;
     }
     .mim-download {
       display: inline-flex; align-items: center; gap: 6px;
