@@ -6,7 +6,24 @@
     address: "200 Able Drive Suite 7, Dayton, TN 37321",
     mapsQueryUrl: "https://www.google.com/maps/search/?api=1&query=200+Able+Drive+Suite+7%2C+Dayton%2C+TN+37321",
     facebookUrl: "https://www.facebook.com/share/16tysqTBA6/?mibextid=wwXIfr",
+    // ─── PASTE YOUR GOOGLE REVIEW LINK HERE ───
+    // Go to Google Maps → search "Referees Sports Bar & Grill Dayton TN"
+    // Click "Reviews" → "Write a review" → copy the URL from your browser
+    reviewUrl: "PASTE_GOOGLE_REVIEW_LINK_HERE",
   };
+
+  // ─── MENU PHOTOS ───────────────────────────────────────────────
+  // To add menu photos:
+  // 1. Add the image file to the root of your project (e.g. menu-photo-1.jpg)
+  // 2. Add an entry to MENU_PHOTOS below with { src, alt } — that's it.
+  const MENU_PHOTOS = [
+    { src: "./food-wings-1.jpg",   alt: "Wings"        },
+    { src: "./food-burger-1.jpg",  alt: "Burgers"      },
+    { src: "./food-fajitas-1.jpg", alt: "Fajitas"      },
+    { src: "./food-steak-1.jpg",   alt: "Steaks"       },
+    { src: "./food-pickles-1.jpg", alt: "Fried Pickles" },
+    { src: "./IMG_0874.jpg",       alt: "Menu Item"    },
+  ];
 
   const MENU = [
     {
@@ -114,7 +131,7 @@
       items: [
         { name: "Top Sirloin", price: 20.00, desc: "8 oz Baseball Center Cut Sirloin · with Baked Potato" },
         { name: "Rib-Eye", price: 32.00, desc: "16 oz Cowboy Cut Rib-eye · with Baked Potato" },
-        { name: "T-Bone", priceText: "Market Price", desc: "with Baked Potato" }
+        { name: "T-Bone", priceText: "Market Price", desc: "with Baked Potato — price varies based on availability" }
       ]
     },
     {
@@ -165,11 +182,6 @@
   const $ = sel => document.querySelector(sel);
   const $$ = sel => document.querySelectorAll(sel);
 
-  function setHref(id, href) {
-    const el = $(id);
-    if (el) el.href = href;
-  }
-
   function setHrefAll(sel, href) {
     $$(sel).forEach(el => { el.href = href; });
   }
@@ -189,17 +201,19 @@
   setHrefAll("[data-tel]", telHref);
   setHrefAll("[data-maps]", CONFIG.mapsQueryUrl);
   setHrefAll("[data-fb]", CONFIG.facebookUrl);
+  setHrefAll("[data-review]", CONFIG.reviewUrl);
 
   $$("#year").forEach(el => { el.textContent = new Date().getFullYear(); });
 
+  // ─── HOURS / STATUS ────────────────────────────────────────────
   const schedule = {
-    0: { open: 11 * 60, close: 21 * 60, label: "11 AM – 9 PM" },
-    1: { open: 15 * 60, close: 21 * 60, label: "3 PM – 9 PM" },
+    0: { open: 11 * 60, close: 21 * 60,  label: "11 AM – 9 PM"  },
+    1: { open: 15 * 60, close: 21 * 60,  label: "3 PM – 9 PM"   },
     2: null,
-    3: { open: 11 * 60, close: 23 * 60, label: "11 AM – 11 PM" },
-    4: { open: 11 * 60, close: 23 * 60, label: "11 AM – 11 PM" },
-    5: { open: 11 * 60, close: 23 * 60, label: "11 AM – 11 PM" },
-    6: { open: 11 * 60, close: 23 * 60, label: "11 AM – 11 PM" }
+    3: { open: 11 * 60, close: 23 * 60,  label: "11 AM – 11 PM" },
+    4: { open: 11 * 60, close: 23 * 60,  label: "11 AM – 11 PM" },
+    5: { open: 11 * 60, close: 23 * 60,  label: "11 AM – 11 PM" },
+    6: { open: 11 * 60, close: 23 * 60,  label: "11 AM – 11 PM" }
   };
 
   function fmtTime(m) {
@@ -234,8 +248,8 @@
       el.className = "open-status stat-value " + cls;
     });
 
-    const todayDays = ["hours-sun","hours-mon","hours-tue","hours-wed","hours-thu","hours-fri","hours-sat"];
-    const todayId = todayDays[d];
+    const todayIds = ["hours-sun","hours-mon","hours-tue","hours-wed","hours-thu","hours-fri","hours-sat"];
+    const todayId = todayIds[d];
     if (todayId) {
       const row = $(`#${todayId}`);
       if (row) row.classList.add("today");
@@ -245,11 +259,12 @@
   updateStatus();
   setInterval(updateStatus, 60000);
 
-  const tabsEl = $("#menuTabs");
-  const gridEl = $("#menuGrid");
-  const searchEl = $("#menuSearch");
-  const clearBtn = $("#clearSearch");
-  const metaEl = $("#menuMeta");
+  // ─── MENU RENDERING ─────────────────────────────────────────────
+  const tabsEl    = $("#menuTabs");
+  const gridEl    = $("#menuGrid");
+  const searchEl  = $("#menuSearch");
+  const clearBtn  = $("#clearSearch");
+  const metaEl    = $("#menuMeta");
 
   let activeKey = "all";
   let query = "";
@@ -293,13 +308,17 @@
 
     gridEl.innerHTML = sections.map(sec => {
       const itemsHtml = sec.items.map(it => {
-        const price = it.priceText !== undefined && it.priceText !== null ? it.priceText : (typeof it.price === "number" ? money(it.price) : "");
+        const priceRaw = it.priceText !== undefined && it.priceText !== null ? it.priceText : (typeof it.price === "number" ? money(it.price) : "");
+        const isMarket = priceRaw === "Market Price";
+        const priceDisplay = isMarket
+          ? `<span class="market-price">Market Price</span>`
+          : esc(priceRaw);
         return `<li class="menu-item">
           <div>
             <div class="item-name">${esc(it.name)}</div>
             ${it.desc ? `<div class="item-desc">${esc(it.desc)}</div>` : ""}
           </div>
-          <div class="item-price">${esc(price)}</div>
+          <div class="item-price">${priceDisplay}</div>
         </li>`;
       }).join("");
 
@@ -326,42 +345,78 @@
   buildTabs();
   renderMenu();
 
-  const orderForm = $("#orderForm");
-  const orderSuccess = $("#orderSuccess");
-  const orderFormWrap = $("#orderFormWrap");
+  // ─── MENU PHOTO GALLERY / LIGHTBOX ──────────────────────────────
+  const menuPhotoGrid = $("#menuPhotoGrid");
+  if (menuPhotoGrid) {
+    menuPhotoGrid.innerHTML = MENU_PHOTOS.map((p, i) =>
+      `<button class="menu-photo-item" data-index="${i}" aria-label="View ${esc(p.alt)} full size" type="button">
+        <img src="${esc(p.src)}" alt="${esc(p.alt)}" loading="lazy" />
+        <div class="menu-photo-overlay"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg></div>
+      </button>`
+    ).join("");
 
-  if (orderForm) {
-    orderForm.addEventListener("submit", e => {
-      e.preventDefault();
-      const fd = new FormData(orderForm);
-      const name = String(fd.get("name") || "").trim();
-      const phone = String(fd.get("phone") || "").trim();
-      const order = String(fd.get("order") || "").trim();
-      const pickup = String(fd.get("pickup") || "").trim();
-      const notes = String(fd.get("notes") || "").trim();
-
-      const subject = encodeURIComponent(`Pickup Order – ${name}`);
-      const body = encodeURIComponent(
-        `Name: ${name}\nPhone: ${phone}\n\nOrder:\n${order}\n${pickup ? `\nPreferred Pickup Time: ${pickup}` : ""}${notes ? `\nNotes/Allergies: ${notes}` : ""}`
-      );
-
-      window.location.href = `mailto:${CONFIG.email}?subject=${subject}&body=${body}`;
-
-      orderForm.reset();
-      if (orderFormWrap) orderFormWrap.style.display = "none";
-      if (orderSuccess) orderSuccess.hidden = false;
+    menuPhotoGrid.addEventListener("click", e => {
+      const btn = e.target.closest("[data-index]");
+      if (!btn) return;
+      openLightbox(parseInt(btn.dataset.index, 10));
     });
   }
 
-  const navLinks = $$(".nav a");
-  const currentPath = window.location.pathname.split("/").pop() || "index.html";
-  navLinks.forEach(a => {
-    const href = a.getAttribute("href") || "";
-    if (href.startsWith("#") || href.includes(currentPath) || (currentPath === "" && href === "index.html")) {
-      a.classList.add("active");
-    }
-  });
+  let lbIndex = 0;
 
+  function openLightbox(idx) {
+    lbIndex = idx;
+    const lb = $("#lightbox");
+    if (!lb) return;
+    renderLightbox();
+    lb.hidden = false;
+    lb.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    lb.querySelector(".lb-close")?.focus();
+  }
+
+  function closeLightbox() {
+    const lb = $("#lightbox");
+    if (!lb) return;
+    lb.hidden = true;
+    lb.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  function renderLightbox() {
+    const lb = $("#lightbox");
+    if (!lb) return;
+    const photo = MENU_PHOTOS[lbIndex];
+    if (!photo) return;
+    const img = lb.querySelector(".lb-img");
+    const dl  = lb.querySelector(".lb-download");
+    const cnt = lb.querySelector(".lb-counter");
+    if (img) { img.src = photo.src; img.alt = photo.alt; }
+    if (dl)  { dl.href = photo.src; dl.download = photo.src.split("/").pop(); }
+    if (cnt) { cnt.textContent = `${lbIndex + 1} / ${MENU_PHOTOS.length}`; }
+  }
+
+  const lb = $("#lightbox");
+  if (lb) {
+    lb.querySelector(".lb-close")?.addEventListener("click", closeLightbox);
+    lb.querySelector(".lb-backdrop")?.addEventListener("click", closeLightbox);
+    lb.querySelector(".lb-prev")?.addEventListener("click", () => {
+      lbIndex = (lbIndex - 1 + MENU_PHOTOS.length) % MENU_PHOTOS.length;
+      renderLightbox();
+    });
+    lb.querySelector(".lb-next")?.addEventListener("click", () => {
+      lbIndex = (lbIndex + 1) % MENU_PHOTOS.length;
+      renderLightbox();
+    });
+    document.addEventListener("keydown", e => {
+      if (lb.hidden) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") { lbIndex = (lbIndex - 1 + MENU_PHOTOS.length) % MENU_PHOTOS.length; renderLightbox(); }
+      if (e.key === "ArrowRight") { lbIndex = (lbIndex + 1) % MENU_PHOTOS.length; renderLightbox(); }
+    });
+  }
+
+  // ─── PHOTO CAROUSEL ─────────────────────────────────────────────
   const track = $("#csTrack");
   if (track) {
     const slides = track.querySelectorAll(".cs-slide");
@@ -376,15 +431,8 @@
         animating = true;
         const from = current;
         current = (next + total) % total;
-        track.style.transition = "none";
         const clone = slides[current].cloneNode(true);
-        clone.style.position = "absolute";
-        clone.style.top = "0";
-        clone.style.left = "0";
-        clone.style.width = "100%";
-        clone.style.height = "100%";
-        clone.style.opacity = "0";
-        clone.style.transition = "opacity 1.2s ease";
+        clone.style.cssText = "position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;transition:opacity 1.2s ease;";
         track.parentElement.appendChild(clone);
         requestAnimationFrame(() => {
           requestAnimationFrame(() => {
@@ -398,10 +446,7 @@
         });
       }
 
-      const timer = setInterval(() => {
-        if (!paused) goTo(current + 1);
-      }, 4500);
-
+      setInterval(() => { if (!paused) goTo(current + 1); }, 4500);
       track.parentElement.addEventListener("mouseenter", () => { paused = true; });
       track.parentElement.addEventListener("mouseleave", () => { paused = false; });
 
@@ -414,4 +459,15 @@
       }, { passive: true });
     }
   }
+
+  // ─── ACTIVE NAV ─────────────────────────────────────────────────
+  const navLinks = $$(".nav a");
+  const currentPath = window.location.pathname.split("/").pop() || "index.html";
+  navLinks.forEach(a => {
+    const href = a.getAttribute("href") || "";
+    if (!href.startsWith("#") && (href.includes(currentPath) || (currentPath === "" && href === "index.html"))) {
+      a.classList.add("active");
+    }
+  });
+
 })();
