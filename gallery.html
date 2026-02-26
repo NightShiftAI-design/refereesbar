@@ -18,13 +18,10 @@
   <style>
     .gallery-label {
       font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      font-size: .8rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
+      font-weight: 700; font-size: .8rem;
+      letter-spacing: .12em; text-transform: uppercase;
       color: var(--muted2);
-      margin-top: 40px;
-      margin-bottom: 12px;
+      margin-top: 40px; margin-bottom: 12px;
       padding-bottom: 10px;
       border-bottom: 1px solid var(--border);
     }
@@ -34,25 +31,27 @@
       gap: 8px;
     }
     .gallery-grid-5 .gallery-item { aspect-ratio: 4/3; }
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       .gallery-grid-5 { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 420px) {
+      .gallery-grid-5 { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-
 <a class="skip" href="#main">Skip to main content</a>
 
 <div class="actionbar" role="navigation" aria-label="Quick actions">
-  <a class="ab-btn" href="tel:+14232855663" data-tel>Call</a>
+  <a class="ab-btn" href="#" data-tel>Call</a>
   <a class="ab-btn" href="#" data-maps target="_blank" rel="noopener">Directions</a>
-  <a class="ab-btn ab-btn--gold" href="./index.html#order">Order Pickup</a>
+  <a class="ab-btn ab-btn--gold" href="#" data-tel>Order Pickup</a>
 </div>
 
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="./index.html">
-      <img src="./referees-logo.png" alt="Referees Sports Bar and Grill" class="site-logo" />
+      <img src="./referees-logo.png" alt="Referees Sports Bar and Grill logo" class="site-logo" width="120" height="44" />
       <div class="brand-text">
         <div class="brand-name">Referees</div>
         <div class="brand-sub">Sports Bar &amp; Grill · Dayton, TN</div>
@@ -62,13 +61,12 @@
       <a href="./index.html">Home</a>
       <a href="./menu.html">Menu</a>
       <a href="./events.html">Events</a>
-      <a href="./catering.html">Catering</a>
       <a href="./gallery.html" class="active">Gallery</a>
       <a href="./index.html#contact">Contact</a>
     </nav>
     <div class="header-cta">
-      <a class="btn btn-outline btn-sm" href="tel:+14232855663" data-tel>Call Now</a>
-      <a class="btn btn-primary btn-sm" href="./index.html#order">Order Pickup</a>
+      <a class="btn btn-outline btn-sm" href="#" data-tel>Call Now</a>
+      <a class="btn btn-primary btn-sm" href="#" data-tel>Order Pickup</a>
     </div>
   </div>
 </header>
@@ -79,10 +77,10 @@
     <div class="container">
       <div class="section-label"><div class="line"></div><span>See the Vibe</span></div>
       <h1>Photo Gallery</h1>
-      <p>A look inside Referees — the food, the bar, the atmosphere. More photos posted regularly on Facebook.</p>
+      <p>A look inside Referees — the food, the bar, 11 TVs, and the atmosphere. More photos posted regularly on Facebook.</p>
       <div class="flex-gap mt-24">
         <a class="btn btn-primary" href="#" data-fb target="_blank" rel="noopener">More on Facebook</a>
-        <a class="btn btn-outline" href="./index.html#order">Order Pickup</a>
+        <a class="btn btn-outline" href="#" data-tel>Order Pickup</a>
       </div>
     </div>
   </section>
@@ -93,63 +91,63 @@
       <div class="gallery-label">Food &amp; Wings</div>
       <div class="gallery-grid-5">
         <div class="gallery-item">
-          <img src="./food-wings-1.jpg" alt="Signature wings at Referees" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-ph\'><svg width=\'32\' height=\'32\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\' stroke-width=\'1\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>wings</span></div>'" />
+          <img src="./food-wings-1.jpg" alt="Signature wings at Referees Sports Bar" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="./food-burger-1.jpg" alt="Burger at Referees" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-ph\'><svg width=\'32\' height=\'32\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\' stroke-width=\'1\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>burger</span></div>'" />
+          <img src="./food-burger-1.jpg" alt="Burger at Referees Sports Bar" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="./food-fajitas-1.jpg" alt="Sizzling fajitas at Referees" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-ph\'><svg width=\'32\' height=\'32\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\' stroke-width=\'1\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>fajitas</span></div>'" />
+          <img src="./food-fajitas-1.jpg" alt="Sizzling fajitas at Referees Sports Bar" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="./IMG_0874.jpg" alt="Food at Referees" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-ph\'><svg width=\'32\' height=\'32\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\' stroke-width=\'1\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>food</span></div>'" />
+          <img src="./IMG_0874.jpg" alt="Food at Referees Sports Bar" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="./food-steak-1.jpg" alt="Steak at Referees" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-ph\'><svg width=\'32\' height=\'32\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\' stroke-width=\'1\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>steak</span></div>'" />
+          <img src="./food-steak-1.jpg" alt="Steak at Referees Sports Bar" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="./food-pickles-1.jpg" alt="Fried pickles at Referees" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-ph\'><svg width=\'32\' height=\'32\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\' stroke-width=\'1\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>fried pickles</span></div>'" />
+          <img src="./food-pickles-1.jpg" alt="Fried pickles at Referees Sports Bar" loading="lazy" />
         </div>
       </div>
 
       <div class="gallery-label">Bar &amp; Interior</div>
       <div class="gallery-grid-5">
         <div class="gallery-item">
-          <img src="./interior-bar-1.jpg" alt="Bar area at Referees" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-ph\'><svg width=\'32\' height=\'32\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\' stroke-width=\'1\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>bar area</span></div>'" />
+          <img src="./interior-bar-1.jpg" alt="Bar area at Referees Sports Bar" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="./interior.jpg" alt="Seating area at Referees" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-ph\'><svg width=\'32\' height=\'32\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\' stroke-width=\'1\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>seating</span></div>'" />
+          <img src="./interior.jpg" alt="Seating area at Referees Sports Bar" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="./IMG_0885.jpg" alt="Inside Referees" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-ph\'><svg width=\'32\' height=\'32\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\' stroke-width=\'1\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>inside</span></div>'" />
+          <img src="./IMG_0885.jpg" alt="Inside Referees Sports Bar" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="./hero-bg.jpg" alt="Outside of Referees" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-ph\'><svg width=\'32\' height=\'32\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\' stroke-width=\'1\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>exterior</span></div>'" />
+          <img src="./hero-bg.jpg" alt="Referees Sports Bar exterior" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="./drinks-beer-1.jpg" alt="Cold drinks at Referees" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-ph\'><svg width=\'32\' height=\'32\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\' stroke-width=\'1\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>drinks</span></div>'" />
+          <img src="./drinks-beer-1.jpg" alt="Cold drinks at Referees Sports Bar" loading="lazy" />
         </div>
       </div>
 
       <div class="gallery-label">Events &amp; Live Music</div>
       <div class="gallery-grid-5">
         <div class="gallery-item">
-          <img src="./event-livemusic-1.jpg" alt="Live music at Referees" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-ph\'><svg width=\'32\' height=\'32\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\' stroke-width=\'1\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>live music</span></div>'" />
+          <img src="./event-livemusic-1.jpg" alt="Live music at Referees Sports Bar" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="./event-livemusic-2.jpg" alt="Band at Referees" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-ph\'><svg width=\'32\' height=\'32\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\' stroke-width=\'1\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>live music</span></div>'" />
+          <img src="./event-livemusic-2.jpg" alt="Band performing at Referees Sports Bar" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="./event-crowd-1.jpg" alt="Crowd at Referees" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-ph\'><svg width=\'32\' height=\'32\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\' stroke-width=\'1\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>crowd</span></div>'" />
+          <img src="./event-crowd-1.jpg" alt="Crowd at Referees Sports Bar on a busy night" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="./food-wings-1.jpg" alt="Wing Wednesday at Referees" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-ph\'><svg width=\'32\' height=\'32\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\' stroke-width=\'1\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>wing wednesday</span></div>'" />
+          <img src="./food-wings-1.jpg" alt="Wing Wednesday at Referees Sports Bar" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="./drinks-beer-1.jpg" alt="Drinks at Referees" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-ph\'><svg width=\'32\' height=\'32\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\' stroke-width=\'1\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>drinks</span></div>'" />
+          <img src="./drinks-beer-1.jpg" alt="Drinks at Referees Sports Bar" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="./interior-bar-1.jpg" alt="Bar at Referees on a busy night" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-ph\'><svg width=\'32\' height=\'32\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\' stroke-width=\'1\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>game day</span></div>'" />
+          <img src="./interior-bar-1.jpg" alt="Bar at Referees Sports Bar on a game day" loading="lazy" />
         </div>
       </div>
 
@@ -157,13 +155,14 @@
         <div class="notice-icon">📸</div>
         <div class="notice-body">
           <strong>More photos on Facebook</strong>
-          <p>We post event photos, food shots, and weekly specials regularly. <a href="#" data-fb style="color:var(--gold)" target="_blank" rel="noopener">Follow @refereesdayton</a> to stay in the loop.</p>
+          <p>We post event photos, food shots, and weekly specials regularly. <a href="#" data-fb style="color:var(--gold)" target="_blank" rel="noopener">Follow us on Facebook</a> to stay in the loop.</p>
         </div>
       </div>
 
       <div class="flex-gap mt-24">
-        <a class="btn btn-primary" href="./index.html#order">Order Pickup</a>
+        <a class="btn btn-primary" href="#" data-tel>Order Pickup — Call Us</a>
         <a class="btn btn-outline" href="./menu.html">Browse Menu</a>
+        <a class="btn btn-review" href="#" data-review target="_blank" rel="noopener">Leave a Review</a>
       </div>
     </div>
   </section>
@@ -175,7 +174,11 @@
     <div class="footer-top">
       <div class="footer-brand">
         <div class="brand-name">Referees</div>
-        <p>Dayton's go-to sports bar &amp; grill. Wings, burgers, fajitas, and cold drinks — plus live music and karaoke nights.</p>
+        <p>Dayton's go-to sports bar &amp; grill. Wings, burgers, fajitas, 11 TVs, and cold drinks — plus live music nights.</p>
+        <div class="flex-gap mt-16">
+          <a class="btn btn-primary btn-sm" href="#" data-tel>Call to Order</a>
+          <a class="btn btn-review btn-sm" href="#" data-review target="_blank" rel="noopener">Leave a Review</a>
+        </div>
       </div>
       <div>
         <div class="footer-col-title">Navigate</div>
@@ -184,7 +187,6 @@
           <a href="./menu.html">Full Menu</a>
           <a href="./events.html">Events</a>
           <a href="./gallery.html">Gallery</a>
-          <a href="./catering.html">Catering</a>
           <a href="./index.html#contact">Contact</a>
         </div>
       </div>
@@ -200,12 +202,19 @@
       <div>
         <div class="footer-col-title">Contact</div>
         <div class="footer-links">
-          <a href="tel:+14232855663" data-tel>(423) 285-5663</a>
-          <a href="/cdn-cgi/l/email-protection#7f0d1a191a0d1a1a0c0f100d0b0c1d1e0d180d1613133f18121e1613511c1012">Email Us</a>
+          <a href="#" data-tel>(423) 285-5663</a>
+          <a href="mailto:refereesportsbargrill@gmail.com">Email Us</a>
           <a href="#" data-maps target="_blank" rel="noopener">200 Able Drive, Dayton TN</a>
           <a href="#" data-fb target="_blank" rel="noopener">Facebook</a>
         </div>
       </div>
+    </div>
+    <div class="footer-liquor-notice">🍺 Liquor license coming soon — updates will be posted here or call <a href="#" data-tel style="color:var(--gold)">(423) 285-5663</a> to confirm current drink offerings.</div>
+    <div class="footer-policies">
+      <p class="footer-policy-line"><strong>Allergy Advisory:</strong> Our kitchen handles common allergens. Cross-contact is possible. Notify your server of any allergies before ordering.</p>
+      <p class="footer-policy-line"><strong>Accessibility:</strong> Need accommodations? Call <a href="#" data-tel style="color:var(--gold)">(423) 285-5663</a>.</p>
+      <p class="footer-policy-line"><strong>Our House:</strong> Everyone is welcome — regardless of race, religion, gender identity, sexual orientation, disability, or background.</p>
+      <p class="footer-policy-line"><strong>Disclaimer:</strong> Prices, hours, and availability subject to change. Call to confirm.</p>
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">&copy; <span id="year"></span> Referees Sports Bar &amp; Grill. All rights reserved.</div>
@@ -216,3 +225,9 @@
           </a>
         </div>
         <a class="footer-credit" href="https://www.gshyamvp.com" target="_blank" rel="noopener">Website by GVP</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
