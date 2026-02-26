@@ -436,7 +436,64 @@
     }
   }
 
-  // ─── ACTIVE NAV ─────────────────────────────────────────────────
+  // ─── MOBILE NAV (HAMBURGER) ──────────────────────────────────────
+  document.addEventListener("DOMContentLoaded", function () {
+    var toggle  = document.getElementById("navToggle");
+    var mobileNav = document.getElementById("mobileNav");
+    if (!toggle || !mobileNav) return;
+
+    var scrollY = 0;
+
+    function openNav() {
+      scrollY = window.scrollY;
+      toggle.setAttribute("aria-expanded", "true");
+      mobileNav.classList.add("is-open");
+      // iOS-safe scroll lock: fix body at current position
+      document.body.style.top = "-" + scrollY + "px";
+      document.body.classList.add("scroll-locked");
+    }
+
+    function closeNav() {
+      toggle.setAttribute("aria-expanded", "false");
+      mobileNav.classList.remove("is-open");
+      document.body.classList.remove("scroll-locked");
+      document.body.style.top = "";
+      window.scrollTo(0, scrollY);
+    }
+
+    function toggleNav() {
+      if (mobileNav.classList.contains("is-open")) { closeNav(); } else { openNav(); }
+    }
+
+    // Toggle on hamburger click
+    toggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      toggleNav();
+    });
+
+    // Close when a nav link is tapped
+    mobileNav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", closeNav);
+    });
+
+    // Close on tap outside
+    document.addEventListener("click", function (e) {
+      if (mobileNav.classList.contains("is-open") &&
+          !mobileNav.contains(e.target) &&
+          e.target !== toggle &&
+          !toggle.contains(e.target)) {
+        closeNav();
+      }
+    });
+
+    // Close on ESC
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && mobileNav.classList.contains("is-open")) {
+        closeNav();
+        toggle.focus();
+      }
+    });
+  });
   const navLinks = $$(".nav a");
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
   navLinks.forEach(a => {
