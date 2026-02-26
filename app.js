@@ -342,53 +342,88 @@
   buildTabs();
   renderMenu();
 
-  // ─── MENU IMAGE TILES — "Coming Soon" MODAL ─────────────────────
-  // Listeners bound once inside DOMContentLoaded to guarantee the DOM
-  // is ready. Uses .is-open class toggle — no hidden attribute conflicts.
+  // ─── MENU IMAGE TILES — LIGHTBOX MODAL ──────────────────────────
+  // Listeners bound once on DOMContentLoaded. Scoped only to
+  // [data-menu-tile] buttons. No other images on the site trigger this.
 
   document.addEventListener("DOMContentLoaded", function () {
-    var modal     = document.getElementById("menuImageModal");
-    var closeBtn  = document.getElementById("mimClose");
-    var tiles     = document.querySelectorAll("[data-menu-tile]");
+    var modal    = document.getElementById("menuImageModal");
+    var closeBtn = document.getElementById("mimClose");
+    var content  = document.getElementById("mimContent");
+    var title    = document.getElementById("mimTitle");
 
-    if (!modal) return; // not on this page
+    if (!modal || !closeBtn || !content) return; // not on this page
 
-    function openModal() {
+    var scrollY = 0;
+
+    var TILE_DATA = {
+      food: {
+        label: "Food Menu",
+        images: [
+          { src: "./foodmenu1.jpg", alt: "Referees Food Menu Page 1",  filename: "foodmenu1.jpg"  },
+          { src: "./foodmenu2.jpg", alt: "Referees Food Menu Page 2",  filename: "foodmenu2.jpg"  }
+        ]
+      },
+      drink: {
+        label: "Drink Menu",
+        images: [
+          { src: "./drinkmenu.jpg", alt: "Referees Drink Menu", filename: "drinkmenu.jpg" }
+        ]
+      }
+    };
+
+    function buildContent(type) {
+      var data = TILE_DATA[type];
+      if (!data) return;
+      if (title) title.textContent = data.label;
+      content.innerHTML = data.images.map(function (img) {
+        return '<div class="mim-img-block">'
+          + '<img src="' + img.src + '" alt="' + img.alt + '" />'
+          + '<a class="mim-download" href="' + img.src + '" download="' + img.filename + '">⬇ Download ' + img.alt + '</a>'
+          + '</div>';
+      }).join('');
+    }
+
+    function openModal(type) {
+      buildContent(type);
+      scrollY = window.scrollY;
       modal.classList.add("is-open");
       modal.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
-      if (closeBtn) closeBtn.focus();
+      // iOS-safe scroll lock
+      document.body.style.top = "-" + scrollY + "px";
+      document.body.classList.add("scroll-locked");
+      closeBtn.focus();
     }
 
     function closeModal() {
       modal.classList.remove("is-open");
       modal.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
+      document.body.classList.remove("scroll-locked");
+      document.body.style.top = "";
+      window.scrollTo(0, scrollY);
     }
 
-    // Open — each tile
-    tiles.forEach(function (btn) {
-      btn.addEventListener("click", openModal);
+    // Wire tiles — each carries data-menu-tile="food" or "drink"
+    document.querySelectorAll("[data-menu-tile]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        openModal(btn.getAttribute("data-menu-tile"));
+      });
     });
 
-    // Close — X button (bound directly by id, never re-created)
-    if (closeBtn) {
-      closeBtn.addEventListener("click", function (e) {
-        e.stopPropagation();
-        closeModal();
-      });
-    }
+    // Close — X button
+    closeBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      closeModal();
+    });
 
-    // Close — click on the overlay backdrop (not the box)
+    // Close — click overlay backdrop (not the box)
     modal.addEventListener("click", function (e) {
       if (e.target === modal) closeModal();
     });
 
-    // Close — ESC key
+    // Close — ESC
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && modal.classList.contains("is-open")) {
-        closeModal();
-      }
+      if (e.key === "Escape" && modal.classList.contains("is-open")) closeModal();
     });
   });
 
