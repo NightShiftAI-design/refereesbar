@@ -17,19 +17,18 @@
   <script defer src="./app.js"></script>
 </head>
 <body>
-
 <a class="skip" href="#main">Skip to main content</a>
 
 <div class="actionbar" role="navigation" aria-label="Quick actions">
-  <a class="ab-btn" href="tel:+14232855663" data-tel>Call</a>
+  <a class="ab-btn" href="#" data-tel>Call</a>
   <a class="ab-btn" href="#" data-maps target="_blank" rel="noopener">Directions</a>
-  <a class="ab-btn ab-btn--gold" href="./index.html#order">Order Pickup</a>
+  <a class="ab-btn ab-btn--gold" href="#" data-tel>Order Pickup</a>
 </div>
 
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="./index.html">
-      <img src="./referees-logo.png" alt="Referees Sports Bar and Grill" class="site-logo" />
+      <img src="./referees-logo.png" alt="Referees Sports Bar and Grill logo" class="site-logo" width="120" height="44" />
       <div class="brand-text">
         <div class="brand-name">Referees</div>
         <div class="brand-sub">Sports Bar &amp; Grill · Dayton, TN</div>
@@ -40,12 +39,11 @@
       <a href="./menu.html" class="active">Menu</a>
       <a href="./events.html">Events</a>
       <a href="./gallery.html">Gallery</a>
-      <a href="./catering.html">Catering</a>
       <a href="./index.html#contact">Contact</a>
     </nav>
     <div class="header-cta">
-      <a class="btn btn-outline btn-sm" href="tel:+14232855663" data-tel>Call Now</a>
-      <a class="btn btn-primary btn-sm" href="./index.html#order">Order Pickup</a>
+      <a class="btn btn-outline btn-sm" href="#" data-tel>Call Now</a>
+      <a class="btn btn-primary btn-sm" href="#" data-tel>Order Pickup</a>
     </div>
   </div>
 </header>
@@ -56,14 +54,32 @@
     <div class="container">
       <div class="section-label"><div class="line"></div><span>What We're Serving</span></div>
       <h1>The Full Menu</h1>
-      <p>Search or browse every category. Prices may change — call <a href="tel:+14232855663" data-tel style="color:var(--gold)">(423) 285-5663</a> to confirm before ordering.</p>
+      <p>Search or browse every category. To place a pickup order, call us — pay when you arrive.</p>
       <div class="flex-gap mt-24">
-        <a class="btn btn-primary" href="./index.html#order">Place a Pickup Order</a>
-        <a class="btn btn-outline" href="tel:+14232855663" data-tel>Call Us</a>
+        <a class="btn btn-primary" href="#" data-tel>Call to Place a Pickup Order</a>
+        <a class="btn btn-outline" href="#menu-photos">Menu Photos</a>
       </div>
     </div>
   </section>
 
+  <!-- MENU DISCLAIMER -->
+  <section class="section" style="padding-bottom:0">
+    <div class="container">
+      <div class="menu-disclaimer">
+        <strong>Pricing &amp; Availability Notice</strong>
+        Prices may vary and are subject to change without notice. Items marked "Market Price" fluctuate based on availability — call <a href="#" data-tel style="color:var(--gold)">(423) 285-5663</a> for current pricing. Market price items include our T-Bone steak and any seasonal specials.
+      </div>
+      <div class="notice" style="margin-bottom:0">
+        <div class="notice-icon">🌾</div>
+        <div class="notice-body">
+          <strong>Allergy Advisory</strong>
+          <p>Our kitchen handles common allergens including nuts, gluten, dairy, shellfish, and eggs. Cross-contact is possible. <strong>Please notify your server</strong> of any allergies or dietary restrictions before ordering.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU ITEMS -->
   <section class="section" id="menu">
     <div class="container">
       <div class="menu-controls">
@@ -76,27 +92,107 @@
       <div id="menuMeta" class="menu-meta"></div>
       <div id="menuGrid" class="menu-grid"></div>
       <div class="notice mt-32">
-        <div class="notice-icon">💡</div>
+        <div class="notice-icon">📞</div>
         <div class="notice-body">
-          <strong>Prices may change without notice</strong>
-          <p>Call <a href="tel:+14232855663" data-tel style="color:var(--gold)">(423) 285-5663</a> to confirm current prices and daily specials, or to place a pickup order over the phone.</p>
+          <strong>Call to place a pickup order — pay at pickup</strong>
+          <p>Call <a href="#" data-tel style="color:var(--gold)">(423) 285-5663</a> to order. We'll confirm your order and give you a pickup time. Payment is collected in person — cash or card.</p>
         </div>
       </div>
       <div class="flex-gap mt-24">
-        <a class="btn btn-primary" href="./index.html#order">Place a Pickup Order</a>
-        <a class="btn btn-outline" href="./index.html#contact">Contact &amp; Directions</a>
+        <a class="btn btn-primary btn-lg" href="#" data-tel>Call to Order: (423) 285-5663</a>
+        <a class="btn btn-outline" href="./index.html#contact">Directions &amp; Hours</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU PHOTOS -->
+  <section class="section section-alt" id="menu-photos">
+    <div class="container">
+      <div class="section-intro">
+        <div>
+          <div class="section-label"><div class="line"></div><span>See It First</span></div>
+          <h2>Menu Photos</h2>
+          <p class="section-lead">Tap any photo to view full size. Use the download button to save.</p>
+        </div>
+      </div>
+      <div class="menu-photo-grid" id="menuPhotoGrid"></div>
+      <div class="notice mt-24">
+        <div class="notice-icon">📸</div>
+        <div class="notice-body">
+          <strong>More photos on Facebook</strong>
+          <p>We post food shots and specials regularly. <a href="#" data-fb style="color:var(--gold)" target="_blank" rel="noopener">Follow us on Facebook</a> for the latest.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POLICIES -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label"><div class="line"></div><span>Good to Know</span></div>
+      <h2>Policies &amp; Info</h2>
+      <div class="policy-grid mt-24">
+        <div class="policy-card">
+          <div class="policy-card-title">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            Allergy &amp; Cross-Contact
+          </div>
+          <p>Our kitchen is not allergen-free. We handle gluten, dairy, nuts, shellfish, and eggs. Cross-contact is possible. Please inform your server of all allergies before ordering — we'll do our best to accommodate you.</p>
+        </div>
+        <div class="policy-card">
+          <div class="policy-card-title">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Pricing Disclaimer
+          </div>
+          <p>All prices listed are subject to change without notice. Market price items (T-Bone, seasonal specials) vary based on availability. Call <a href="#" data-tel style="color:var(--gold)">(423) 285-5663</a> to confirm current pricing.</p>
+        </div>
+        <div class="policy-card">
+          <div class="policy-card-title">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            Accessibility
+          </div>
+          <p>If you need accommodations to enjoy your visit — including seating, parking, or service assistance — please call us at <a href="#" data-tel style="color:var(--gold)">(423) 285-5663</a> before you arrive and we'll be glad to help.</p>
+        </div>
+        <div class="policy-card">
+          <div class="policy-card-title">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            Everyone's Welcome
+          </div>
+          <p>We welcome all guests regardless of race, religion, gender identity, sexual orientation, disability, or background. This is a place for everyone — come as you are.</p>
+        </div>
       </div>
     </div>
   </section>
 
 </main>
 
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" hidden aria-hidden="true" aria-modal="true" role="dialog" aria-label="Menu photo viewer">
+  <div class="lb-backdrop"></div>
+  <div class="lb-inner">
+    <button class="lb-close" aria-label="Close photo viewer" type="button">&times;</button>
+    <div class="lb-img-wrap">
+      <img class="lb-img" src="" alt="" />
+    </div>
+    <div class="lb-bar">
+      <button class="lb-prev" aria-label="Previous photo" type="button">&#8592;</button>
+      <span class="lb-counter">1 / 1</span>
+      <button class="lb-next" aria-label="Next photo" type="button">&#8594;</button>
+      <a class="lb-download" href="" download aria-label="Download photo">Download</a>
+    </div>
+  </div>
+</div>
+
 <footer class="site-footer">
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
         <div class="brand-name">Referees</div>
-        <p>Dayton's go-to sports bar &amp; grill. Wings, burgers, fajitas, and cold drinks — plus live music and karaoke nights.</p>
+        <p>Dayton's go-to sports bar &amp; grill. Wings, burgers, fajitas, 11 TVs, and cold drinks — plus live music nights.</p>
+        <div class="flex-gap mt-16">
+          <a class="btn btn-primary btn-sm" href="#" data-tel>Call to Order</a>
+          <a class="btn btn-review btn-sm" href="#" data-review target="_blank" rel="noopener">Leave a Review</a>
+        </div>
       </div>
       <div>
         <div class="footer-col-title">Navigate</div>
@@ -105,7 +201,6 @@
           <a href="./menu.html">Full Menu</a>
           <a href="./events.html">Events</a>
           <a href="./gallery.html">Gallery</a>
-          <a href="./catering.html">Catering</a>
           <a href="./index.html#contact">Contact</a>
         </div>
       </div>
@@ -121,12 +216,19 @@
       <div>
         <div class="footer-col-title">Contact</div>
         <div class="footer-links">
-          <a href="tel:+14232855663" data-tel>(423) 285-5663</a>
+          <a href="#" data-tel>(423) 285-5663</a>
           <a href="mailto:refereesportsbargrill@gmail.com">Email Us</a>
           <a href="#" data-maps target="_blank" rel="noopener">200 Able Drive, Dayton TN</a>
           <a href="#" data-fb target="_blank" rel="noopener">Facebook</a>
         </div>
       </div>
+    </div>
+    <div class="footer-liquor-notice">🍺 Liquor license coming soon — updates will be posted here or call <a href="#" data-tel style="color:var(--gold)">(423) 285-5663</a> to confirm current drink offerings.</div>
+    <div class="footer-policies">
+      <p class="footer-policy-line"><strong>Allergy Advisory:</strong> Our kitchen handles common allergens. Cross-contact is possible. Notify your server of any allergies before ordering.</p>
+      <p class="footer-policy-line"><strong>Accessibility:</strong> Need accommodations? Call <a href="#" data-tel style="color:var(--gold)">(423) 285-5663</a>.</p>
+      <p class="footer-policy-line"><strong>Our House:</strong> Everyone is welcome — regardless of race, religion, gender identity, sexual orientation, disability, or background.</p>
+      <p class="footer-policy-line"><strong>Disclaimer:</strong> Prices, hours, and availability subject to change. Call to confirm.</p>
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">&copy; <span id="year"></span> Referees Sports Bar &amp; Grill. All rights reserved.</div>
