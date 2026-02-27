@@ -9,10 +9,6 @@
     reviewUrl: "https://www.google.com/search?sca_esv=db2351f46a6aa745&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOSrkv5aWi_biwLS8E5Nh7hVrDuFGLbv-hMx-yYjjDmYifS-Tlgb5a76cBwR1jjkDsrCRF2rOjlXhYW3hXiKQGXDbdA3c&q=Referees+Reviews&sa=X&ved=2ahUKEwizlo-7jviSAxVdv4kEHZxyIG0Q0bkNegQIHBAF&biw=1470&bih=831&dpr=2",
   };
 
-  // ─── GOOGLE 360 TOUR ────────────────────────────────────────────
-  // Fill in the URL (opens tour in new tab) and thumb (still image).
-  // thumb can be a local file (e.g. ./tour-thumb-1.jpg) or a full URL.
-  // Leave thumb as "" to show a placeholder icon until you have an image.
   const TOUR_360 = [
     {
       url:   "https://www.google.com/maps/place/Referees/@35.4759352,-85.0273746,3a,75y,68.13h,84.01t/data=!3m8!1e1!3m6!1sCIABIhD27kuX_SDbTHxvejiFUCVf!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAFfmt2bM9pbYGsieVfwIf9hCARLGuZv-Y4DAs3jy-MR5ydKnokdff3k-SMZHIn30tvM0nw4rwI819qzlBmM7ajxjiKIJfCdUM2tcazRQuus_ps1LC2AOPf7YU257GRLNmmQgqpfFuot6QZYr3vM%3Dw900-h600-k-no-pi5.993400658047733-ya301.99678461136375-ro0-fo100!7i6284!8i3142!4m9!3m8!1s0x8860a3928cc4f261:0x9618beea02624ab2!8m2!3d35.4756277!4d-85.0275975!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11t59n25r6?entry=ttu&g_ep=EgoyMDI2MDIyNC4wIKXMDSoASAFQAw%3D%3D",
@@ -26,30 +22,26 @@
     },
   ];
 
-  // ─── MENU ──────────────────────────────────────────────────────
-  // Exact order: Apps · Wings · Burgers · Subs & Wraps · Pasta ·
-  // Steaks · Fajitas · Fowled Out · Seafood · Sidelines · Kids · Desserts · Drinks
-
   const MENU = [
     {
-      key: "appetizers",
-      title: "Starting Line-Up",
-      subtitle: "Appetizers",
+      key: "apps",
+      title: "Apps",
+      subtitle: "Starting Line-Up",
       items: [
         { name: "Fresh Guacamole & Chips", price: 8.00 },
-        { name: "Jalapeño Poppers", price: 8.00 },
-        { name: "Loaded Fries", price: 12.00, desc: "Pico / Melted Cheese / Bacon Bits / Sour Cream / Jalapeño" },
-        { name: "Sampler Platter", price: 12.00, desc: "Pretzel Nuggets · Mushrooms · Cheese Wedges" },
+        { name: "Jalapeno Poppers", price: 8.00 },
+        { name: "Loaded Fries", price: 12.00, desc: "Pico / Melted Cheese / Bacon Bits / Sour Cream / Jalapenos" },
+        { name: "Sampler Platter", price: 12.00, desc: "Pretzel Nugget / Mushrooms / Cheese Wedges" },
         { name: "Pretzel Nuggets with Beer Cheese", price: 8.00 },
         { name: "Potato Skins", price: 10.00 },
         { name: "Fried Zucchini with Marinara", price: 8.00 },
-        { name: "Spinach/Artichoke Dip with Pita Chips", price: 10.00 },
         { name: "Cheese Wedges with Marinara", price: 8.00 },
+        { name: "Chapo Platter", price: 12.00, desc: "Cheese Wedges / Green Beans / Pretzel Nugget" },
         { name: "Fried Mushrooms", price: 8.00 },
-        { name: "Quesadilla", price: 10.00, desc: "Served with Lettuce · Tomatoes · Salsa · Sour Cream — Grilled Chicken or Steak" },
-        { name: "Jolene Platter", price: 12.00, desc: "Mushrooms · Green Beans · Zucchini" },
+        { name: "Quesadilla", price: 10.00, desc: "Served with Lettuce / Tomatoes / Salsa / Sour Cream\nGrilled Chicken / Steak" },
+        { name: "Jolene Platter", price: 12.00, desc: "Mushrooms, Green Beans, Zucchini" },
         { name: "Green Beans", price: 10.00, desc: "Boom Boom Sauce" },
-        { name: "Nachos", price: 15.00, desc: "Monterey Jack · Salsa · Sour Cream · Pico · Lettuce · Tomatoes. Grilled Chicken or Steak up-charge." },
+        { name: "Nachos", price: 15.00, desc: "Topped with Shredded Monterey Jack Cheese / Salsa / Sour Cream / Pico de Gallo / Lettuce / Tomatoes.\nGrilled Chicken / Steak (Up-Charge)" },
         { name: "Fried Pickles", price: 8.00 }
       ]
     },
@@ -58,132 +50,107 @@
       title: "Wings",
       subtitle: "Bone-In or Boneless",
       items: [
-        { name: "½ Dozen", price: 11.00 },
+        { name: "1/2 Dozen", price: 11.00 },
         { name: "Whole Dozen", price: 20.00 },
-        {
-          name: "Wet Sauces",
-          priceText: "Choose your heat",
-          desc: "Mild · Hot · Hot Honey · Honey · Garlic Parmesan · BBQ · Sweet Red Chili · Sriracha Bourbon · Mango Habanero · Boom Boom · Teriyaki · Lemon Pepper Wet"
-        },
-        {
-          name: "Dry Rubs",
-          priceText: "Choose your rub",
-          desc: "Lemon Pepper · Garlic Parmesan · Blackened · Cajun"
-        },
-        {
-          name: "🍯 Locally Sourced Sauces",
-          priceText: "",
-          desc: "Honey and Hot Honey are locally sourced — made right here in the Dayton area."
-        }
+        { name: "Dry Rubs", priceText: "", desc: "Lemon Pepper / Garlic Parmesan / Blackened / Cajun" },
+        { name: "Wet Sauces", priceText: "", desc: "Mild / Hot / Garlic Parmesan / Honey (Locally Sourced) / Hot Honey (Locally Sourced) / BBQ / Sweet Red Chili / Siracha Bourbon / Mango Habanero" },
+        { name: "Gio's Pick", priceText: "1/2 Doz. $10.00  /  Doz. $19.00", desc: "COOK PICKS SAUCES" }
       ]
     },
     {
       key: "burgers",
       title: "Burgers",
-      subtitle: "All burgers on a Brioche Bun with one side",
+      subtitle: "All Burgers come on Brioche Bun with one side.",
       items: [
-        { name: "All American", price: 12.00, desc: "Lettuce · Tomato · Onion · Pickle · American Cheese — Add Bacon $2.00" },
-        { name: "Jolene's Burger", price: 12.00, desc: "Grilled Chicken Breast · Bacon · BBQ Sauce · Lettuce · Onions · Tomatoes" },
-        { name: "Bacon Burger", price: 14.00, desc: "Beef Patty · Bacon · BBQ Sauce" },
-        { name: "Portobella Bacon Swiss", price: 15.00, desc: "Portobella Mushrooms · Peppered Bacon · Swiss Cheese" },
-        { name: "Roethlisburger", price: 15.00, desc: "Double burger loaded with Mozzarella · Melted Cheddar · Bacon Bits. You will need gloves for this one!" },
-        { name: "Chicken Buffalo Burger", price: 13.50, desc: "Fried Chicken · Buffalo Sauce · Lettuce · Pickles · Onions · Tomatoes. Add any other sauce for 25¢." }
+        { name: "All American*", price: 12.00, desc: "Topped with Lettuce / Tomato / Onion / Pickle / American Cheese\nAdd Bacon $2.00" },
+        { name: "Portobella Bacon Swiss*", price: 15.00, desc: "Topped with Grilled Portobella Mushrooms / Peppered Bacon / Swiss Cheese" },
+        { name: "Roethlisburger*", price: 15.00, desc: "Double Burger loaded with Mozzarella / topped with Melted Cheddar Cheese / Bacon Bits\nyou will need Gloves for this one!" },
+        { name: "Jolene's Burger*", price: 12.00, desc: "Grilled Chicken Breast / Bacon / BBQ Sauce / Lettuce / Onions / Tomatoes" },
+        { name: "Bacon Burger*", price: 14.00, desc: "Beef Patty / Bacon / BBQ Sauce" },
+        { name: "Chicken Buffalo Burger*", price: 13.50, desc: "Fried Chicken covered with Buffalo Sauce / Lettuce / Pickles / Onions / Tomatoes" },
+        { name: "Oso Hamburger Steak*", price: 14.00, desc: "Onions / Bell Peppers\nAdd Mushrooms $2.00" },
+        { name: "Aztec Burger*", price: 15.00, desc: "Colby Jack Cheese / Guacamole\nAdd Bacon $2.00" }
       ],
-      footnote: "* Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk of food-borne illness."
+      footnote: "Add any other sauce for 25¢ more."
     },
     {
       key: "subs",
       title: "Subs & Wraps",
-      subtitle: "Comes with 1 side",
+      subtitle: "Comes with 1 Side",
       items: [
-        { name: "Philly Flyer Steak", price: 10.00, desc: "Grilled Steak · Sautéed Onion · Provolone · Bell Peppers" },
-        { name: "The Bills Wrap", price: 12.00, desc: "Hand-breaded Chicken tossed in Buffalo · Lettuce · Tomato · Onion" },
-        { name: "Clubhouse Wrap", price: 13.00, desc: "Ham · Turkey · American Cheese · Lettuce · Tomato" },
-        { name: "Referees Chicken Dog", price: 11.50, desc: "Hand-breaded Chicken Tender · Coleslaw · Ranch · Green Onions · Buffalo Sauce" }
+        { name: "Philly Flyer Steak*", price: 10.00, desc: "Grilled Steak / Sauteed Onion / Provolone Cheese / Bell Peppers" },
+        { name: "Clubhouse Wrap", price: 13.00, desc: "Ham / Turkey / American Cheese / Lettuce / Tomato" },
+        { name: "The Bills Wrap", price: 12.00, desc: "Hand-breaded Chicken tossed in Buffalo Sauce / Lettuce / Tomato / Onion" }
       ]
     },
     {
       key: "pasta",
       title: "Pasta",
       items: [
-        { name: "Chicken Alfredo", price: 15.00, desc: "House-breaded Chicken over Angel Pasta" },
-        { name: "Shrimp Alfredo",  price: 18.00, desc: "Shrimp over Angel Pasta with Alfredo Sauce" },
-        { name: "Steak Alfredo",   price: 18.00, desc: "Grilled Steak over Angel Pasta with Alfredo Sauce" }
+        { name: "Chicken Alfredo", price: 15.00, desc: "Grilled Chicken in Homemade Alfredo over Angel Pasta.  Add Shrimp $3.00" },
+        { name: "Buffalo Chicken Alfredo", price: 16.00, desc: "Breaded Chicken w/Buffalo Sauce covered over Alfredo" }
       ]
     },
     {
       key: "steaks",
       title: "Steaks",
       items: [
-        { name: "Top Sirloin", price: 20.00, desc: "8 oz Baseball Center Cut Sirloin · with Baked Potato" },
-        { name: "Rib-Eye",     price: 32.00, desc: "16 oz Cowboy Cut Rib-eye · with Baked Potato" },
-        { name: "T-Bone",      priceText: "Market Price", desc: "with Baked Potato — price varies based on availability" }
+        { name: "Top Sirloin*", price: 20.00, desc: "8 oz. Baseball Center Cut Sirloin / with Baked Potato" },
+        { name: "Rib-Eye*", price: 32.00, desc: "16 oz. Cowboy Cut Rib-eye / with Baked Potato" },
+        { name: "T-Bone*", priceText: "$ Market Price", desc: "with Baked Potato" }
       ]
     },
     {
       key: "fajitas",
       title: "Sizzling Fajitas",
       items: [
-        { name: "Chicken or Steak",  price: 16.00, desc: "Bell Peppers · Onions · Tomatoes" },
-        { name: "Shrimp Fajitas",    price: 17.00 },
-        { name: "Hawaiian Fajitas",  price: 18.00, desc: "Steak · Bell Peppers · Onions · Pineapple" },
-        { name: "Tex Fajitas",       price: 18.00, desc: "Chicken · Steak · Shrimp — Bell Peppers · Onions · Tomatoes" }
+        { name: "Chicken or Steak*", price: 16.00, desc: "Cooked with Grilled Bell Peppers / Onions / Tomatoes" },
+        { name: "Shrimp Fajitas", price: 17.00, desc: "Cooked with Bell Peppers / Onions / Tomatoes" },
+        { name: "Hawaiian Fajitas — Steak", price: 18.00, desc: "Bell Peppers / Onions / Pineapple / Tomatoes" },
+        { name: "Tex Fajitas — Chicken / Steak / Shrimp", price: 18.00, desc: "Cooked with Bell Peppers / Onions / Tomatoes" }
       ]
     },
     {
-      key: "chicken",
+      key: "fowled",
       title: "Fowled Out",
-      subtitle: "Comes with 1 side",
+      subtitle: "Comes with 1 Side",
       items: [
-        { name: "Chicken Tenders", price: 13.00, desc: "House-breaded and fried" },
-        { name: "Naked Tenders",   price: 12.00, desc: "Grilled chicken" }
+        { name: "Chicken Tenders", price: 13.00, desc: "House-breaded and Fried" },
+        { name: "Naked Tenders", price: 12.00, desc: "Grilled Chicken" }
       ]
     },
     {
       key: "seafood",
       title: "Seafood",
       items: [
-        { name: "Fish and Chips", price: 15.00, desc: "Corona Beer-Battered Cod" }
-      ]
-    },
-    {
-      key: "sides",
-      title: "Sidelines",
-      subtitle: "$3.99 each — $1.99 up-charge for loaded (bacon, sour cream, jalapeños, nacho cheese)",
-      items: [
-        { name: "Tater Babies (Wedges)" },
-        { name: "Tater Tots" },
-        { name: "Cole Slaw" },
-        { name: "Onion Rings" },
-        { name: "Sweet Potato Fries" },
-        { name: "Waffle Fries" },
-        { name: "Side Salad" }
+        { name: "Fried Butterfly Shrimp", price: 13.00, desc: "w/ Waffle Fries. (8 Pieces)" },
+        { name: "Fish and Chips*", price: 15.00, desc: "Corona Beer-Battered Cod" }
       ]
     },
     {
       key: "kids",
-      title: "Kid's Menu",
-      subtitle: "Ages 12 & Under — $6.00",
+      title: "Kids Menu",
+      subtitle: "Ages 12 & Under  $6.00",
       items: [
         { name: "Kid Batter Up Tenders & 1 Side" },
         { name: "Kid Lil' Slugger Burger & 1 Side" },
-        { name: "Kid Fowled Out Alfredo" },
+        { name: "Kid Fowled Out Alfredo", desc: "Garlic Bread" },
         { name: "Cheese Quesadilla" },
-        { name: "Side Options", priceText: "", desc: "Waffle Fries · Onion Rings · Tater Babies · Sweet Potato Fries" }
+        { name: "Bacon-Wrapped Hot Dog" },
+        { name: "Grilled Cheese" },
+        { name: "Side Options", priceText: "", desc: "Waffle Fries / Onion Rings / Tater Babies / Sweet Potato Fries" }
       ]
     },
     {
       key: "desserts",
-      title: "Desserts",
-      items: [
-        { name: "Brownie with Ice Cream", price: 5.00 }
-      ]
+      title: "Desserts (Ask Server)",
+      items: []
     },
     {
       key: "drinks",
       title: "Drinks",
       items: [
-        { name: "Coca-Cola Products", price: 2.99 }
+        { name: "Coca Cola Products", priceText: "$2.99" }
       ]
     }
   ];
@@ -214,7 +181,6 @@
 
   $$("#year").forEach(el => { el.textContent = new Date().getFullYear(); });
 
-  // ─── HOURS / STATUS ────────────────────────────────────────────
   const schedule = {
     0: { open: 11 * 60, close: 21 * 60 },
     1: { open: 15 * 60, close: 21 * 60 },
@@ -261,7 +227,6 @@
   updateStatus();
   setInterval(updateStatus, 60000);
 
-  // ─── MENU RENDERING ─────────────────────────────────────────────
   const tabsEl   = $("#menuTabs");
   const gridEl   = $("#menuGrid");
   const searchEl = $("#menuSearch");
@@ -311,7 +276,7 @@
     gridEl.innerHTML = sections.map(sec => {
       const itemsHtml = sec.items.map(it => {
         const priceRaw = it.priceText !== undefined && it.priceText !== null ? it.priceText : (typeof it.price === "number" ? money(it.price) : "");
-        const isMarket = priceRaw === "Market Price";
+        const isMarket = priceRaw === "Market Price" || priceRaw === "$ Market Price";
         const priceDisplay = isMarket ? `<span class="market-price">Market Price</span>` : esc(priceRaw);
         return `<li class="menu-item">
           <div>
@@ -341,7 +306,6 @@
   buildTabs();
   renderMenu();
 
-  // ─── GOOGLE 360 TOUR CARDS (gallery.html) ───────────────────────
   const tourGrid = document.getElementById("tourGrid");
   if (tourGrid && TOUR_360.length) {
     tourGrid.innerHTML = TOUR_360.map(t => {
@@ -358,7 +322,6 @@
     }).join("");
   }
 
-  // ─── MENU IMAGE MODAL (menu.html) ───────────────────────────────
   document.addEventListener("DOMContentLoaded", function () {
     var modal    = document.getElementById("menuImageModal");
     var closeBtn = document.getElementById("mimClose");
@@ -425,7 +388,6 @@
     });
   });
 
-  // ─── MOBILE NAV ─────────────────────────────────────────────────
   document.addEventListener("DOMContentLoaded", function () {
     var toggle    = document.getElementById("navToggle");
     var mobileNav = document.getElementById("mobileNav");
@@ -465,7 +427,6 @@
     });
   });
 
-  // ─── ACTIVE NAV ─────────────────────────────────────────────────
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
   $$(".nav a").forEach(a => {
     const href = a.getAttribute("href") || "";
