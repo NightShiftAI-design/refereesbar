@@ -38,11 +38,21 @@
         { name: "Cheese Wedges with Marinara", price: 8.00 },
         { name: "Chapo Platter", price: 12.00, desc: "Cheese Wedges / Green Beans / Pretzel Nugget" },
         { name: "Fried Mushrooms", price: 8.00 },
-        { name: "Quesadilla", price: 10.00, desc: "Served with Lettuce / Tomatoes / Salsa / Sour Cream\nGrilled Chicken / Steak" },
+        { name: "Quesadilla", price: 10.00, desc: "Served with Lettuce / Tomatoes / Salsa / Sour Cream — Grilled Chicken / Steak" },
         { name: "Jolene Platter", price: 12.00, desc: "Mushrooms, Green Beans, Zucchini" },
         { name: "Green Beans", price: 10.00, desc: "Boom Boom Sauce" },
-        { name: "Nachos", price: 15.00, desc: "Topped with Shredded Monterey Jack Cheese / Salsa / Sour Cream / Pico de Gallo / Lettuce / Tomatoes.\nGrilled Chicken / Steak (Up-Charge)" },
+        { name: "Nachos", price: 15.00, desc: "Topped with Shredded Monterey Jack Cheese / Salsa / Sour Cream / Pico de Gallo / Lettuce / Tomatoes. Grilled Chicken / Steak (Up-Charge)" },
         { name: "Fried Pickles", price: 8.00 }
+      ]
+    },
+    {
+      key: "salads",
+      title: "Salads",
+      subtitle: "Dressings: Honey Mustard, French, Thousand Island, Italian, Blue Cheese, Raspberry Vinaigrette, Caesar, Ranch",
+      items: [
+        { name: "The Sir Cobb", price: 14.00, desc: "Mixed Greens / Ham / Turkey / Cucumbers / Tomatoes / Shredded Cheese" },
+        { name: "Madison Square Garden", price: 9.00, desc: "Mixed Greens / Cucumbers / Tomatoes / Shredded Cheese / Croutons / Red Onions" },
+        { name: "Chicken Caesar", price: 12.00, desc: "Romaine / Caesar Dressing / Parmesan Cheese / Croutons / Grilled Chicken" }
       ]
     },
     {
@@ -53,8 +63,8 @@
         { name: "1/2 Dozen", price: 11.00 },
         { name: "Whole Dozen", price: 20.00 },
         { name: "Dry Rubs", priceText: "", desc: "Lemon Pepper / Garlic Parmesan / Blackened / Cajun" },
-        { name: "Wet Sauces", priceText: "", desc: "Mild / Hot / Garlic Parmesan / Honey (Locally Sourced) / Hot Honey (Locally Sourced) / BBQ / Sweet Red Chili / Siracha Bourbon / Mango Habanero" },
-        { name: "Gio's Pick", priceText: "1/2 Doz. $10.00  /  Doz. $19.00", desc: "COOK PICKS SAUCES" }
+        { name: "Wet Sauces", priceText: "", desc: "Mild / Hot / Garlic Parmesan / Honey \u2014 Locally Sourced / Hot Honey \u2014 Locally Sourced / BBQ / Sweet Red Chili / Siracha Bourbon / Mango Habanero" },
+        { name: "Gio\u2019s Pick", priceText: "1/2 Doz. $10.00  /  Doz. $19.00", desc: "COOK PICKS SAUCES" }
       ]
     },
     {
@@ -62,16 +72,16 @@
       title: "Burgers",
       subtitle: "All Burgers come on Brioche Bun with one side.",
       items: [
-        { name: "All American*", price: 12.00, desc: "Topped with Lettuce / Tomato / Onion / Pickle / American Cheese\nAdd Bacon $2.00" },
+        { name: "All American*", price: 12.00, desc: "Topped with Lettuce / Tomato / Onion / Pickle / American Cheese — Add Bacon $2.00" },
         { name: "Portobella Bacon Swiss*", price: 15.00, desc: "Topped with Grilled Portobella Mushrooms / Peppered Bacon / Swiss Cheese" },
-        { name: "Roethlisburger*", price: 15.00, desc: "Double Burger loaded with Mozzarella / topped with Melted Cheddar Cheese / Bacon Bits\nyou will need Gloves for this one!" },
-        { name: "Jolene's Burger*", price: 12.00, desc: "Grilled Chicken Breast / Bacon / BBQ Sauce / Lettuce / Onions / Tomatoes" },
+        { name: "Roethlisburger*", price: 15.00, desc: "Double Burger loaded with Mozzarella / topped with Melted Cheddar Cheese / Bacon Bits — you will need Gloves for this one!" },
+        { name: "Jolene\u2019s Burger*", price: 12.00, desc: "Grilled Chicken Breast / Bacon / BBQ Sauce / Lettuce / Onions / Tomatoes" },
         { name: "Bacon Burger*", price: 14.00, desc: "Beef Patty / Bacon / BBQ Sauce" },
         { name: "Chicken Buffalo Burger*", price: 13.50, desc: "Fried Chicken covered with Buffalo Sauce / Lettuce / Pickles / Onions / Tomatoes" },
-        { name: "Oso Hamburger Steak*", price: 14.00, desc: "Onions / Bell Peppers\nAdd Mushrooms $2.00" },
-        { name: "Aztec Burger*", price: 15.00, desc: "Colby Jack Cheese / Guacamole\nAdd Bacon $2.00" }
+        { name: "Oso Hamburger Steak*", price: 14.00, desc: "Onions / Bell Peppers — Add Mushrooms $2.00" },
+        { name: "Aztec Burger*", price: 15.00, desc: "Colby Jack Cheese / Guacamole — Add Bacon $2.00" }
       ],
-      footnote: "Add any other sauce for 25¢ more."
+      footnote: "Add any other sauce for 25\u00a2 more."
     },
     {
       key: "subs",
@@ -106,8 +116,8 @@
       items: [
         { name: "Chicken or Steak*", price: 16.00, desc: "Cooked with Grilled Bell Peppers / Onions / Tomatoes" },
         { name: "Shrimp Fajitas", price: 17.00, desc: "Cooked with Bell Peppers / Onions / Tomatoes" },
-        { name: "Hawaiian Fajitas — Steak", price: 18.00, desc: "Bell Peppers / Onions / Pineapple / Tomatoes" },
-        { name: "Tex Fajitas — Chicken / Steak / Shrimp", price: 18.00, desc: "Cooked with Bell Peppers / Onions / Tomatoes" }
+        { name: "Hawaiian Fajitas \u2014 Steak", price: 18.00, desc: "Bell Peppers / Onions / Pineapple / Tomatoes" },
+        { name: "Tex Fajitas \u2014 Chicken / Steak / Shrimp", price: 18.00, desc: "Cooked with Bell Peppers / Onions / Tomatoes" }
       ]
     },
     {
@@ -133,7 +143,7 @@
       subtitle: "Ages 12 & Under  $6.00",
       items: [
         { name: "Kid Batter Up Tenders & 1 Side" },
-        { name: "Kid Lil' Slugger Burger & 1 Side" },
+        { name: "Kid Lil\u2019 Slugger Burger & 1 Side" },
         { name: "Kid Fowled Out Alfredo", desc: "Garlic Bread" },
         { name: "Cheese Quesadilla" },
         { name: "Bacon-Wrapped Hot Dog" },
@@ -143,8 +153,10 @@
     },
     {
       key: "desserts",
-      title: "Desserts (Ask Server)",
-      items: []
+      title: "Desserts",
+      items: [
+        { name: "Ask server for today\u2019s dessert", priceText: "", desc: "Options may vary" }
+      ]
     },
     {
       key: "drinks",
@@ -213,7 +225,7 @@
     } else {
       const left = today.close - mins;
       const h = Math.floor(left / 60), m = left % 60;
-      msg = `Open · Closes in ${h > 0 ? h + "h " : ""}${m}m`; cls = "status-open";
+      msg = `Open \u00b7 Closes in ${h > 0 ? h + "h " : ""}${m}m`; cls = "status-open";
     }
     $$(".open-status").forEach(el => {
       el.textContent = msg;
@@ -266,10 +278,10 @@
     if (!gridEl) return;
     const sections = filteredMenu();
     const total = sections.reduce((a, s) => a + s.items.length, 0);
-    if (metaEl) metaEl.textContent = `${activeKey === "all" ? "All categories" : MENU.find(s => s.key === activeKey)?.title} · ${total} item${total !== 1 ? "s" : ""}${query.trim() ? ` matching "${query.trim()}"` : ""}`;
+    if (metaEl) metaEl.textContent = `${activeKey === "all" ? "All categories" : MENU.find(s => s.key === activeKey)?.title} \u00b7 ${total} item${total !== 1 ? "s" : ""}${query.trim() ? ` matching "${query.trim()}"` : ""}`;
 
     if (!sections.length) {
-      gridEl.innerHTML = `<div class="notice"><div class="notice-icon">🔍</div><div class="notice-body"><strong>No results</strong><p>No menu items match "<em>${esc(query)}</em>".</p></div></div>`;
+      gridEl.innerHTML = `<div class="notice"><div class="notice-icon">\uD83D\uDD0D</div><div class="notice-body"><strong>No results</strong><p>No menu items match "<em>${esc(query)}</em>".</p></div></div>`;
       return;
     }
 
@@ -311,12 +323,12 @@
     tourGrid.innerHTML = TOUR_360.map(t => {
       const thumb = t.thumb
         ? `<img src="${esc(t.thumb)}" alt="360 view of ${esc(t.label)}" loading="lazy" />`
-        : `<div class="tour-placeholder"><svg width="36" height="36" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg><span>360° View</span></div>`;
+        : `<div class="tour-placeholder"><svg width="36" height="36" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg><span>360\u00b0 View</span></div>`;
       return `<a class="tour-card" href="${esc(t.url)}" target="_blank" rel="noopener" aria-label="Open Google 360 view: ${esc(t.label)}">
         <div class="tour-thumb">${thumb}</div>
         <div class="tour-card-label">
           <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
-          ${esc(t.label)} — tap to view in Google Maps
+          ${esc(t.label)} \u2014 tap to view in Google Maps
         </div>
       </a>`;
     }).join("");
@@ -354,7 +366,7 @@
       content.innerHTML = data.images.map(function (img) {
         return '<div class="mim-img-block">'
           + '<img src="' + img.src + '" alt="' + img.alt + '" style="width:100%;max-width:100%;height:auto;display:block;" />'
-          + '<a class="mim-download" href="' + img.src + '" download="' + img.filename + '">⬇ Download ' + img.alt + '</a>'
+          + '<a class="mim-download" href="' + img.src + '" download="' + img.filename + '">\u2b07 Download ' + img.alt + '</a>'
           + '</div>';
       }).join('');
     }
