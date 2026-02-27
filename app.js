@@ -158,7 +158,8 @@
         { name: "Sweet Potato Fries" },
         { name: "Waffle Fries" },
         { name: "Side Salad" }
-      ]
+      ],
+      footnote: "Loaded includes bacon, sour cream, jalapeños, and nacho cheese."
     },
     {
       key: "kids",
