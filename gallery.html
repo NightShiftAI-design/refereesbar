@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="./styles.css" />
   <script defer src="./app.js"></script>
   <style>
+    /* ── Gallery grid ── */
     .gallery-label {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 700; font-size: .8rem;
@@ -25,18 +26,57 @@
       padding-bottom: 10px;
       border-bottom: 1px solid var(--border);
     }
-    .gallery-grid-5 {
+    .gallery-grid-7 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 8px;
     }
-    .gallery-grid-5 .gallery-item { aspect-ratio: 4/3; }
-    @media (max-width: 700px) {
-      .gallery-grid-5 { grid-template-columns: 1fr 1fr; }
+    .gallery-grid-7 .gallery-item { aspect-ratio: 4/3; }
+    @media (max-width: 700px) { .gallery-grid-7 { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 420px) { .gallery-grid-7 { grid-template-columns: 1fr; } }
+
+    /* ── 360 Tour cards ── */
+    .tour-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
     }
-    @media (max-width: 420px) {
-      .gallery-grid-5 { grid-template-columns: 1fr; }
+    .tour-card {
+      display: block;
+      border-radius: var(--r2);
+      overflow: hidden;
+      border: 1px solid var(--border2);
+      background: var(--surface);
+      transition: border-color .15s, transform .15s;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
     }
+    .tour-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+    .tour-thumb {
+      aspect-ratio: 16/9;
+      background: var(--deep);
+      overflow: hidden;
+    }
+    .tour-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .tour-placeholder {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 8px; color: var(--muted2);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: .85rem;
+      letter-spacing: .06em; text-transform: uppercase;
+    }
+    .tour-card-label {
+      display: flex; align-items: center; gap: 7px;
+      padding: 10px 14px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: .88rem;
+      letter-spacing: .04em; text-transform: uppercase;
+      color: var(--muted);
+    }
+    .tour-card:hover .tour-card-label { color: var(--gold); }
   </style>
 </head>
 <body>
@@ -98,67 +138,37 @@
   <section class="section" id="photos">
     <div class="container">
 
-      <div class="gallery-label">Food &amp; Wings</div>
-      <div class="gallery-grid-5">
+      <!-- 7 new photos -->
+      <div class="gallery-label">Referees — Food, Bar &amp; Atmosphere</div>
+      <div class="gallery-grid-7">
         <div class="gallery-item">
-          <img src="./food-wings-1.jpg" alt="Signature wings at Referees Sports Bar" loading="lazy" />
+          <img src="./photo-1.jpg" alt="Referees Sports Bar — photo 1" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="./food-burger-1.jpg" alt="Burger at Referees Sports Bar" loading="lazy" />
+          <img src="./photo-2.jpg" alt="Referees Sports Bar — photo 2" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="./food-fajitas-1.jpg" alt="Sizzling fajitas at Referees Sports Bar" loading="lazy" />
+          <img src="./photo-3.jpg" alt="Referees Sports Bar — photo 3" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="./IMG_0874.jpg" alt="Food at Referees Sports Bar" loading="lazy" />
+          <img src="./photo-4.jpg" alt="Referees Sports Bar — photo 4" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="./food-steak-1.jpg" alt="Steak at Referees Sports Bar" loading="lazy" />
+          <img src="./photo-5.jpg" alt="Referees Sports Bar — photo 5" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="./food-pickles-1.jpg" alt="Fried pickles at Referees Sports Bar" loading="lazy" />
-        </div>
-      </div>
-
-      <div class="gallery-label">Bar &amp; Interior</div>
-      <div class="gallery-grid-5">
-        <div class="gallery-item">
-          <img src="./interior-bar-1.jpg" alt="Bar area at Referees Sports Bar" loading="lazy" />
+          <img src="./photo-6.jpg" alt="Referees Sports Bar — photo 6" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="./interior.jpg" alt="Seating area at Referees Sports Bar" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="./IMG_0885.jpg" alt="Inside Referees Sports Bar" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="./hero-bg.jpg" alt="Referees Sports Bar exterior" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="./drinks-beer-1.jpg" alt="Cold drinks at Referees Sports Bar" loading="lazy" />
+          <img src="./photo-7.jpg" alt="Referees Sports Bar — photo 7" loading="lazy" />
         </div>
       </div>
 
-      <div class="gallery-label">Events &amp; Live Music</div>
-      <div class="gallery-grid-5">
-        <div class="gallery-item">
-          <img src="./event-livemusic-1.jpg" alt="Live music at Referees Sports Bar" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="./event-livemusic-2.jpg" alt="Band performing at Referees Sports Bar" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="./event-crowd-1.jpg" alt="Crowd at Referees Sports Bar on a busy night" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="./food-wings-1.jpg" alt="Wing Wednesday at Referees Sports Bar" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="./drinks-beer-1.jpg" alt="Drinks at Referees Sports Bar" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="./interior-bar-1.jpg" alt="Bar at Referees Sports Bar on a game day" loading="lazy" />
-        </div>
+      <!-- 360 Tour Section -->
+      <div class="gallery-label mt-48">360° View</div>
+      <p class="text-muted text-small" style="margin-bottom:0">Take a virtual walk through Referees on Google Maps. Tap any card to open the interactive 360° tour in a new tab.</p>
+      <div id="tourGrid" class="tour-grid">
+        <!-- Rendered by app.js from TOUR_360 array -->
       </div>
 
       <div class="notice mt-32">
@@ -222,6 +232,7 @@
     <div class="footer-liquor-notice">🍺 Liquor license coming soon — updates will be posted here or call <a href="#" data-tel style="color:var(--gold)">(423) 285-5663</a> to confirm current drink offerings.</div>
     <div class="footer-policies">
       <p class="footer-policy-line"><strong>Allergy Advisory:</strong> Our kitchen handles common allergens. Cross-contact is possible. Notify your server of any allergies before ordering.</p>
+      <p class="footer-policy-line"><strong>Payment:</strong> Cash · Credit &amp; debit cards · Tap to Pay available. Credit card payments may include a 3% surcharge.</p>
       <p class="footer-policy-line"><strong>Accessibility:</strong> Need accommodations? Call <a href="#" data-tel style="color:var(--gold)">(423) 285-5663</a>.</p>
       <p class="footer-policy-line"><strong>Our House:</strong> Everyone is welcome — regardless of race, religion, gender identity, sexual orientation, disability, or background.</p>
       <p class="footer-policy-line"><strong>Disclaimer:</strong> Prices, hours, and availability subject to change. Call to confirm.</p>
