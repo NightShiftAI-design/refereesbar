@@ -38,7 +38,7 @@
       items: [
         { name: "Fresh Guacamole & Chips", price: 8.00 },
         { name: "Jalapeño Poppers", price: 8.00 },
-        { name: "Loaded Fries", price: 12.00, desc: "Loaded with bacon, sour cream, jalapeño, and nacho cheese." },
+        { name: "Loaded Fries", price: 12.00, desc: "Pico / Melted Cheese / Bacon Bits / Sour Cream / Jalapeño" },
         { name: "Sampler Platter", price: 12.00, desc: "Pretzel Nuggets · Mushrooms · Cheese Wedges" },
         { name: "Pretzel Nuggets with Beer Cheese", price: 8.00 },
         { name: "Potato Skins", price: 10.00 },
