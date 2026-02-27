@@ -149,7 +149,7 @@
     {
       key: "sides",
       title: "Sidelines",
-      subtitle: "$3.99 each — $1.99 up-charge for loaded",
+      subtitle: "$3.99 each — $1.99 up-charge for loaded (bacon, sour cream, jalapeños, nacho cheese)",
       items: [
         { name: "Tater Babies (Wedges)" },
         { name: "Tater Tots" },
@@ -158,8 +158,7 @@
         { name: "Sweet Potato Fries" },
         { name: "Waffle Fries" },
         { name: "Side Salad" }
-      ],
-      footnote: "Loaded includes bacon, sour cream, jalapeños, and nacho cheese."
+      ]
     },
     {
       key: "kids",
