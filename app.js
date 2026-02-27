@@ -15,21 +15,15 @@
   // Leave thumb as "" to show a placeholder icon until you have an image.
   const TOUR_360 = [
     {
-      url:   "https://www.google.com/maps/place/Referees/data=!4m2!3m1!1s0x0:0x9618beea02624ab2?sa=X&ved=1t:2428&ictx=111",
-      thumb: "",        // ← paste thumbnail URL or local filename here
-      label: "Inside — Bar Area"
+      url:   "https://www.google.com/maps/place/Referees/@35.4759352,-85.0273746,3a,75y,68.13h,84.01t/data=!3m8!1e1!3m6!1sCIABIhD27kuX_SDbTHxvejiFUCVf!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAFfmt2bM9pbYGsieVfwIf9hCARLGuZv-Y4DAs3jy-MR5ydKnokdff3k-SMZHIn30tvM0nw4rwI819qzlBmM7ajxjiKIJfCdUM2tcazRQuus_ps1LC2AOPf7YU257GRLNmmQgqpfFuot6QZYr3vM%3Dw900-h600-k-no-pi5.993400658047733-ya301.99678461136375-ro0-fo100!7i6284!8i3142!4m9!3m8!1s0x8860a3928cc4f261:0x9618beea02624ab2!8m2!3d35.4756277!4d-85.0275975!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11t59n25r6?entry=ttu&g_ep=EgoyMDI2MDIyNC4wIKXMDSoASAFQAw%3D%3D",
+      thumb: "",
+      label: "Inside Bar (360°)"
     },
     {
-      url:   "https://www.google.com/maps/place/Referees/data=!4m2!3m1!1s0x0:0x9618beea02624ab2?sa=X&ved=1t:2428&ictx=111",
-      thumb: "",        // ← paste thumbnail URL or local filename here
-      label: "Dining Room"
+      url:   "https://www.google.com/maps/place/Referees/@35.4759013,-85.0275895,3a,75y,76.22h,76.15t/data=!3m8!1e1!3m6!1sCIABIhC37vCkQ2jkBpyW0U6VzZYP!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAFfmt2ZO3KKb8LITJVpctCBq3mLlSSFRmVxk_7EJFgKhaOo45gbgBQ41gV2cnNKwFcEWqgUlTy8tYbi8Rl6AItTuqhVqdmuuaSSo_u4Hv4E9cDvwICi-cQrLysXNcD3aT0wG_NWzED7L2_q6IXxa%3Dw900-h600-k-no-pi13.851381099371565-ya298.7691660001406-ro0-fo100!7i6284!8i3142!4m9!3m8!1s0x8860a3928cc4f261:0x9618beea02624ab2!8m2!3d35.4756277!4d-85.0275975!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11t59n25r6?entry=ttu&g_ep=EgoyMDI2MDIyNC4wIKXMDSoASAFQAw%3D%3D",
+      thumb: "",
+      label: "Dining Room (360°)"
     },
-    // Uncomment for a 3rd card:
-    // {
-    //   url:   "PASTE_TOUR_URL_HERE",
-    //   thumb: "",
-    //   label: "Patio / Exterior"
-    // },
   ];
 
   // ─── MENU ──────────────────────────────────────────────────────
@@ -44,7 +38,7 @@
       items: [
         { name: "Fresh Guacamole & Chips", price: 8.00 },
         { name: "Jalapeño Poppers", price: 8.00 },
-        { name: "Loaded Fries", price: 12.00, desc: "Pico · Melted Cheese · Bacon Bits · Sour Cream · Jalapeños" },
+        { name: "Loaded Fries", price: 12.00, desc: "Loaded with bacon, sour cream, jalapeño, and nacho cheese." },
         { name: "Sampler Platter", price: 12.00, desc: "Pretzel Nuggets · Mushrooms · Cheese Wedges" },
         { name: "Pretzel Nuggets with Beer Cheese", price: 8.00 },
         { name: "Potato Skins", price: 10.00 },
