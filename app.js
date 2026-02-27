@@ -9,18 +9,32 @@
     reviewUrl: "https://www.google.com/search?sca_esv=db2351f46a6aa745&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOSrkv5aWi_biwLS8E5Nh7hVrDuFGLbv-hMx-yYjjDmYifS-Tlgb5a76cBwR1jjkDsrCRF2rOjlXhYW3hXiKQGXDbdA3c&q=Referees+Reviews&sa=X&ved=2ahUKEwizlo-7jviSAxVdv4kEHZxyIG0Q0bkNegQIHBAF&biw=1470&bih=831&dpr=2",
   };
 
-  // ─── MENU PHOTOS ───────────────────────────────────────────────
-  // To add menu photos:
-  // 1. Add the image file to the root of your project (e.g. menu-photo-1.jpg)
-  // 2. Add an entry to MENU_PHOTOS below with { src, alt } — that's it.
-  const MENU_PHOTOS = [
-    { src: "./food-wings-1.jpg",   alt: "Wings"        },
-    { src: "./food-burger-1.jpg",  alt: "Burgers"      },
-    { src: "./food-fajitas-1.jpg", alt: "Fajitas"      },
-    { src: "./food-steak-1.jpg",   alt: "Steaks"       },
-    { src: "./food-pickles-1.jpg", alt: "Fried Pickles" },
-    { src: "./IMG_0874.jpg",       alt: "Menu Item"    },
+  // ─── GOOGLE 360 TOUR ────────────────────────────────────────────
+  // Fill in the URL (opens tour in new tab) and thumb (still image).
+  // thumb can be a local file (e.g. ./tour-thumb-1.jpg) or a full URL.
+  // Leave thumb as "" to show a placeholder icon until you have an image.
+  const TOUR_360 = [
+    {
+      url:   "https://www.google.com/maps/place/Referees/data=!4m2!3m1!1s0x0:0x9618beea02624ab2?sa=X&ved=1t:2428&ictx=111",
+      thumb: "",        // ← paste thumbnail URL or local filename here
+      label: "Inside — Bar Area"
+    },
+    {
+      url:   "https://www.google.com/maps/place/Referees/data=!4m2!3m1!1s0x0:0x9618beea02624ab2?sa=X&ved=1t:2428&ictx=111",
+      thumb: "",        // ← paste thumbnail URL or local filename here
+      label: "Dining Room"
+    },
+    // Uncomment for a 3rd card:
+    // {
+    //   url:   "PASTE_TOUR_URL_HERE",
+    //   thumb: "",
+    //   label: "Patio / Exterior"
+    // },
   ];
+
+  // ─── MENU ──────────────────────────────────────────────────────
+  // Exact order: Apps · Wings · Burgers · Subs & Wraps · Pasta ·
+  // Steaks · Fajitas · Fowled Out · Seafood · Sidelines · Kids · Desserts · Drinks
 
   const MENU = [
     {
@@ -46,24 +60,27 @@
       ]
     },
     {
-      key: "salads",
-      title: "Salads",
-      subtitle: "Dressings: Honey Mustard · French · Thousand Island · Italian · Blue Cheese · Raspberry Vinaigrette · Caesar · Ranch",
-      items: [
-        { name: "The Sir Cobb", price: 14.00, desc: "Mixed Greens · Ham · Turkey · Cucumbers · Tomatoes · Shredded Cheese" },
-        { name: "Madison Square Garden", price: 9.00, desc: "Mixed Greens · Cucumbers · Tomatoes · Shredded Cheese · Croutons · Red Onions" },
-        { name: "Chicken Caesar", price: 12.00, desc: "Romaine · Caesar Dressing · Parmesan · Croutons · Grilled Chicken" }
-      ]
-    },
-    {
       key: "wings",
       title: "Wings",
       subtitle: "Bone-In or Boneless",
       items: [
         { name: "½ Dozen", price: 11.00 },
         { name: "Whole Dozen", price: 20.00 },
-        { name: "Wet Sauces", priceText: "Choose your heat", desc: "Mild · Hot · Garlic Parmesan · Honey · BBQ · Sweet Red Chili · Sriracha Bourbon · Mango Habanero" },
-        { name: "Dry Rubs", priceText: "Choose your rub", desc: "Lemon Pepper · Garlic Parmesan · Blackened · Cajun" }
+        {
+          name: "Wet Sauces",
+          priceText: "Choose your heat",
+          desc: "Mild · Hot · Hot Honey · Honey · Garlic Parmesan · BBQ · Sweet Red Chili · Sriracha Bourbon · Mango Habanero · Boom Boom · Teriyaki · Lemon Pepper Wet"
+        },
+        {
+          name: "Dry Rubs",
+          priceText: "Choose your rub",
+          desc: "Lemon Pepper · Garlic Parmesan · Blackened · Cajun"
+        },
+        {
+          name: "🍯 Locally Sourced Sauces",
+          priceText: "",
+          desc: "Honey and Hot Honey are locally sourced — made right here in the Dayton area."
+        }
       ]
     },
     {
@@ -81,20 +98,6 @@
       footnote: "* Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk of food-borne illness."
     },
     {
-      key: "sides",
-      title: "Sidelines",
-      subtitle: "$3.99 each — $1.99 up-charge for loaded",
-      items: [
-        { name: "Tater Babies (Wedges)" },
-        { name: "Tater Tots" },
-        { name: "Cole Slaw" },
-        { name: "Onion Rings" },
-        { name: "Sweet Potato Fries" },
-        { name: "Waffle Fries" },
-        { name: "Side Salad" }
-      ]
-    },
-    {
       key: "subs",
       title: "Subs & Wraps",
       subtitle: "Comes with 1 side",
@@ -106,20 +109,12 @@
       ]
     },
     {
-      key: "chicken",
-      title: "Fowled Out",
-      subtitle: "Comes with 1 side",
-      items: [
-        { name: "Chicken Tenders", price: 13.00, desc: "House-breaded and fried" },
-        { name: "Naked Tenders", price: 12.00, desc: "Grilled chicken" }
-      ]
-    },
-    {
       key: "pasta",
       title: "Pasta",
       items: [
-        { name: "Chicken Alfredo", price: 15.00, desc: "House-breaded Chicken over Angel Pasta — Add Shrimp $3.00" },
-        { name: "Chicken Parmesan", price: 15.00, desc: "House-breaded Chicken Breast · Pasta Sauce · Provolone over Pasta" }
+        { name: "Chicken Alfredo", price: 15.00, desc: "House-breaded Chicken over Angel Pasta" },
+        { name: "Shrimp Alfredo",  price: 18.00, desc: "Shrimp over Angel Pasta with Alfredo Sauce" },
+        { name: "Steak Alfredo",   price: 18.00, desc: "Grilled Steak over Angel Pasta with Alfredo Sauce" }
       ]
     },
     {
@@ -127,8 +122,27 @@
       title: "Steaks",
       items: [
         { name: "Top Sirloin", price: 20.00, desc: "8 oz Baseball Center Cut Sirloin · with Baked Potato" },
-        { name: "Rib-Eye", price: 32.00, desc: "16 oz Cowboy Cut Rib-eye · with Baked Potato" },
-        { name: "T-Bone", priceText: "Market Price", desc: "with Baked Potato — price varies based on availability" }
+        { name: "Rib-Eye",     price: 32.00, desc: "16 oz Cowboy Cut Rib-eye · with Baked Potato" },
+        { name: "T-Bone",      priceText: "Market Price", desc: "with Baked Potato — price varies based on availability" }
+      ]
+    },
+    {
+      key: "fajitas",
+      title: "Sizzling Fajitas",
+      items: [
+        { name: "Chicken or Steak",  price: 16.00, desc: "Bell Peppers · Onions · Tomatoes" },
+        { name: "Shrimp Fajitas",    price: 17.00 },
+        { name: "Hawaiian Fajitas",  price: 18.00, desc: "Steak · Bell Peppers · Onions · Pineapple" },
+        { name: "Tex Fajitas",       price: 18.00, desc: "Chicken · Steak · Shrimp — Bell Peppers · Onions · Tomatoes" }
+      ]
+    },
+    {
+      key: "chicken",
+      title: "Fowled Out",
+      subtitle: "Comes with 1 side",
+      items: [
+        { name: "Chicken Tenders", price: 13.00, desc: "House-breaded and fried" },
+        { name: "Naked Tenders",   price: 12.00, desc: "Grilled chicken" }
       ]
     },
     {
@@ -139,13 +153,17 @@
       ]
     },
     {
-      key: "fajitas",
-      title: "Sizzling Fajitas",
+      key: "sides",
+      title: "Sidelines",
+      subtitle: "$3.99 each — $1.99 up-charge for loaded",
       items: [
-        { name: "Chicken or Steak", price: 16.00, desc: "Bell Peppers · Onions · Tomatoes" },
-        { name: "Shrimp Fajitas", price: 17.00 },
-        { name: "Hawaiian Fajitas", price: 18.00, desc: "Steak · Bell Peppers · Onions · Pineapple" },
-        { name: "Tex Fajitas", price: 18.00, desc: "Chicken · Steak · Shrimp — Bell Peppers · Onions · Tomatoes" }
+        { name: "Tater Babies (Wedges)" },
+        { name: "Tater Tots" },
+        { name: "Cole Slaw" },
+        { name: "Onion Rings" },
+        { name: "Sweet Potato Fries" },
+        { name: "Waffle Fries" },
+        { name: "Side Salad" }
       ]
     },
     {
@@ -161,17 +179,17 @@
       ]
     },
     {
+      key: "desserts",
+      title: "Desserts",
+      items: [
+        { name: "Brownie with Ice Cream", price: 5.00 }
+      ]
+    },
+    {
       key: "drinks",
       title: "Drinks",
       items: [
         { name: "Coca-Cola Products", price: 2.99 }
-      ]
-    },
-    {
-      key: "desserts",
-      title: "Desserts",
-      items: [
-        { name: "Ask your server for today's options" }
       ]
     }
   ];
@@ -195,22 +213,22 @@
 
   const telHref = `tel:+1${CONFIG.phoneRaw}`;
 
-  setHrefAll("[data-tel]", telHref);
-  setHrefAll("[data-maps]", CONFIG.mapsQueryUrl);
-  setHrefAll("[data-fb]", CONFIG.facebookUrl);
+  setHrefAll("[data-tel]",    telHref);
+  setHrefAll("[data-maps]",   CONFIG.mapsQueryUrl);
+  setHrefAll("[data-fb]",     CONFIG.facebookUrl);
   setHrefAll("[data-review]", CONFIG.reviewUrl);
 
   $$("#year").forEach(el => { el.textContent = new Date().getFullYear(); });
 
   // ─── HOURS / STATUS ────────────────────────────────────────────
   const schedule = {
-    0: { open: 11 * 60, close: 21 * 60,  label: "11 AM – 9 PM"  },
-    1: { open: 15 * 60, close: 21 * 60,  label: "3 PM – 9 PM"   },
+    0: { open: 11 * 60, close: 21 * 60 },
+    1: { open: 15 * 60, close: 21 * 60 },
     2: null,
-    3: { open: 11 * 60, close: 23 * 60,  label: "11 AM – 11 PM" },
-    4: { open: 11 * 60, close: 23 * 60,  label: "11 AM – 11 PM" },
-    5: { open: 11 * 60, close: 23 * 60,  label: "11 AM – 11 PM" },
-    6: { open: 11 * 60, close: 23 * 60,  label: "11 AM – 11 PM" }
+    3: { open: 11 * 60, close: 23 * 60 },
+    4: { open: 11 * 60, close: 23 * 60 },
+    5: { open: 11 * 60, close: 23 * 60 },
+    6: { open: 11 * 60, close: 23 * 60 }
   };
 
   function fmtTime(m) {
@@ -225,7 +243,6 @@
     const d = now.getDay();
     const mins = now.getHours() * 60 + now.getMinutes();
     const today = schedule[d];
-
     let msg, cls;
     if (!today) {
       msg = "Closed Today"; cls = "status-closed";
@@ -236,32 +253,26 @@
     } else {
       const left = today.close - mins;
       const h = Math.floor(left / 60), m = left % 60;
-      const leftStr = h > 0 ? `${h}h ${m}m` : `${m}m`;
-      msg = `Open · Closes in ${leftStr}`; cls = "status-open";
+      msg = `Open · Closes in ${h > 0 ? h + "h " : ""}${m}m`; cls = "status-open";
     }
-
     $$(".open-status").forEach(el => {
       el.textContent = msg;
       el.className = "open-status stat-value " + cls;
     });
-
-    const todayIds = ["hours-sun","hours-mon","hours-tue","hours-wed","hours-thu","hours-fri","hours-sat"];
-    const todayId = todayIds[d];
-    if (todayId) {
-      const row = $(`#${todayId}`);
-      if (row) row.classList.add("today");
-    }
+    const ids = ["hours-sun","hours-mon","hours-tue","hours-wed","hours-thu","hours-fri","hours-sat"];
+    const row = $(`#${ids[d]}`);
+    if (row) row.classList.add("today");
   }
 
   updateStatus();
   setInterval(updateStatus, 60000);
 
   // ─── MENU RENDERING ─────────────────────────────────────────────
-  const tabsEl    = $("#menuTabs");
-  const gridEl    = $("#menuGrid");
-  const searchEl  = $("#menuSearch");
-  const clearBtn  = $("#clearSearch");
-  const metaEl    = $("#menuMeta");
+  const tabsEl   = $("#menuTabs");
+  const gridEl   = $("#menuGrid");
+  const searchEl = $("#menuSearch");
+  const clearBtn = $("#clearSearch");
+  const metaEl   = $("#menuMeta");
 
   let activeKey = "all";
   let query = "";
@@ -270,7 +281,7 @@
     if (!tabsEl) return;
     const tabs = [{ key: "all", label: "All" }, ...MENU.map(s => ({ key: s.key, label: s.title }))];
     tabsEl.innerHTML = tabs.map(t =>
-      `<button class="tab" role="tab" aria-selected="${t.key === activeKey}" data-key="${t.key}" type="button">${esc(t.label)}</button>`
+      `<button class="tab" role="tab" aria-selected="${t.key === activeKey}" data-key="${esc(t.key)}" type="button">${esc(t.label)}</button>`
     ).join("");
     tabsEl.addEventListener("click", e => {
       const btn = e.target.closest(".tab");
@@ -299,7 +310,7 @@
     if (metaEl) metaEl.textContent = `${activeKey === "all" ? "All categories" : MENU.find(s => s.key === activeKey)?.title} · ${total} item${total !== 1 ? "s" : ""}${query.trim() ? ` matching "${query.trim()}"` : ""}`;
 
     if (!sections.length) {
-      gridEl.innerHTML = `<div class="notice"><div class="notice-icon">🔍</div><div class="notice-body"><strong>No results</strong><p>No menu items match "<em>${esc(query)}</em>". Try a different search.</p></div></div>`;
+      gridEl.innerHTML = `<div class="notice"><div class="notice-icon">🔍</div><div class="notice-body"><strong>No results</strong><p>No menu items match "<em>${esc(query)}</em>".</p></div></div>`;
       return;
     }
 
@@ -307,9 +318,7 @@
       const itemsHtml = sec.items.map(it => {
         const priceRaw = it.priceText !== undefined && it.priceText !== null ? it.priceText : (typeof it.price === "number" ? money(it.price) : "");
         const isMarket = priceRaw === "Market Price";
-        const priceDisplay = isMarket
-          ? `<span class="market-price">Market Price</span>`
-          : esc(priceRaw);
+        const priceDisplay = isMarket ? `<span class="market-price">Market Price</span>` : esc(priceRaw);
         return `<li class="menu-item">
           <div>
             <div class="item-name">${esc(it.name)}</div>
@@ -333,35 +342,44 @@
     }).join("");
   }
 
-  if (searchEl) {
-    searchEl.addEventListener("input", e => { query = e.target.value || ""; renderMenu(); });
-  }
-  if (clearBtn) {
-    clearBtn.addEventListener("click", () => { query = ""; if (searchEl) searchEl.value = ""; renderMenu(); });
-  }
+  if (searchEl) searchEl.addEventListener("input", e => { query = e.target.value || ""; renderMenu(); });
+  if (clearBtn) clearBtn.addEventListener("click", () => { query = ""; if (searchEl) searchEl.value = ""; renderMenu(); });
   buildTabs();
   renderMenu();
 
-  // ─── MENU IMAGE TILES — LIGHTBOX MODAL ──────────────────────────
-  // Listeners bound once on DOMContentLoaded. Scoped only to
-  // [data-menu-tile] buttons. No other images on the site trigger this.
+  // ─── GOOGLE 360 TOUR CARDS (gallery.html) ───────────────────────
+  const tourGrid = document.getElementById("tourGrid");
+  if (tourGrid && TOUR_360.length) {
+    tourGrid.innerHTML = TOUR_360.map(t => {
+      const thumb = t.thumb
+        ? `<img src="${esc(t.thumb)}" alt="360 view of ${esc(t.label)}" loading="lazy" />`
+        : `<div class="tour-placeholder"><svg width="36" height="36" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg><span>360° View</span></div>`;
+      return `<a class="tour-card" href="${esc(t.url)}" target="_blank" rel="noopener" aria-label="Open Google 360 view: ${esc(t.label)}">
+        <div class="tour-thumb">${thumb}</div>
+        <div class="tour-card-label">
+          <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+          ${esc(t.label)} — tap to view in Google Maps
+        </div>
+      </a>`;
+    }).join("");
+  }
 
+  // ─── MENU IMAGE MODAL (menu.html) ───────────────────────────────
   document.addEventListener("DOMContentLoaded", function () {
     var modal    = document.getElementById("menuImageModal");
     var closeBtn = document.getElementById("mimClose");
     var content  = document.getElementById("mimContent");
-    var title    = document.getElementById("mimTitle");
+    var titleEl  = document.getElementById("mimTitle");
+    if (!modal || !closeBtn || !content) return;
 
-    if (!modal || !closeBtn || !content) return; // not on this page
-
-    var scrollY = 0;
+    var _scrollY = 0;
 
     var TILE_DATA = {
       food: {
         label: "Food Menu",
         images: [
-          { src: "./foodmenu1.jpg", alt: "Referees Food Menu Page 1",  filename: "foodmenu1.jpg"  },
-          { src: "./foodmenu2.jpg", alt: "Referees Food Menu Page 2",  filename: "foodmenu2.jpg"  }
+          { src: "./foodmenu1.jpg", alt: "Referees Food Menu Page 1", filename: "foodmenu1.jpg" },
+          { src: "./foodmenu2.jpg", alt: "Referees Food Menu Page 2", filename: "foodmenu2.jpg" }
         ]
       },
       drink: {
@@ -372,25 +390,24 @@
       }
     };
 
-    function buildContent(type) {
+    function buildModalContent(type) {
       var data = TILE_DATA[type];
       if (!data) return;
-      if (title) title.textContent = data.label;
+      if (titleEl) titleEl.textContent = data.label;
       content.innerHTML = data.images.map(function (img) {
         return '<div class="mim-img-block">'
-          + '<img src="' + img.src + '" alt="' + img.alt + '" />'
+          + '<img src="' + img.src + '" alt="' + img.alt + '" style="width:100%;max-width:100%;height:auto;display:block;" />'
           + '<a class="mim-download" href="' + img.src + '" download="' + img.filename + '">⬇ Download ' + img.alt + '</a>'
           + '</div>';
       }).join('');
     }
 
     function openModal(type) {
-      buildContent(type);
-      scrollY = window.scrollY;
+      buildModalContent(type);
+      _scrollY = window.scrollY;
       modal.classList.add("is-open");
       modal.setAttribute("aria-hidden", "false");
-      // iOS-safe scroll lock
-      document.body.style.top = "-" + scrollY + "px";
+      document.body.style.top = "-" + _scrollY + "px";
       document.body.classList.add("scroll-locked");
       closeBtn.focus();
     }
@@ -400,91 +417,33 @@
       modal.setAttribute("aria-hidden", "true");
       document.body.classList.remove("scroll-locked");
       document.body.style.top = "";
-      window.scrollTo(0, scrollY);
+      window.scrollTo(0, _scrollY);
     }
 
-    // Wire tiles — each carries data-menu-tile="food" or "drink"
     document.querySelectorAll("[data-menu-tile]").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        openModal(btn.getAttribute("data-menu-tile"));
-      });
+      btn.addEventListener("click", function () { openModal(btn.getAttribute("data-menu-tile")); });
     });
 
-    // Close — X button
-    closeBtn.addEventListener("click", function (e) {
-      e.stopPropagation();
-      closeModal();
-    });
-
-    // Close — click overlay backdrop (not the box)
-    modal.addEventListener("click", function (e) {
-      if (e.target === modal) closeModal();
-    });
-
-    // Close — ESC
+    closeBtn.addEventListener("click", function (e) { e.stopPropagation(); closeModal(); });
+    modal.addEventListener("click", function (e) { if (e.target === modal) closeModal(); });
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && modal.classList.contains("is-open")) closeModal();
     });
   });
 
-  // ─── PHOTO CAROUSEL ─────────────────────────────────────────────
-  const track = $("#csTrack");
-  if (track) {
-    const slides = track.querySelectorAll(".cs-slide");
-    const total = slides.length;
-    if (total > 1) {
-      let current = 0;
-      let paused = false;
-      let animating = false;
-
-      function goTo(next) {
-        if (animating) return;
-        animating = true;
-        const from = current;
-        current = (next + total) % total;
-        const clone = slides[current].cloneNode(true);
-        clone.style.cssText = "position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;transition:opacity 1.2s ease;";
-        track.parentElement.appendChild(clone);
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            clone.style.opacity = "1";
-            setTimeout(() => {
-              slides[from].style.backgroundImage = slides[current].style.backgroundImage;
-              clone.remove();
-              animating = false;
-            }, 1250);
-          });
-        });
-      }
-
-      setInterval(() => { if (!paused) goTo(current + 1); }, 4500);
-      track.parentElement.addEventListener("mouseenter", () => { paused = true; });
-      track.parentElement.addEventListener("mouseleave", () => { paused = false; });
-
-      let tx = 0, ty = 0;
-      track.parentElement.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, { passive: true });
-      track.parentElement.addEventListener("touchend", e => {
-        const dx = e.changedTouches[0].clientX - tx;
-        const dy = Math.abs(e.changedTouches[0].clientY - ty);
-        if (Math.abs(dx) > 40 && dy < 60) goTo(dx < 0 ? current + 1 : current - 1);
-      }, { passive: true });
-    }
-  }
-
-  // ─── MOBILE NAV (HAMBURGER) ──────────────────────────────────────
+  // ─── MOBILE NAV ─────────────────────────────────────────────────
   document.addEventListener("DOMContentLoaded", function () {
-    var toggle  = document.getElementById("navToggle");
+    var toggle    = document.getElementById("navToggle");
     var mobileNav = document.getElementById("mobileNav");
     if (!toggle || !mobileNav) return;
 
-    var scrollY = 0;
+    var _scrollY = 0;
 
     function openNav() {
-      scrollY = window.scrollY;
+      _scrollY = window.scrollY;
       toggle.setAttribute("aria-expanded", "true");
       mobileNav.classList.add("is-open");
-      // iOS-safe scroll lock: fix body at current position
-      document.body.style.top = "-" + scrollY + "px";
+      document.body.style.top = "-" + _scrollY + "px";
       document.body.classList.add("scroll-locked");
     }
 
@@ -493,45 +452,28 @@
       mobileNav.classList.remove("is-open");
       document.body.classList.remove("scroll-locked");
       document.body.style.top = "";
-      window.scrollTo(0, scrollY);
+      window.scrollTo(0, _scrollY);
     }
 
-    function toggleNav() {
-      if (mobileNav.classList.contains("is-open")) { closeNav(); } else { openNav(); }
-    }
-
-    // Toggle on hamburger click
     toggle.addEventListener("click", function (e) {
       e.stopPropagation();
-      toggleNav();
+      mobileNav.classList.contains("is-open") ? closeNav() : openNav();
     });
 
-    // Close when a nav link is tapped
-    mobileNav.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", closeNav);
-    });
+    mobileNav.querySelectorAll("a").forEach(function (l) { l.addEventListener("click", closeNav); });
 
-    // Close on tap outside
     document.addEventListener("click", function (e) {
-      if (mobileNav.classList.contains("is-open") &&
-          !mobileNav.contains(e.target) &&
-          e.target !== toggle &&
-          !toggle.contains(e.target)) {
-        closeNav();
-      }
+      if (mobileNav.classList.contains("is-open") && !mobileNav.contains(e.target) && e.target !== toggle && !toggle.contains(e.target)) closeNav();
     });
 
-    // Close on ESC
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && mobileNav.classList.contains("is-open")) {
-        closeNav();
-        toggle.focus();
-      }
+      if (e.key === "Escape" && mobileNav.classList.contains("is-open")) { closeNav(); toggle.focus(); }
     });
   });
-  const navLinks = $$(".nav a");
+
+  // ─── ACTIVE NAV ─────────────────────────────────────────────────
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
-  navLinks.forEach(a => {
+  $$(".nav a").forEach(a => {
     const href = a.getAttribute("href") || "";
     if (!href.startsWith("#") && (href.includes(currentPath) || (currentPath === "" && href === "index.html"))) {
       a.classList.add("active");
