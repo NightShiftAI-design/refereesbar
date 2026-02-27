@@ -811,6 +811,40 @@ a.cc-value:hover { color: var(--gold); }
 .page-hero p { font-size: 1.05rem; color: var(--muted); max-width: 56ch; }
 
 
+/* ─── BEST BAR BADGE ─── */
+.best-bar-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: .78rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(212,168,67,.1);
+  border: 1px solid rgba(212,168,67,.25);
+  border-radius: 999px;
+  padding: 4px 14px;
+  margin-bottom: 14px;
+}
+
+/* ─── PAYMENT OPTIONS (order section) ─── */
+.payment-options {
+  margin-top: 0;
+  padding: 14px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+}
+.payment-options-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: .82rem;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--muted2); margin-bottom: 6px;
+}
+.payment-options p { font-size: .9rem; color: var(--muted); line-height: 1.6; }
+
 /* ─── UTILITIES ─── */
 .mt-8  { margin-top: 8px; }
 .mt-12 { margin-top: 12px; }
