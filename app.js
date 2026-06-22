@@ -347,14 +347,14 @@
       food: {
         label: "Food Menu",
         images: [
-          { src: "./foodmenu1.jpg", alt: "Referees Food Menu Page 1", filename: "foodmenu1.jpg" },
-          { src: "./foodmenu2.jpg", alt: "Referees Food Menu Page 2", filename: "foodmenu2.jpg" }
+          { src: "./images/food/foodmenu1.jpg", alt: "Referees Food Menu Page 1", filename: "foodmenu1.jpg" },
+          { src: "./images/food/foodmenu2.jpg", alt: "Referees Food Menu Page 2", filename: "foodmenu2.jpg" }
         ]
       },
       drink: {
         label: "Drink Menu",
         images: [
-          { src: "./drinkmenu.jpg", alt: "Referees Drink Menu", filename: "drinkmenu.jpg" }
+          { src: "./images/food/drinkmenu.jpg", alt: "Referees Drink Menu", filename: "drinkmenu.jpg" }
         ]
       }
     };
