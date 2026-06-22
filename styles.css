@@ -872,6 +872,7 @@ a.cc-value:hover { color: var(--gold); }
   .footer-top { grid-template-columns: 1fr 1fr; }
   /* Hide desktop nav — replaced by mobile drawer */
   .nav { display: none; }
+  .header-cta .btn-outline { display: none; }
   .header-cta { display: none; }
   .nav-toggle { display: none; }
   .actionbar { display: flex; }
@@ -1024,6 +1025,7 @@ a.cc-value:hover { color: var(--gold); }
   padding-top: 80px;
   box-shadow: -8px 0 40px rgba(0,0,0,.6);
   overflow-y: auto;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
 .mob-nav-drawer.is-open {
@@ -1081,6 +1083,13 @@ a.cc-value:hover { color: var(--gold); }
 .mob-nav-scrim.is-open {
   opacity: 1;
   pointer-events: auto;
+}
+
+/* ─── MOB NAV: force hidden on desktop ─── */
+@media (min-width: 961px) {
+  .mob-menu-btn,
+  .mob-nav-drawer,
+  .mob-nav-scrim { display: none !important; }
 }
 
 @media (max-width: 960px) {
