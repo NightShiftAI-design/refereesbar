@@ -362,9 +362,9 @@
   <span></span><span></span><span></span>
 </button>
 <!-- Mobile nav scrim -->
-<div class="mob-nav-scrim" id="mobNavScrim" aria-hidden="true"></div>
+<div class="mob-nav-scrim" id="mobNavScrim" aria-hidden="true" style="display:none"></div>
 <!-- Mobile nav drawer -->
-<nav class="mob-nav-drawer" id="mobNavDrawer" aria-label="Mobile navigation" aria-hidden="true">
+<nav class="mob-nav-drawer" id="mobNavDrawer" aria-label="Mobile navigation" aria-hidden="true" style="display:none">
   <div class="mob-nav-drawer-label">Navigate</div>
   <a href="./index.html">Home</a>
   <a href="./menu.html" class="active">Menu</a>
@@ -386,6 +386,10 @@
     var scrim  = document.getElementById('mobNavScrim');
     if (!btn || !drawer || !scrim) return;
     function openDrawer() {
+      drawer.style.display = 'flex';
+      scrim.style.display = 'block';
+      // Force reflow so transition fires
+      drawer.offsetHeight;
       drawer.classList.add('is-open');
       scrim.classList.add('is-open');
       btn.setAttribute('aria-expanded', 'true');
@@ -398,6 +402,13 @@
       btn.setAttribute('aria-expanded', 'false');
       drawer.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
+      // Hide after transition completes
+      setTimeout(function() {
+        if (!drawer.classList.contains('is-open')) {
+          drawer.style.display = 'none';
+          scrim.style.display = 'none';
+        }
+      }, 300);
     }
     btn.addEventListener('click', function() {
       drawer.classList.contains('is-open') ? closeDrawer() : openDrawer();
