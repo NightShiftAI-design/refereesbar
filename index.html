@@ -6,15 +6,65 @@
   <title>Referees Sports Bar &amp; Grill | Dayton, TN</title>
   <meta name="description" content="Referees Sports Bar &amp; Grill — Dayton's home for wings, burgers, fajitas, 11 TVs, live music &amp; more at 200 Able Drive. Call (423) 285-5663." />
   <meta name="theme-color" content="#080808" />
+  <link rel="canonical" href="https://www.daytonreferees.com/" />
   <meta property="og:title" content="Referees Sports Bar &amp; Grill | Dayton, TN" />
   <meta property="og:description" content="Dayton's go-to spot for games, wings, burgers, and a good time. Call (423) 285-5663." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="./hero-bg.jpg" />
-  <link rel="icon" href="./favicon (2).ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
-  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
-  <link rel="preload" as="image" href="./hero-bg.jpg" />
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:url" content="https://www.daytonreferees.com/" />
+  <meta property="og:image" content="https://www.daytonreferees.com/images/hero-bg.jpg" />
+  <meta property="og:image:width" content="1400" />
+  <meta property="og:image:height" content="800" />
+  <meta property="og:image:alt" content="Referees Sports Bar and Grill — Dayton, TN" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Referees Sports Bar &amp; Grill" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Referees Sports Bar &amp; Grill | Dayton, TN" />
+  <meta name="twitter:description" content="Dayton's go-to spot for games, wings, burgers, and a good time. Call (423) 285-5663." />
+  <meta name="twitter:image" content="https://www.daytonreferees.com/images/hero-bg.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarOrPub",
+    "name": "Referees Sports Bar & Grill",
+    "url": "https://www.daytonreferees.com",
+    "telephone": "+14232855663",
+    "email": "refereesportsbargrill@gmail.com",
+    "image": "https://www.daytonreferees.com/images/hero-bg.jpg",
+    "description": "Dayton's favorite sports bar. Wings, burgers, fajitas, 11 TVs, and live music. Voted Best Bar in Dayton 2025.",
+    "priceRange": "$$",
+    "servesCuisine": ["American", "Bar Food", "Wings", "Burgers"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "200 Able Drive Suite 7",
+      "addressLocality": "Dayton",
+      "addressRegion": "TN",
+      "postalCode": "37321",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 35.4756277,
+      "longitude": -85.0275975
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "15:00", "closes": "21:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "11:00", "closes": "23:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "11:00", "closes": "23:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "11:00", "closes": "23:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "11:00", "closes": "23:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "21:00" }
+    ],
+    "sameAs": ["https://www.facebook.com/share/16tysqTBA6/"],
+    "hasMap": "https://www.google.com/maps/place/Referees/@35.4756277,-85.0275975",
+    "acceptsReservations": false,
+    "menu": "https://www.daytonreferees.com/menu.html"
+  }
+  </script>
+  <link rel="icon" href="./icons/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+  <link rel="preload" as="image" href="./images/hero-bg.jpg" />
   <link rel="stylesheet" href="./styles.css" />
   <script defer src="./app.js"></script>
 </head>
@@ -30,7 +80,7 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="./index.html">
-      <img src="./referees-logo.png" alt="Referees Sports Bar and Grill logo" class="site-logo" width="120" height="44" />
+      <img src="./icons/referees-logo.png" alt="Referees Sports Bar and Grill logo" class="site-logo" width="120" height="44" />
       <div class="brand-text">
         <div class="brand-name">Referees</div>
         <div class="brand-sub">Sports Bar &amp; Grill · Dayton, TN</div>
@@ -65,7 +115,7 @@
   <!-- HERO -->
   <section class="hero" aria-label="Welcome to Referees">
     <div class="hero-bg">
-      <img src="./hero-bg.jpg" alt="" aria-hidden="true" width="1400" height="800" />
+      <img src="./images/hero-bg.jpg" alt="" aria-hidden="true" width="1400" height="800" fetchpriority="high" decoding="async" />
     </div>
     <div class="hero-content">
       <div class="container">
@@ -102,17 +152,17 @@
           </div>
           <div class="hero-media" aria-hidden="true">
             <div class="hero-img-main">
-              <img src="./photo-1.jpg" alt="Food at Referees Sports Bar" width="600" height="450"
+              <img src="./images/gallery/photo-1.jpg" alt="Food at Referees Sports Bar" width="600" height="450" loading="lazy" decoding="async"
                 onerror="this.style.display='none'" />
             </div>
             <div class="hero-img-grid">
               <div class="hero-img-sm">
-                <img src="./photo-2.jpg" alt="Inside Referees Sports Bar" width="300" height="225"
+                <img src="./images/gallery/photo-2.jpg" alt="Inside Referees Sports Bar" width="300" height="225" loading="lazy" decoding="async"
                   onerror="this.style.display='none'" />
               </div>
               <div class="hero-img-sm">
-                <img src="./IMG_8231.jpg" alt="Atmosphere at Referees Sports Bar" width="300" height="225"
-                  onerror="this.onerror=null;this.src='./photo-1.jpg'" />
+                <img src="./images/gallery/referees-interior-2.jpg" alt="Atmosphere at Referees Sports Bar" width="300" height="225" loading="lazy" decoding="async"
+                  onerror="this.onerror=null;this.src='./images/gallery/photo-1.jpg'" />
               </div>
             </div>
           </div>
