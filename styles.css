@@ -924,3 +924,33 @@ a.cc-value:hover { color: var(--gold); }
   .hero h1 { font-size: 2.8rem; }
   .ab-btn { padding: 10px 12px; font-size: .78rem; }
 }
+
+/* ─── SVG ICON REPLACEMENTS ─── */
+.icon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.icon-badge svg { flex-shrink: 0; }
+
+.event-day-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+}
+
+.hiw-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gold-dim);
+  border: 1px solid rgba(212,168,67,.25);
+  border-radius: var(--r2);
+  color: var(--gold);
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+}
+
+.catering-icon svg { color: var(--gold); }
