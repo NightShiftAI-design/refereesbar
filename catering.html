@@ -513,5 +513,64 @@
   }
 </script>
 
+
+<!-- Mobile menu button (fixed top-right) -->
+<button class="mob-menu-btn" id="mobMenuBtn" type="button" aria-expanded="false" aria-controls="mobNavDrawer" aria-label="Open navigation menu">
+  <span></span><span></span><span></span>
+</button>
+<!-- Mobile nav scrim -->
+<div class="mob-nav-scrim" id="mobNavScrim" aria-hidden="true"></div>
+<!-- Mobile nav drawer -->
+<nav class="mob-nav-drawer" id="mobNavDrawer" aria-label="Mobile navigation" aria-hidden="true">
+  <div class="mob-nav-drawer-label">Navigate</div>
+  <a href="./index.html">Home</a>
+  <a href="./menu.html">Menu</a>
+  <a href="./events.html">Events</a>
+  <a href="./gallery.html">Gallery</a>
+  <a href="./catering.html" class="active">Catering</a>
+  <a href="./index.html#contact">Contact</a>
+
+  <div class="mob-nav-cta">
+    <a class="btn btn-primary" href="#" data-tel>Call Now — (423) 285-5663</a>
+    <a class="btn btn-outline" href="./menu.html">View Menu</a>
+  </div>
+</nav>
+<script>
+  // ── Mobile drawer nav ──
+  (function() {
+    var btn   = document.getElementById('mobMenuBtn');
+    var drawer = document.getElementById('mobNavDrawer');
+    var scrim  = document.getElementById('mobNavScrim');
+    if (!btn || !drawer || !scrim) return;
+    function openDrawer() {
+      drawer.classList.add('is-open');
+      scrim.classList.add('is-open');
+      btn.setAttribute('aria-expanded', 'true');
+      drawer.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer() {
+      drawer.classList.remove('is-open');
+      scrim.classList.remove('is-open');
+      btn.setAttribute('aria-expanded', 'false');
+      drawer.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+    btn.addEventListener('click', function() {
+      drawer.classList.contains('is-open') ? closeDrawer() : openDrawer();
+    });
+    scrim.addEventListener('click', closeDrawer);
+    drawer.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        if (!a.getAttribute('href').startsWith('#') || a.hasAttribute('data-tel') || a.hasAttribute('data-maps')) {
+          closeDrawer();
+        }
+      });
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && drawer.classList.contains('is-open')) { closeDrawer(); btn.focus(); }
+    });
+  })();
+</script>
 </body>
 </html>
